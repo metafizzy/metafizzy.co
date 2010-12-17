@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="google-site-verification" content="UUcS9OxYc-a3DO6oACFLndUyJEfZxmTBoP5N_tnmMXE" />
+  <title>Metafizzy</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      height: 100%;
+      background: #111;
+    }
+  
+    body { 
+      height: 50%; 
+      position: relative;
+      font-family:  'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    h1 {
+      position: absolute;
+      bottom: -0.5em;
+      text-align: center;
+      width: 100%;
+      font-weight: 100;
+      color: white;
+      color: hsla(0 0%, 0%, 0.8);
+      font-size: 120px;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <h1 id="title">Metafizzy</h1>
+  
+  <script>
+    var colorTime = 0,
+        waveTheta = 0,
+        maxCount = 200,
+        colorIncrement = -2,
+        props = {};
+
+    var getTextShadow = function( x, y, hue, alpha ) {
+      return ', ' + x + 'px ' + y + 'px hsla(' + hue + ', 100%, 40%, ' + alpha + ')';
+    };
+
+    var animate = function() {
+      var shadows = '0 0 transparent',
+          hue0 = colorTime % 360,
+          i, j, x, y;
+
+      // renders rainbow river
+      for ( i = 1; i < maxCount; i++ ) {
+        var normI = i / maxCount,
+            hue = ( normI * 50 + colorTime ) % 360,
+            alpha = (1-normI) * 0.8;
+        x = i * 2;
+        y = i * 2;
+        shadows += getTextShadow( x, y, hue, alpha );
+      }
+
+      title.style.textShadow = shadows;
+      colorTime += colorIncrement;
+      setTimeout( animate, 30 );
+    };
+
+    var init = function() {
+
+      title = document.getElementById('title');
+
+      setTimeout( animate, 1 );
+
+    };
+
+    window.addEventListener( 'DOMContentLoaded', init, false);
+  </script>
+
+</body>
+</html>
