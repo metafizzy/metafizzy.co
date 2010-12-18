@@ -1,6 +1,9 @@
 {% include html-head.html %}
 
   <title>{{ page.title }} &middot; {{ site.name }} Blog</title>
+  
+  <script src="http://use.typekit.com/kow8gzm.js"></script>
+  <script >try{Typekit.load();}catch(e){}</script>
 
   <link rel="stylesheet" href="../../assets/css/style.css" type="text/css" media="screen" />
   
@@ -9,15 +12,23 @@
   
 <div id="wrap">
 
-  <h1>{{ page.title }}</h1>
+  <article>
+
+    <h1>{{ page.title }}</h1>
   
-  <p class="date">{{ page.date | date:'%d %b %Y' }}</p>
-  
-  <div class="post">
-    {{ content }}
-  </div>
+    <div class="content">
+      <p class="date"><a href="{{ page.url }}">{{ page.date | date:'%d %b %Y' }}</a></p>
+    
+      {{ content }}
+    </div>
+    
+  </article>
+
   
 </div> <!-- #wrap -->
   
   
+<script src="../../assets/js/scripts.js"></script>
+  
 </body>
+</html>

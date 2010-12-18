@@ -241,9 +241,9 @@ button {  width: auto; overflow: visible; }
 body {
   background: #1D1D1D;
   color: white;
-  font-family: "Adelle Web", "Adelle", "adelle-1","adelle-2", "Chaparral Pro", georgia, serif;
+  font-family: "Chaparral Pro",  "chaparral-pro-1","chaparral-pro-2", georgia, serif;
   font-size: 16px;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
     
@@ -282,12 +282,24 @@ a:active { color: #3FC; }
   /**** Layout ****/
 
   .blog #wrap {
-    width: 548px;
+    width: 588px;
     padding: 10px;
-    padding-left: 210px;
+    padding-left: 170px;
     margin: 0 auto;
   }
   
+  .blog .date {
+    position: absolute;
+    left: -150px;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .blog .content {
+    position: relative;
+  }
   
 }
 

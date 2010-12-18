@@ -6,11 +6,45 @@ title: Blog
 {% include html-head.html %}
 
   <title>Blog &middot; {{ site.name }}</title>
+  
+  <script src="http://use.typekit.com/kow8gzm.js"></script>
+  <script >try{Typekit.load();}catch(e){}</script>
 
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen" />
 
 </head>
-<body>
+<body class="blog">
 
+<div id="wrap">
+  
   <h1>{{ page.title }}</h1>
+  
+  {% for blog in site.categories.blog %}
+    <article>
+      <h1>{{ blog.title }}</h1>
 
+      <div class="content">
+        <p class="date"><a href=".{{ blog.url }}">{{ blog.date | date:'%d %b %Y' }}</a></p>
+        
+        {{ blog.content }}
+      </div>
+    </article>
+  {% endfor %}
+  
+
+  <ul>
+    {% for blog in site.categories.blog %}
+      <li><a href=".{{ blog.url }}">{{ blog.title }}</a></li>
+    {% endfor %}
+  </ul>
+  
+</div> <!-- #wrap -->
+
+  
+<script src="assets/js/scripts.js"></script>
+  
+
+
+  
+</body>
+</html>
