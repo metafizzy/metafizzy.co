@@ -18,9 +18,6 @@
     }
     
     h1 {
-/*      position: absolute;*/
-/*      bottom: -0.5em;*/
-/*      text-align: center;*/
       width: 100%;
       font-weight: 100;
       color: hsla(0 0%, 0%, 0.8);
@@ -45,8 +42,6 @@
     
     .under-dev a {
       font-style: italic;
-      text-decoration: none;
-      padding: 0.1em 0.3em;
       text-shadow: 1px 1px #111;
     }
   </style>
@@ -57,10 +52,11 @@
   <div id="masthead">
     <h1 id="title"><span class="metafizzy">Metafizzy</span></h1>
     <p class="tagline">Delightful web resources</p>
-    <p class="under-dev">Currently under development. <a href="blog.html">Read blog</a></p>
+    <p class="under-dev">Currently under development. <a href="blog/">Read blog</a></p>
   </div>
   
   
+  <script src="assets/js/scripts.js"></script>
   <script>
     var colorTime = 0,
         waveTheta = 0,
@@ -99,18 +95,12 @@
       title = document.getElementById('title');
 
       setTimeout( animate, 1 );
-      
-      var metafizzies = document.querySelectorAll('.metafizzy');
-      
-      // use proper fi ligature
-      for ( var i =0, len = metafizzies.length; i<len; i++ ) {
-        metafizzies[i].innerHTML = 'Meta&#64257;zzy';
-      }
 
     };
 
     window.addEventListener( 'DOMContentLoaded', init, false);
   </script>
+  
 
 </body>
 </html>
