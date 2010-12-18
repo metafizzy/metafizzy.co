@@ -1,0 +1,10 @@
+---
+
+
+
+But I'm not going to slap a price-tag on Masonry. It was released as free-for-everyone and its $0 price tag certainly helped it gain traction. Even the concept of making money off of code feels sleazy. 
+
+Front-end development as a profession has flourished on the element of free. In fact, when I started to look at paid-for web resources, I had a hard time finding any good examples. As a digital commodity, no front-end code (HTML, JavaScript, CSS) can ever be put up behind a pay wall. Anyone with a browser and the know-how to use View Source
+
+Personally, I have benefited greatly by being able to use others' work for free
+
