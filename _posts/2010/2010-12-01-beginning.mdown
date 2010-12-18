@@ -1,0 +1,17 @@
+---
+
+title: Beginning
+category: blog
+layout: blog
+
+---
+
+I'm starting a business. Its name is <span class="metafizzy">Metafizzy</span>. The business makes money by selling licenses for <em>delightful web resources</em> that I make. Apart from those three sentences, I'm making this up as I go along.
+
+Actually, that's a bit of hyperbole. I do have a general sense of what I want to accomplish and how to go about it. But for the most part, this whole thing is going to be one big experiment. 
+
+How I got here
+--------------
+
+A year and a half ago I released a jQuery plugin called [Masonry](http://desandro.com/resources/jquery-masonry). Since its initial release it has been especially successful both as a creation and as a mechanism for my career. The whole story of Masonry deserves its own blog post, which I should write some day. The short version is that this one plugin has grown to be an especially popular front-end development resource that is used by lots and lots of web developers. Masonry is used for [Tumblr themes](http://www.delicious.com/desandro/jquerymasonry+tumblrtheme), [Wordpress themes](http://www.delicious.com/desandro/jquerymasonry+wordpresstheme), [professional portfolios](http://scribbletone.com/), [publications](http://www.bygonebureau.com/), [corporate sites](http://www.puma.com/running/media). Designers use it subtlety as a work-around for tricky layouts, and substantially as a piece of branding. Just yesterday, Matt McInerney, (the dude behind [Raleway](http://theleagueofmoveabletype.com/fonts/14-raleway), font used for branding on this site) mentioned [his approval](http://twitter.com/#!/mattmc/status/15962064828760064) of Masonry. How cool is that?
+

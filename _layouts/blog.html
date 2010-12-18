@@ -1,0 +1,23 @@
+{% include html-head.html %}
+
+  <title>{{ page.title }} &middot; {{ site.name }} Blog</title>
+
+  <link rel="stylesheet" href="../../assets/css/style.css" type="text/css" media="screen" />
+  
+</head>
+<body class="blog">
+  
+<div id="wrap">
+
+  <h1>{{ page.title }}</h1>
+  
+  <p class="date">{{ page.date | date:'%d %b %Y' }}</p>
+  
+  <div class="post">
+    {{ content }}
+  </div>
+  
+</div> <!-- #wrap -->
+  
+  
+</body>

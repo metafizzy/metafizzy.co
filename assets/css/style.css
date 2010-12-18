@@ -107,13 +107,6 @@ h1,h2,h3,h4,h5,h6 { font-weight: bold; }
 html { overflow-y: scroll; }
 
 
-/* accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active { outline: none; }
-
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
-
-
 ul, ol { margin-left: 2em; }
 ol { list-style-type: decimal; }
 
@@ -249,6 +242,8 @@ body {
   background: #1D1D1D;
   color: white;
   font-family: "Adelle Web", "Adelle", "adelle-1","adelle-2", "Chaparral Pro", georgia, serif;
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
     
@@ -257,10 +252,44 @@ h1, h2, h3 {
   font-weight: 100;
 }
 
+h1 {
+  margin-bottom: 0.5em;
+  font-size: 42px;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+  color: #AAA;
+}
+
+p, ul, ol {
+  margin-bottom: 0.8em;
+}
+
+a, a:visited { 
+  color: #3CF; 
+  text-decoration: none;
+}
+a:hover { color: #FC3; }
+a:active { color: #3FC; }
 
 
+@media screen {
 
+  /**** Layout ****/
 
+  .blog #wrap {
+    width: 548px;
+    padding: 10px;
+    padding-left: 210px;
+    margin: 0 auto;
+  }
+  
+  
+}
 
 
 
