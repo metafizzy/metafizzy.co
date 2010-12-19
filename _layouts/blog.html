@@ -1,16 +1,7 @@
+{% assign root_path = '../../' %}
 {% include html-head.html %}
 
-  <title>{{ page.title }} &middot; {{ site.name }} Blog</title>
-  
-  <script src="http://use.typekit.com/kow8gzm.js"></script>
-  <script >try{Typekit.load();}catch(e){}</script>
-
-  <link rel="stylesheet" href="../../assets/css/style.css" type="text/css" media="screen" />
-  
-</head>
-<body class="blog">
-  
-<div id="wrap">
+{% include blog-header.html %}
 
   <article>
 
@@ -28,7 +19,7 @@
 </div> <!-- #wrap -->
   
   
-<script src="../../assets/js/scripts.js"></script>
+<script src="{{ root_path }}assets/js/scripts.js"></script>
   
 </body>
 </html>

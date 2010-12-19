@@ -107,7 +107,7 @@ h1,h2,h3,h4,h5,h6 { font-weight: bold; }
 html { overflow-y: scroll; }
 
 
-ul, ol { margin-left: 2em; }
+ul, ol { margin-left: 1.5em; }
 ol { list-style-type: decimal; }
 
 /* remove margins for navigation lists */
@@ -240,7 +240,7 @@ button {  width: auto; overflow: visible; }
 
 body {
   background: #1D1D1D;
-  color: white;
+  color: #F5F5F5;
   font-family: "Chaparral Pro", "chaparral-pro-1","chaparral-pro-2", georgia, serif;
   font-size: 16px;
   line-height: 1.6em;
@@ -253,9 +253,9 @@ h1, h2, h3 {
 }
 
 h1 {
-  margin-bottom: 0.5em;
   font-size: 42px;
   line-height: 1.2em;
+  margin-bottom: 0.3em;
 }
 
 h2 {
@@ -270,11 +270,16 @@ p, ul, ol {
 }
 
 a, a:visited { 
-  color: #3CF; 
+  color: #F83; 
   text-decoration: none;
 }
-a:hover { color: #FC3; }
-a:active { color: #3FC; }
+a:hover { color: #38F; }
+a:active { color: #3F8; }
+
+.blog header h1 {
+  font-size: 26px;
+  margin-bottom: 0.3em;
+}
 
 
 @media screen {
@@ -288,19 +293,31 @@ a:active { color: #3FC; }
     margin: 0 auto;
   }
   
+  .blog header {
+    border-bottom: 1px solid #282828;
+    margin-bottom: 1.0em;
+    
+  }
+  
   .blog .date {
     position: absolute;
     left: -150px;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 300;
   }
   
   .blog .content {
     position: relative;
   }
-  
+
+
+  .blog article {
+    padding-bottom: 1.0em;
+    border-bottom: 1px solid #282828;
+    margin-bottom: 2.0em;
+  }
 }
 
 
