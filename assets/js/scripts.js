@@ -44,7 +44,7 @@ ZZ.init = function() {
   }
 
   if ( ZZ.isTransitionsSupported ) {
-    ZZ.colorT = ~~(Math.random()*9);
+    ZZ.colorT = ~~(Math.random()*18);
     ZZ.changeColor();
   }
   
