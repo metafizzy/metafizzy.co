@@ -269,17 +269,50 @@ p, ul, ol {
   margin-bottom: 0.8em;
 }
 
+a {
+  -webkit-transition: color 3.0s linear;
+     -moz-transition: color 3.0s linear;
+       -o-transition: color 3.0s linear;
+          transition: color 3.0s linear;
+}
+
 a, a:visited { 
   color: #F83; 
   text-decoration: none;
 }
-a:hover { color: #38F; }
+a:hover { 
+  color: white !important;
+  -webkit-transition-duration: 0;
+     -moz-transition-duration: 0;
+       -o-transition-duration: 0;
+          transition-duration: 0;
+  border-bottom: 1px solid;
+}
 a:active { color: #3F8; }
 
 .blog header h1 {
   font-size: 26px;
   margin-bottom: 0.3em;
 }
+
+.color0 a  { color: hsl(  10, 90%, 60% ); }
+.color1 a  { color: hsl(  30, 90%, 60% ); }
+.color2 a  { color: hsl(  50, 90%, 60% ); }
+.color3 a  { color: hsl(  70, 90%, 60% ); }
+.color4 a  { color: hsl(  90, 90%, 60% ); }
+.color5 a  { color: hsl( 110, 90%, 60% ); }
+.color6 a  { color: hsl( 130, 90%, 60% ); }
+.color7 a  { color: hsl( 150, 90%, 60% ); }
+.color8 a  { color: hsl( 170, 90%, 60% ); }
+.color9 a  { color: hsl( 190, 90%, 60% ); }
+.color10 a { color: hsl( 210, 90%, 60% ); }
+.color11 a { color: hsl( 230, 90%, 60% ); }
+.color12 a { color: hsl( 250, 90%, 60% ); }
+.color13 a { color: hsl( 270, 90%, 60% ); }
+.color14 a { color: hsl( 290, 90%, 60% ); }
+.color15 a { color: hsl( 310, 90%, 60% ); }
+.color16 a { color: hsl( 330, 90%, 60% ); }
+.color17 a { color: hsl( 350, 90%, 60% ); }
 
 
 @media screen {
