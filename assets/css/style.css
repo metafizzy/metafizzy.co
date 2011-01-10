@@ -224,9 +224,9 @@ button {  width: auto; overflow: visible; }
 body {
   background: #1D1D1D;
   color: #F5F5F5;
-  font-family: "Chaparral Pro", "chaparral-pro-1","chaparral-pro-2", georgia, serif;
-  font-size: 16px;
-  line-height: 1.6em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.8em;
 }
 
     
@@ -261,13 +261,11 @@ a {
 
 
 
+
 .blog header h1 {
   font-size: 26px;
   margin-bottom: 0.3em;
 }
-
-
-
 
 @media screen {
   
@@ -326,15 +324,16 @@ a {
     top: 0.5em;
     font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 100;
+    font-size: 16px;
   }
   
   .blog .date {
     position: absolute;
     left: -150px;
     font-size: 15px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    font-weight: 300;
+    letter-spacing: 0.2em;
+    font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 100;
   }
   
   .blog .content {
