@@ -317,7 +317,15 @@ a {
   .blog header {
     border-bottom: 1px solid #282828;
     margin-bottom: 1.0em;
-    
+    position: relative;
+  }
+  
+  .blog header .rss {
+    position: absolute;
+    right: 0;
+    top: 0.5em;
+    font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 100;
   }
   
   .blog .date {
