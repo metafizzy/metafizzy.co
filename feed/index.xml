@@ -1,0 +1,26 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Metafizzy</title>
+ <link href="http://metafizzy.co/feed/index.xml" rel="self"/>
+ <link href="http://metafizzy.co/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://metafizzy.co/</id>
+ <author>
+   <name>David DeSandro / Metafizzy</name>
+ </author>
+
+ {% for post in site.categories.blog %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://metafizzy.co{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://metafizzy.co{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
