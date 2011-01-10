@@ -19,9 +19,9 @@ As Masonry is open-source and free for commercial applications, it has been leve
 
 But I'd rather not slap a price tag on Masonry. It has always been free to use, which obviously aided in it gaining traction.
 
-In October, I started development on a new plugin, called Molequul. Molequul is a suped up version of Masonry, plus the fun sorting and filtering interation of [Quicksand](http://razorjack.net/quicksand). Molequul is friggin' awesome and I'm jazzed to finally start revealing what it can do.
+In October, I started development on a new plugin, called Isotope. Isotope is a suped up version of Masonry, plus the fun sorting and filtering interation of [Quicksand](http://razorjack.net/quicksand). Isotope is friggin' awesome and I'm jazzed to finally start revealing what it can do.
 
-Molequul is in fact so awesome, that it's worth paying for.
+Isotope is in fact so awesome, that it's worth paying for.
 
 Now what
 --------

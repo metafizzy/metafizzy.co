@@ -12,7 +12,7 @@ Grid layout jQuery plugin
 
 For innovative layouts
 
-### Molequul
+### Isotope
 
 Layout, filtering, and sorting jQuery plugin
 
@@ -23,9 +23,9 @@ For spectacular interfaces
 Services
 --------
 
-### Molequul Commercial License
+### Isotope Commercial License
 
-Use Molequul in any site or theme that makes you money.
+Use Isotope in any site or theme that makes you money.
 
 $27
 

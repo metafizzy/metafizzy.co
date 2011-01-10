@@ -20,5 +20,5 @@ The initial revenue stream &mdash; selling licenses for the super-Masonry plugin
 
 But the real question I've been wrestling with is how to handle support.
 
-Currently with Masonry, I get an average of 3 support requests a week. After Molequul is released, I imagine I can expect to receive even more. Molequul has more features, and consequently will generate more questions. Now the good-guy/open-source dude in me wants to help these people. But the business manager knows that isn't feasible to put hours into resolving others' issues unless I can turn it into revenue. Of course there are ways to do that, but I'm not sure if it will fit into my measure for success.
+Currently with Masonry, I get an average of 3 support requests a week. After Isotope is released, I imagine I can expect to receive even more. Isotope has more features, and consequently will generate more questions. Now the good-guy/open-source dude in me wants to help these people. But the business manager knows that isn't feasible to put hours into resolving others' issues unless I can turn it into revenue. Of course there are ways to do that, but I'm not sure if it will fit into my measure for success.
 
