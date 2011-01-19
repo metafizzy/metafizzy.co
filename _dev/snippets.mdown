@@ -16,3 +16,11 @@ tweaking raleway
 
 ---
 
+using Jekyll for docs
+
+Maruku is powerful,
+ - auto adds ID's to titles
+ 
+---
+
+add payment success
