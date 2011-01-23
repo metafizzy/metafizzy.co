@@ -6,7 +6,7 @@ layout: blog
 
 ---
 
-![Metafizzy logo](http://i.imgur.com/CkDAH.png)
+![Metafizzy logo](http://i.imgur.com/QgrjU.png)
 
 This is the logo for now until I can think of a better one.
 
