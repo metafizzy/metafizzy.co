@@ -363,6 +363,9 @@ a:active { background: white; }
 
 .index #licenses .acquire a {
   display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 138px;
   height: 138px;
   border: 1px solid;
@@ -370,6 +373,15 @@ a:active { background: white; }
   -webkit-border-radius: 70px;
      -moz-border-radius: 70px;
           border-radius: 70px;
+}
+
+.index #licenses .acquire a:hover {
+  border-width: 10px;
+  top: -9px;
+  right: -9px;
+  -webkit-border-radius: 79px;
+     -moz-border-radius: 79px;
+          border-radius: 79px;
 }
 
 .index #licenses .acquire .price,
@@ -383,10 +395,15 @@ a:active { background: white; }
 .index #licenses .acquire .price {
   font-size: 70px;
   line-height: 1.0em;
-  top: 20px;
+  top: 16px;
 }
 
-.index #licenses .acquire .dollar { font-size: 54px; }
+.index #licenses .acquire .dollar { 
+  font-size: 36px; 
+  vertical-align: top;
+  padding-top: 0.0em;
+  padding-right: 0.1em;
+}
 
 .index #licenses .acquire .buy {
   text-transform: uppercase;

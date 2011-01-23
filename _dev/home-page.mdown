@@ -34,3 +34,18 @@ $27
 Get 
 
 $15
+
+
+
+## Support
+
+If you're having trouble with Masonry or Isotope, you can purchase a couple hours of my time with a Support License. **Provide a link to the site you're having trouble with.** If it's a confidential project, try re-creating the issue in jsFiddle. 
+
+Typically response time is within 3 business days. I make no guarantees that I can completely resolve your issue, but I will do my best job to help you out.
+
+
+
+
+
+
+
