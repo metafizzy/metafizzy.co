@@ -339,11 +339,36 @@ a:active { background: white; }
   margin: 0 auto;
 }
 
-.index #licenses h2 {
+.index section {
+  padding: 40px 0;
+  border-top: 1px solid #333;
+  border-color:   hsla( 0, 0%, 100%, 0.05 );
+}
+
+.index section h2 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5em;
+  font-size: 18px;
+}
+
+.index section h3 {
   font-size: 40px;
+  line-height: 1.2em;
   color: white;
   margin-bottom: 0;
+  
 }
+
+/**** Featuring ****/
+
+#featuring {
+}
+
+
+
+/**** Licenses ****/
+
 
 .index .license {
   position: relative;
