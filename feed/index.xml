@@ -6,9 +6,9 @@ layout: nil
  
  <title>Metafizzy</title>
  <link href="http://metafizzy.co/feed/index.xml" rel="self"/>
- <link href="http://metafizzy.co/"/>
+ <link href="http://metafizzy.co/blog" />
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://metafizzy.co/</id>
+ <id>http://metafizzy.co/blog</id>
  <author>
    <name>David DeSandro / Metafizzy</name>
  </author>
@@ -17,7 +17,11 @@ layout: nil
  <entry>
    <title>{{ post.title }}</title>
    <link href="http://metafizzy.co{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <published>{{ post.date | date_to_xmlschema }}</published>
+   <author>
+     <name>David DeSandro</name>
+     <uri>http://metafizzy.co/blog</uri>
+   </author>
    <id>http://metafizzy.co{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
