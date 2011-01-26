@@ -19,7 +19,7 @@ layout: nil
    <link href="http://metafizzy.co{{ post.url }}"/>
    <published>{{ post.date | date_to_xmlschema }}</published>
    <author>
-     <name>David DeSandro</name>
+     <name>David DeSandro / Metafizzy</name>
      <uri>http://metafizzy.co/blog</uri>
    </author>
    <id>http://metafizzy.co{{ post.id }}</id>
