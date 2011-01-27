@@ -45,6 +45,7 @@ ZZ.init = function() {
 
   if ( ZZ.isTransitionsSupported ) {
     ZZ.colorT = ~~(Math.random()*18);
+    document.body.addClassName('transitions-ready');
     ZZ.changeColor();
   }
   
