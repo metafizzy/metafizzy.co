@@ -13,11 +13,7 @@
     }
     
     h1 {
-      width: 100%;
-      font-weight: 100;
-      color: hsla(0 0%, 0%, 0.8);
       font-size: 100px;
-      margin-bottom: 0.1em;
     }
     
   </style>
@@ -28,53 +24,9 @@
   
   <h2>Sorry about that! <a href="/">Return to <span class="metafizzy">Metafizzy</span>.co</a></h2>
 
-  <h1 id="title">Page not found</h1>
+  <h1 class="groover" data-groover-panes="200">Page not found</h1>
   
-
   <script src="assets/js/scripts.js"></script>
-  <script>
-    var colorTime = 0,
-        waveTheta = 0,
-        maxCount = 200,
-        colorIncrement = -1,
-        props = {};
-
-    var getTextShadow = function( x, y, hue, alpha ) {
-      return ', ' + x + 'px ' + y + 'px hsla(' + hue + ', 100%, 40%, ' + alpha + ')';
-    };
-
-    var animate = function() {
-      var shadows = '0 0 transparent',
-          hue0 = colorTime % 360,
-          i, j, x, y;
-
-      
-
-      // renders rainbow river
-      for ( i = 1; i < maxCount; i++ ) {
-        var normI = i / maxCount,
-            hue = ( normI * 50 + colorTime ) % 360,
-            alpha = (1-normI) * 0.8;
-        x = i * 2;
-        y = i * 2;
-        shadows += getTextShadow( x, y, hue, alpha );
-      }
-
-      title.style.textShadow = shadows;
-      colorTime += colorIncrement;
-      setTimeout( animate, 60 );
-    };
-    
-    var init = function() {
-
-      title = document.getElementById('title');
-
-      setTimeout( animate, 1 );
-
-    };
-
-    window.addEventListener( 'DOMContentLoaded', init, false);
-  </script>
 
 </body>
 </html>

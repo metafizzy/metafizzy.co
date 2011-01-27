@@ -14,7 +14,7 @@
 
   <div id="wrap">
     <div id="masthead">
-      <h1 id="title"><span class="metafizzy">Metafizzy</span></h1>
+      <h1 id="title" class="groover" data-groover-panes="100"><span class="metafizzy">Metafizzy</span></h1>
       <h2>Delightful web resources</h2>
       <p class="under-dev">Currently under development. <a href="blog">Read blog</a></p>
     </div>
@@ -89,49 +89,6 @@
   
   
   <script src="assets/js/scripts.js"></script>
-  <script>
-    var colorTime = 0,
-        waveTheta = 0,
-        maxCount = 100,
-        colorIncrement = -1,
-        props = {};
-
-    var getTextShadow = function( x, y, hue, alpha ) {
-      return ', ' + x + 'px ' + y + 'px hsla(' + hue + ', 100%, 40%, ' + alpha + ')';
-    };
-
-    var animate = function() {
-      var shadows = '0 0 transparent',
-          hue0 = colorTime % 360,
-          i, j, x, y;
-
-      
-
-      // renders rainbow river
-      for ( i = 1; i < maxCount; i++ ) {
-        var normI = i / maxCount,
-            hue = ( normI * 50 + colorTime ) % 360,
-            alpha = (1-normI) * 0.8;
-        x = i * 2;
-        y = i * 2;
-        shadows += getTextShadow( x, y, hue, alpha );
-      }
-
-      title.style.textShadow = shadows;
-      colorTime += colorIncrement;
-      setTimeout( animate, 60 );
-    };
-    
-    var init = function() {
-
-      title = document.getElementById('title');
-
-      setTimeout( animate, 1 );
-
-    };
-
-    window.addEventListener( 'DOMContentLoaded', init, false);
-  </script>
   
   <script src="http://desandro.com/mint/?js"></script>
 
