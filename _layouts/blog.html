@@ -3,22 +3,11 @@
 
 {% include blog-header.html %}
 
-  <article>
-
-    <h1>{{ page.title }}</h1>
-  
-    <div class="content">
-      <p class="date"><a href="{{ page.url }}">{{ page.date | date:'%d %b %Y' }}</a></p>
-    
-      {{ content }}
-    </div>
-    
-  </article>
+  {% assign post = page %}
+  {% assign single_post = true %}
+  {% include blog-post.html %}
 
   
 </div> <!-- #wrap -->
-  
-  
-<script src="{{ root_path }}assets/js/scripts.js"></script>
   
 {% include html-foot.html %}
