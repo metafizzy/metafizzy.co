@@ -1,19 +1,5 @@
 /*
   HTML5 ✰ Boilerplate
-
-  style.css contains a reset, font normalization and some base styles.
-
-  credit is left where credit is due.
-  much inspiration was taken from these projects:
-    yui.yahooapis.com/2.8.1/build/base/base.css
-    camendesign.com/design/
-    praegnanz.de/weblog/htmlcssjs-kickstart
-*/
-
-/*
-  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
-  v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
-  html5doctor.com/html-5-reset-stylesheet/
 */
 
 html, body, div, span, object, iframe,
@@ -94,7 +80,7 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
 body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
-  color: #444;
+  color: #333;
   /* set your base font here, to apply evenly */
   /* font-family: Georgia, serif;  */
 }
@@ -453,7 +439,7 @@ a:active { background: white; }
   position: absolute;
   left: -150px;
   font-size: 15px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 100;
 }
@@ -463,10 +449,38 @@ a:active { background: white; }
 }
 
 .blog article {
-  padding-bottom: 1.0em;
+  padding: 3.0em 0;
   border-bottom: 1px solid #282828;
-  margin-bottom: 2.0em;
 }
+
+
+/* Pagination */
+
+#pagination {
+  position: relative;
+  margin: 3.0em 0;
+}
+
+#pagination .current {
+  text-align: center;
+  font-style: italic;
+}
+
+#pagination .next,
+#pagination .previous {
+  font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+#pagination .previous { left: 0; }
+#pagination .next { right: 0; }
+
+
+/* code */
 
 pre { 
   padding: 10px;

@@ -1,0 +1,46 @@
+{% assign root_path = '../' %}
+
+<title>Blog page {{ paginator.page }} &middot; {{ site.name }}</title>
+
+<link rel="stylesheet" href="{{ root_path }}assets/css/style.css" type="text/css" media="screen" />
+
+</head>
+<body class="blog">
+
+<div id="wrap">
+
+<header>
+  <h1>
+    <a href="{{ root_path }}"><span class="metafizzy">Metafizzy</span></a>
+    <a href="{{ root_path }}blog/">blog</a>
+    page {{ paginator.page }}
+  </h1>
+  <p class="rss"><a href="http://feeds.feedburner.com/metafizzy">RSS Feed</a></p>
+</header>
+
+{% for post in paginator.posts %}
+  <article>
+    <h1>{{ post.title }}</h1>
+
+    <div class="content">
+      <p class="date"><a href="..{{ blog.url }}">{{ post.date | date:'%d %b %Y' }}</a></p>
+      
+      {{ post.content }}
+    </div>
+  </article>
+{% endfor %}
+
+<nav id="pagination">
+  {% if paginator.previous_page == 1 %}
+    {% capture previous_link %}{{ root_path }}blog{% endcapture %}
+  {% else %}
+    {% capture previous_link %}../page{{ paginator.previous_page }}{% endcapture %}
+  {% endif %}    
+
+  <p class="previous"><a href="{{ previous_link }}">Previous</a></p>
+  <p class="current">Page {{ paginator.page }} of {{ paginator.total_pages }}</p>
+  {% if paginator.next_page %}
+    <p class="next"><a href="../page{{ paginator.next_page }}">Next</a></p>
+  {% endif %}
+</nav>
+

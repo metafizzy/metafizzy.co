@@ -1,4 +1,4 @@
 permalink: /:categories/:title
 name: Metafizzy
 pygments: true
-paginate: 3
+paginate: 6

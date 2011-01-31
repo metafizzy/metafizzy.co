@@ -3,25 +3,30 @@ layout: nil
 title: Blog
 ---
 {% assign root_path = '../' %}
+
 {% include html-head.html %}
 
 {% include blog-header.html %}
   
-  {% for blog in site.categories.blog %}
+  
+  {% for post in site.posts limit:paginator.per_page %}
     <article>
-      <h1>{{ blog.title }}</h1>
+      <h1>{{ post.title }}</h1>
 
       <div class="content">
-        <p class="date"><a href="..{{ blog.url }}">{{ blog.date | date:'%d %b %Y' }}</a></p>
+        <p class="date"><a href="..{{ blog.url }}">{{ post.date | date:'%d %b %Y' }}</a></p>
         
-        {{ blog.content }}
+        {{ post.content }}
       </div>
     </article>
   {% endfor %}
   
+  <nav id="pagination">
+    <p class="current">Page 1 of {{ paginator.total_pages }}</p>
+    <p class="next"><a href="../page2">Next</a></p>
+  </nav>
+  
 </div> <!-- #wrap -->
 
-  
-<script src="../assets/js/scripts.js"></script>
   
 {% include html-foot.html %}
