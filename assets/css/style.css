@@ -123,16 +123,6 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; }
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-pre {
-  padding: 1.0em;
-
-  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
-  white-space: pre; /* CSS2 */
-  white-space: pre-wrap; /* CSS 2.1 */
-  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-  word-wrap: break-word; /* IE */
-}
-
 textarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
 
 .ie6 legend, .ie7 legend { margin-left: -7px; } /* thnx ivannikolic! */
@@ -248,7 +238,7 @@ h2 {
   color: #999;
 }
 
-p, ul, ol {
+p, ul, ol, pre {
   margin-bottom: 0.8em;
 }
 
@@ -346,6 +336,40 @@ a {
     border-bottom: 1px solid #282828;
     margin-bottom: 2.0em;
   }
+  
+  
+  pre { 
+    padding: 10px;
+    background: black; 
+  }
+  
+  code { font-size: 12px; }
+  
+  /* Pygments */
+  
+  code .s1,
+  code .s { color: #78BD55; } /* string */
+  code .mi, /* integer */
+  code .cp, /* doctype */
+  code .kc { color: #5298D4; } /*boolean*/
+  code .k { color: #E39B79; } /* keyword */
+  code .kd, /* storage */
+  code .na { color: #A9D866; } /* markup attribute */
+  code .p  { color: #EDB; } /* punctuation */
+  code .o  { color: #F63; }   /* operator */
+  code .nb { color: #AA97AC;} /* support */
+
+  /* comment */
+  code .c,
+  code .c1 { color: #666; font-style: italic; }
+
+  code .nt { color: #A0C8FC; } /* Markup open tag */
+
+  code .nf { color: #9EA8B8; } /* css id */
+  code .nc { color: #A78352; }  /* CSS class */
+  code .m  { color: #DE8E50; } /* CSS value */
+  code .nd { color: #9FAD7E; } /* CSS pseudo selector */
+  
 }
 
 
