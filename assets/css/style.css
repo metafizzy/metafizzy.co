@@ -242,7 +242,7 @@ p, ul, ol, pre {
   margin-bottom: 0.8em;
 }
 
-a {
+.transitions-ready a {
   -webkit-transition: color 3.0s linear;
      -moz-transition: color 3.0s linear;
        -o-transition: color 3.0s linear;
@@ -250,127 +250,256 @@ a {
 }
 
 
-
-
 .blog header h1 {
   font-size: 26px;
   margin-bottom: 0.3em;
 }
 
-@media screen {
-  
-  a, a:visited { 
-    color: #F83; 
-    text-decoration: none;
-  }
-  a:hover { 
-  /*  color: white !important;
-    -webkit-transition-duration: 0;
-       -moz-transition-duration: 0;
-         -o-transition-duration: 0;
-            transition-duration: 0;*/
-    border-bottom: 1px solid;
-  }
-  a:active { background: white; }
-  
-  .color0 a  { color: hsl(  10, 90%, 60% ); }
-  .color1 a  { color: hsl(  30, 90%, 60% ); }
-  .color2 a  { color: hsl(  50, 90%, 60% ); }
-  .color3 a  { color: hsl(  70, 90%, 60% ); }
-  .color4 a  { color: hsl(  90, 90%, 60% ); }
-  .color5 a  { color: hsl( 110, 90%, 60% ); }
-  .color6 a  { color: hsl( 130, 90%, 60% ); }
-  .color7 a  { color: hsl( 150, 90%, 60% ); }
-  .color8 a  { color: hsl( 170, 90%, 60% ); }
-  .color9 a  { color: hsl( 190, 90%, 60% ); }
-  .color10 a { color: hsl( 210, 90%, 60% ); }
-  .color11 a { color: hsl( 230, 90%, 60% ); }
-  .color12 a { color: hsl( 250, 90%, 60% ); }
-  .color13 a { color: hsl( 270, 90%, 60% ); }
-  .color14 a { color: hsl( 290, 90%, 60% ); }
-  .color15 a { color: hsl( 310, 90%, 60% ); }
-  .color16 a { color: hsl( 330, 90%, 60% ); }
-  .color17 a { color: hsl( 350, 90%, 60% ); }
-  
-  
-  /**** Layout ****/
 
-  .blog #wrap {
-    width: 588px;
-    padding: 10px;
-    padding-left: 170px;
-    margin: 0 auto;
-  }
-  
-  .blog header {
-    border-bottom: 1px solid #282828;
-    margin-bottom: 1.0em;
-    position: relative;
-  }
-  
-  .blog header .rss {
-    position: absolute;
-    right: 0;
-    top: 0.5em;
-    font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 100;
-    font-size: 16px;
-  }
-  
-  .blog .date {
-    position: absolute;
-    left: -150px;
-    font-size: 15px;
-    letter-spacing: 0.2em;
-    font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 100;
-  }
-  
-  .blog .content {
-    position: relative;
-  }
+a, a:visited { 
+  color: #F83; 
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 1px solid;
+}
+a:active { background: white; }
+
+.transitions-ready.color0 a  { color: hsl(  10, 90%, 60% ); }
+.transitions-ready.color1 a  { color: hsl(  30, 90%, 60% ); }
+.transitions-ready.color2 a  { color: hsl(  50, 90%, 60% ); }
+.transitions-ready.color3 a  { color: hsl(  70, 90%, 60% ); }
+.transitions-ready.color4 a  { color: hsl(  90, 90%, 60% ); }
+.transitions-ready.color5 a  { color: hsl( 110, 90%, 60% ); }
+.transitions-ready.color6 a  { color: hsl( 130, 90%, 60% ); }
+.transitions-ready.color7 a  { color: hsl( 150, 90%, 60% ); }
+.transitions-ready.color8 a  { color: hsl( 170, 90%, 60% ); }
+.transitions-ready.color9 a  { color: hsl( 190, 90%, 60% ); }
+.transitions-ready.color10 a { color: hsl( 210, 90%, 60% ); }
+.transitions-ready.color11 a { color: hsl( 230, 90%, 60% ); }
+.transitions-ready.color12 a { color: hsl( 250, 90%, 60% ); }
+.transitions-ready.color13 a { color: hsl( 270, 90%, 60% ); }
+.transitions-ready.color14 a { color: hsl( 290, 90%, 60% ); }
+.transitions-ready.color15 a { color: hsl( 310, 90%, 60% ); }
+.transitions-ready.color16 a { color: hsl( 330, 90%, 60% ); }
+.transitions-ready.color17 a { color: hsl( 350, 90%, 60% ); }
 
 
-  .blog article {
-    padding-bottom: 1.0em;
-    border-bottom: 1px solid #282828;
-    margin-bottom: 2.0em;
-  }
-  
-  
-  pre { 
-    padding: 10px;
-    background: black; 
-  }
-  
-  code { font-size: 12px; }
-  
-  /* Pygments */
-  
-  code .s1,
-  code .s { color: #78BD55; } /* string */
-  code .mi, /* integer */
-  code .cp, /* doctype */
-  code .kc { color: #5298D4; } /*boolean*/
-  code .k { color: #E39B79; } /* keyword */
-  code .kd, /* storage */
-  code .na { color: #A9D866; } /* markup attribute */
-  code .p  { color: #EDB; } /* punctuation */
-  code .o  { color: #F63; }   /* operator */
-  code .nb { color: #AA97AC;} /* support */
+/**** Index ****/
 
-  /* comment */
-  code .c,
-  code .c1 { color: #666; font-style: italic; }
+.index #masthead {
+  text-align: center;
+  padding: 20px;
+}
 
-  code .nt { color: #A0C8FC; } /* Markup open tag */
+.index #masthead h1 {
+  width: 100%;
+  font-weight: 100;
+  color: hsla(0 0%, 0%, 0.8);
+  font-size: 120px;
+  margin-bottom: 0.1em;
+}
 
-  code .nf { color: #9EA8B8; } /* css id */
-  code .nc { color: #A78352; }  /* CSS class */
-  code .m  { color: #DE8E50; } /* CSS value */
-  code .nd { color: #9FAD7E; } /* CSS pseudo selector */
+.index #masthead h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 1px 1px #111;
+  margin-bottom: 1.0em;
+  color: #FFF;
+}
+
+.under-dev {
+}
+
+.index  .under-dev a {
+  font-style: italic;
+  text-shadow: 1px 1px #111;
+}
+
+.index #wrap {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.index section {
+  padding: 40px 0;
+  border-top: 1px solid #333;
+  border-color:   hsla( 0, 0%, 100%, 0.05 );
+}
+
+.index section h2 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5em;
+  font-size: 18px;
+}
+
+.index section h3 {
+  font-size: 40px;
+  line-height: 1.2em;
+  color: white;
+  margin-bottom: 0;
   
 }
+
+/**** Featuring ****/
+
+#featuring {
+}
+
+
+
+/**** Licenses ****/
+
+
+.index .license {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.index #licenses .blurb {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.index #licenses .acquire {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.index #licenses .acquire a {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 138px;
+  height: 138px;
+  border: 1px solid;
+  text-align: center;
+  -webkit-border-radius: 70px;
+     -moz-border-radius: 70px;
+          border-radius: 70px;
+}
+
+.index #licenses .acquire a:hover {
+  border-width: 10px;
+  top: -9px;
+  right: -9px;
+  -webkit-border-radius: 79px;
+     -moz-border-radius: 79px;
+          border-radius: 79px;
+}
+
+.index #licenses .acquire .price,
+.index #licenses .acquire .buy {
+  
+  font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  position: relative;
+}
+
+.index #licenses .acquire .price {
+  font-size: 70px;
+  line-height: 1.0em;
+  top: 16px;
+}
+
+.index #licenses .acquire .dollar { 
+  font-size: 36px; 
+  vertical-align: top;
+  padding-top: 0.0em;
+  padding-right: 0.1em;
+}
+
+.index #licenses .acquire .buy {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 0.3em;
+  top: 16px;
+}
+
+.index .license ul {
+  width: 480px;
+}
+
+/**** Layout ****/
+
+.blog #wrap {
+  width: 588px;
+  padding: 10px;
+  padding-left: 170px;
+  margin: 0 auto;
+}
+
+.blog header {
+  border-bottom: 1px solid #282828;
+  margin-bottom: 1.0em;
+  position: relative;
+}
+
+.blog header .rss {
+  position: absolute;
+  right: 0;
+  top: 0.5em;
+  font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.blog .date {
+  position: absolute;
+  left: -150px;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 100;
+}
+
+.blog .content {
+  position: relative;
+}
+
+.blog article {
+  padding-bottom: 1.0em;
+  border-bottom: 1px solid #282828;
+  margin-bottom: 2.0em;
+}
+
+pre { 
+  padding: 10px;
+  background: black; 
+}
+
+code { font-size: 12px; }
+
+/* Pygments */
+
+code .s1,
+code .s { color: #78BD55; } /* string */
+code .mi, /* integer */
+code .cp, /* doctype */
+code .kc { color: #5298D4; } /*boolean*/
+code .k { color: #E39B79; } /* keyword */
+code .kd, /* storage */
+code .na { color: #A9D866; } /* markup attribute */
+code .p  { color: #EDB; } /* punctuation */
+code .o  { color: #F63; }   /* operator */
+code .nb { color: #AA97AC;} /* support */
+
+/* comment */
+code .c,
+code .c1 { color: #666; font-style: italic; }
+
+code .nt { color: #A0C8FC; } /* Markup open tag */
+
+code .nf { color: #9EA8B8; } /* css id */
+code .nc { color: #A78352; }  /* CSS class */
+code .m  { color: #DE8E50; } /* CSS value */
+code .nd { color: #9FAD7E; } /* CSS pseudo selector */
+  
 
 
 
