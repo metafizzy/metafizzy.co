@@ -11,17 +11,17 @@ layout: nil
       width: 6.0em;
       height: 8.0em;
       margin: 1.0em auto;
-      line-height: 40px;
-      font-size: 40px;
+      font-size: 20px;
 /*      background: hsla( 0, 0%, 100%, 0.1 );*/
       position: relative;
+/*      -webkit-transform: scaleX(-1);*/
     }
     
     #logo div {
       position: absolute;
 /*      background-color: hsla( 300, 80%, 60%, 0.6 );*/
       width: 2.0em;
-      border: 1px solid black;
+      border: 1px solid white;
     }
     
     #logo .leg {
@@ -48,10 +48,10 @@ layout: nil
   
     #logo .slant.right {
       -webkit-transform-origin: right top;
-      -webkit-transform:  skewY(-22.5deg) skewX(-60deg) ;
-      height: 1.20em;
+      -webkit-transform:  skewY(-22.5deg) skewX(-54deg) ;
+      height: 1.30em;
       right: 0;
-      top: 2.15em;
+      top: 2.05em;
     }
   
   
@@ -63,24 +63,6 @@ layout: nil
     }
     
   
-    .transitions-ready.color0 #logo div  { background-color: hsla(  10, 90%, 60%, 0.8 ); }
-    .transitions-ready.color1 #logo div  { background-color: hsla(  30, 90%, 60%, 0.8 ); }
-    .transitions-ready.color2 #logo div  { background-color: hsla(  50, 90%, 60%, 0.8 ); }
-    .transitions-ready.color3 #logo div  { background-color: hsla(  70, 90%, 60%, 0.8 ); }
-    .transitions-ready.color4 #logo div  { background-color: hsla(  90, 90%, 60%, 0.8 ); }
-    .transitions-ready.color5 #logo div  { background-color: hsla( 110, 90%, 60%, 0.8 ); }
-    .transitions-ready.color6 #logo div  { background-color: hsla( 130, 90%, 60%, 0.8 ); }
-    .transitions-ready.color7 #logo div  { background-color: hsla( 150, 90%, 60%, 0.8 ); }
-    .transitions-ready.color8 #logo div  { background-color: hsla( 170, 90%, 60%, 0.8 ); }
-    .transitions-ready.color9 #logo div  { background-color: hsla( 190, 90%, 60%, 0.8 ); }
-    .transitions-ready.color10 #logo div { background-color: hsla( 210, 90%, 60%, 0.8 ); }
-    .transitions-ready.color11 #logo div { background-color: hsla( 230, 90%, 60%, 0.8 ); }
-    .transitions-ready.color12 #logo div { background-color: hsla( 250, 90%, 60%, 0.8 ); }
-    .transitions-ready.color13 #logo div { background-color: hsla( 270, 90%, 60%, 0.8 ); }
-    .transitions-ready.color14 #logo div { background-color: hsla( 290, 90%, 60%, 0.8 ); }
-    .transitions-ready.color15 #logo div { background-color: hsla( 310, 90%, 60%, 0.8 ); }
-    .transitions-ready.color16 #logo div { background-color: hsla( 330, 90%, 60%, 0.8 ); }
-    .transitions-ready.color17 #logo div { background-color: hsla( 350, 90%, 60%, 0.8 ); }
   </style>
 
 </head>
@@ -92,5 +74,32 @@ layout: nil
     <div class="slant left"></div>
     <div class="leg left"></div>
   </div>
-  
+
+  <script>
+    var styleNode = document.createElement('style');
+        styles = [];
+    
+    for ( var i = 0; i < 18; i++ ) {
+      var hue = (i*2+1) * 10;
+      styles.push('.transitions-ready.color' + i +' #logo .leg.left, ')
+      styles.push('.transitions-ready.color' + ((i+9)%18) +' #logo .slant.left, ')
+      styles.push('.transitions-ready.color' + ((i+2)%18) +' #logo .slant.right, ')
+      styles.push('.transitions-ready.color' + ((i+4)%18) +' #logo .leg.right ')
+      styles.push('{ background-color: hsla( ' + hue + ', 90%, 60%, 0.7 ); }')
+    }
+
+
+    styleNode.innerHTML = styles.join(' ')
+    
+    var init = function() {
+      
+      document.head.appendChild( styleNode )
+      
+    };
+    
+    window.addEventListener( 'DOMContentLoaded', init, false );
+    
+    
+  </script>
+
 {% include html-foot.html %}
