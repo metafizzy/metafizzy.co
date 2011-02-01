@@ -76,16 +76,17 @@ layout: nil
   </div>
 
   <script>
-    var styleNode = document.createElement('style');
+    var transReady = '.transitions-ready.color',
+        styleNode = document.createElement('style'),
         styles = [];
     
     for ( var i = 0; i < 18; i++ ) {
       var hue = (i*2+1) * 10;
-      styles.push('.transitions-ready.color' + i +' #logo .leg.left, ')
-      styles.push('.transitions-ready.color' + ((i+9)%18) +' #logo .slant.left, ')
-      styles.push('.transitions-ready.color' + ((i+2)%18) +' #logo .slant.right, ')
-      styles.push('.transitions-ready.color' + ((i+4)%18) +' #logo .leg.right ')
-      styles.push('{ background-color: hsla( ' + hue + ', 90%, 60%, 0.7 ); }')
+      styles.push( transReady + i          +' #logo .leg.left, ');
+      styles.push( transReady + ((i+9)%18) +' #logo .slant.left, ');
+      styles.push( transReady + ((i+2)%18) +' #logo .slant.right, ');
+      styles.push( transReady + ((i+4)%18) +' #logo .leg.right ');
+      styles.push('{ background-color: hsla( ' + hue + ', 90%, 60%, 0.7 ); }');
     }
 
 
