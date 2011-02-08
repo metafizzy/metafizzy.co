@@ -224,7 +224,7 @@ h2 {
   color: #999;
 }
 
-p, ul, ol, pre, article iframe {
+p, ul, ol, pre, article iframe, blockquote {
   margin-bottom: 0.8em;
 }
 
@@ -452,6 +452,14 @@ a:active { background: white; }
   padding: 3.0em 0;
   border-bottom: 1px solid #282828;
 }
+
+blockquote {
+  padding: 10px;
+  background: #444;
+  background: hsla( 0, 0%, 100%, 0.05 );
+  font-style: italic;
+}
+blockquote p:last-child { margin-bottom: 0; }
 
 
 /* Pagination */
