@@ -1,4 +1,3 @@
-{% assign root_path = '../' %}
 {% assign paginator_page = true %}
 
 {% include blog-header.html %}
@@ -9,7 +8,7 @@
 
 <nav id="pagination">
   {% if paginator.previous_page == 1 %}
-    {% capture previous_link %}{{ root_path }}blog{% endcapture %}
+    {% capture previous_link %}/blog{% endcapture %}
   {% else %}
     {% capture previous_link %}../page{{ paginator.previous_page }}{% endcapture %}
   {% endif %}    
