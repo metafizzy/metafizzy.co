@@ -10,7 +10,7 @@ layout: blog
 
 In the 13 hours it's been out, here's what people have been saying:
 
-> [I]mpressive
+> Impressive
 
 -- [Jonathan Snook](http://twitter.com/#!/snookca/status/34636082263887874)
 
@@ -18,7 +18,7 @@ In the 13 hours it's been out, here's what people have been saying:
 
 -- [Faruk Ateş](http://farukat.es/journal/2011/02/518-isotope-jquery-masonry-coreanimation)
 
-> A dynamic layout generator [...] that makes things look beautiful [...] automatically.
+> A dynamic layout generator ... that makes things look beautiful ... automatically.
 
 -- [Paul Irish](http://vimeo.com/19578621) (31:30), who named it the [YayQuery](http://yayquery.com) Plugin of the Week
 
