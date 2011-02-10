@@ -286,14 +286,7 @@ a:active { background: white; }
   margin-bottom: 0.1em;
 }
 
-.index #masthead h2 {
-  font-size: 28px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  text-shadow: 1px 1px #111;
-  margin-bottom: 1.0em;
-  color: #FFF;
-}
+
 
 .under-dev {
 }
@@ -308,17 +301,25 @@ a:active { background: white; }
   margin: 0 auto;
 }
 
+
 .index section {
   padding: 40px 0;
   border-top: 1px solid #333;
   border-color:   hsla( 0, 0%, 100%, 0.05 );
 }
 
+.index #masthead h2,
 .index section h2 {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.5em;
   font-size: 18px;
+}
+
+.index #masthead h2 {
+  text-shadow: 1px 1px #111;
+  color: #FFF;
+  font-size: 19px;
 }
 
 .index section h3 {
