@@ -2,3 +2,5 @@ permalink: /:categories/:title
 name: Metafizzy
 pygments: true
 paginate: 6
+css_version: '01'
+js_version: '01'
