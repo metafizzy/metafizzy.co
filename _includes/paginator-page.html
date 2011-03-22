@@ -8,7 +8,7 @@
 
 <nav id="pagination">
   {% if paginator.previous_page == 1 %}
-    {% capture previous_link %}/blog{% endcapture %}
+    {% assign previous_link = '../blog' %}
   {% else %}
     {% capture previous_link %}../page{{ paginator.previous_page }}{% endcapture %}
   {% endif %}    
