@@ -225,7 +225,7 @@ h2 {
 }
 
 p, ul, ol, pre, article iframe, blockquote {
-  margin-bottom: 0.8em;
+  margin-bottom: 1.0em;
 }
 
 .transitions-ready a {
