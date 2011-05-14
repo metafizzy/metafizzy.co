@@ -18,8 +18,10 @@ I'm a big fan of [Divya](http://nimbupani.com/)'s because she draws a clear line
 
 ## [HTML5, CSS3, and DOM Performance](http://www.youtube.com/watch?v=q_O9_C2ZjoA#t=9m53s) by Paul Irish
 
-(Isotope portion starts at 9:53)
-
 <iframe width="480" height="390" src="http://www.youtube.com/embed/q_O9_C2ZjoA?rel=0" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
-Paul uses Isotope to talk about hardware acceleration. Getting the plugin to be use hardware acceleration was no easy task, as I needed to develop all the stuff that Thomas talks about. But it results in best performance possible.
+Isotope portion starts at 9:53
+
+Paul uses Isotope to talk about hardware acceleration. Getting the plugin to use hardware acceleration was no easy task, as I needed to develop all the stuff that Thomas talks about. 
+
+It's fantastic to see Isotope get this sort of recognition. I find it encouraging that each of the above mentions discuss not just Isotope's features, but how it has a series of fallbacks and intelligence built into it to enable its features in the best manner possible.
