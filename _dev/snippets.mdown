@@ -24,3 +24,7 @@ Maruku is powerful,
 ---
 
 add payment success
+
+---
+
+But there is much left undetermined about hardware acceleration in browsers in general. Firefox seems to be pushing for it when using WebGL. WebKit browsers have it capable in CSS. But they they use an arbitrary mechanism to trigger it -- the _transform3d()_ syntax like `translate3d()` or `scale3d()`. Moving forward, it would be great if the browser vendors started properly documenting how we developers can expect to use hardware acceleration. 
