@@ -493,10 +493,16 @@ blockquote p:last-child { margin-bottom: 0; }
 
 pre { 
   padding: 10px;
-  background: black; 
 }
 
-code { font-size: 12px; }
+code {
+  font-size: 12px;
+  padding: 1px 3px;
+}
+
+pre, code {
+  background: black;
+}
 
 /* Pygments */
 
