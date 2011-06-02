@@ -1,0 +1,21 @@
+---
+layout: nil
+title: Blog archive
+---
+{% include html-head.html %}
+
+{% include blog-header.html %}
+  
+  {% for post in site.posts %}
+    <article class="archive">
+      <div class="content">
+        <p class="date">{{ post.date | date:'%d %b %Y' }}</p>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      </div>
+    </article>
+  {% endfor %}
+  
+</div> <!-- #wrap -->
+
+  
+{% include html-foot.html %}

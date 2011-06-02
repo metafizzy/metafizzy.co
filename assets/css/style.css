@@ -382,13 +382,18 @@ a:active { background: white; }
   position: relative;
 }
 
-.blog header .rss {
+.blog header ul {
   position: absolute;
   right: 0;
   top: 0.5em;
   font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 100;
   font-size: 16px;
+}
+
+.blog header ul li {
+  display: inline-block;
+  margin-left: 0.5em;
 }
 
 .blog .date {
@@ -407,6 +412,10 @@ a:active { background: white; }
 .blog article {
   padding: 3.0em 0;
   border-bottom: 1px solid #282828;
+}
+
+.blog article.archive {
+  padding: 1.5em 0;
 }
 
 blockquote {
