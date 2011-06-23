@@ -394,6 +394,9 @@ a:active { background: white; }
 .blog header ul li {
   display: inline-block;
   margin-left: 0.5em;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.1em;
 }
 
 .blog .date {
