@@ -7,16 +7,16 @@
 {% endfor %}
 
 <nav id="pagination">
-  {% if paginator.previous_page == 1 %}
-    {% assign previous_link = '../blog' %}
-  {% else %}
-    {% capture previous_link %}../page{{ paginator.previous_page }}{% endcapture %}
-  {% endif %}    
-
-  <p class="previous"><a href="{{ previous_link }}">Previous</a></p>
+  <p class="previous">
+    {% if paginator.previous_page == 1 %}
+      <a href="../blog/">Previous</a>
+    {% else %}
+      <a href="../page{{ paginator.previous_page }}/">Previous</a>
+    {% endif %}
+  </p>
   <p class="current">Page {{ paginator.page }} of {{ paginator.total_pages }}</p>
   {% if paginator.next_page %}
-    <p class="next"><a href="../page{{ paginator.next_page }}">Next</a></p>
+    <p class="next"><a href="../page{{ paginator.next_page }}/">Next</a></p>
   {% endif %}
 </nav>
 
