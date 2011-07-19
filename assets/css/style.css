@@ -43,8 +43,6 @@ mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
 
 del { text-decoration: line-through; }
 
-abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
-
 /* tables still need cellspacing="0" in the markup */
 table { border-collapse:collapse; border-spacing:0; }
 
@@ -92,36 +90,12 @@ sub { bottom: -0.25em; }
 
 textarea { overflow: auto; } 
 
-.ie6 legend, .ie7 legend { margin-left: -7px; } /* thnx ivannikolic! */
-
-/* align checkboxes, radios, text inputs with their label
-   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; }
-.ie7 input[type="checkbox"] { vertical-align: baseline; }
-.ie6 input { vertical-align: text-bottom; }
-
 /* hand cursor on clickable input elements */
 label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
 
 /* webkit browsers add a 2px margin outside the chrome of form elements */
 button, input, select, textarea { margin: 0; }
 
-/* colors for form validity */
-input:valid, textarea:valid   {  }
-input:invalid, textarea:invalid {
- border-radius: 1px;
- -webkit-box-shadow: 0px 0px 5px red;
-    -moz-box-shadow: 0px 0px 5px red;
-         box-shadow: 0px 0px 5px red;
-}
-.no-boxshadow input:invalid,
-.no-boxshadow textarea:invalid { background-color: #f0dddd; }
-
-
-/* These selection declarations have to be separate.
-   No text-shadow: twitter.com/miketaylr/status/12228805301
-   Also: hot pink. */
 /*
 ::-moz-selection { background: #FF5E99; color:#fff; text-shadow: none; }
 ::selection      { background: #FF5E99; color:#fff; text-shadow: none; }
@@ -502,36 +476,13 @@ code .nd { color: #9FAD7E; } /* CSS pseudo selector */
 
 /* Order status */
 
-
-
-/*
- * media queries for responsive design
- * these follow after primary styles so they will successfully override.
- */
-
-@media all and (orientation:portrait) {
-  /* style adjustments for portrait mode goes here */
-
-}
-
-@media all and (orientation:landscape) {
-  /* style adjustments for landscape mode goes here */
-
 body.order-status {
   text-align: center;
   padding-top: 40px;
 }
 
-/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
-   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
 .order-status h1 { font-size: 60px; }
 
-
-  /* uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you
-     j.mp/textsizeadjust
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
-}
 
 /*
  * print styles
