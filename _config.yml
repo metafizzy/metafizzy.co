@@ -4,3 +4,4 @@ pygments: true
 paginate: 6
 css_version: '02'
 js_version: '02'
+exclude: [ newpost.sh ]
