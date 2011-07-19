@@ -1,6 +1,6 @@
 ---
 
-title: Comparing Quicksand and Isotope
+title: Comparing Quicksand and&nbsp;Isotope
 category: blog
 layout: blog
 

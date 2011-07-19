@@ -1,6 +1,6 @@
 ---
 
-title: Isotope v1.4 - refined inserting animation
+title: Isotope v1.4 - refined inserting&nbsp;animation
 category: blog
 layout: blog
 
