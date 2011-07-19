@@ -500,6 +500,7 @@ code .nd { color: #9FAD7E; } /* CSS pseudo selector */
   
 
 
+/* Order status */
 
 
 
@@ -516,11 +517,15 @@ code .nd { color: #9FAD7E; } /* CSS pseudo selector */
 @media all and (orientation:landscape) {
   /* style adjustments for landscape mode goes here */
 
+body.order-status {
+  text-align: center;
+  padding-top: 40px;
 }
 
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
    consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 @media screen and (max-device-width: 480px) {
+.order-status h1 { font-size: 60px; }
 
 
   /* uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you
