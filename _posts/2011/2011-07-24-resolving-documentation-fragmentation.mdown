@@ -1,0 +1,27 @@
+---
+
+title: Resolving documentation fragmentation
+category: blog
+layout: blog
+published: false
+
+---
+
+One of the biggest hassles I had with previous versions of Masonry was updating documentation. To properly update a page, I had to update it in three places: the documentation site, the file in the downloadable project and on another home page. This was a pain as each piece was managed separately: upload via FTP, change a CMS, push via Git. On top of that, documentation and related resources could spill out into other pots, like a GitHub wiki.
+
+One of my bigger over-arching goals releasing Isotope was to streamline the documentation. Ideally, I would only have to update one source.
+
+My approach now is build the documentation and demos into the project itself, keeping everything in the same place. The project is the doc site is the downloadable zip.
+
+## Documentation site
+
+[GitHub Pages](http://pages.github.com) is the lynchpin keeping this all together. GitHub Pages is perfectly suited for bridging the gap between building documentation and releasing the software as it is integrated right into GitHub. I can make changes to 
+
+## Downloadable zip
+
+
+
+If I had to make an estimate, I would say that two thirds of time developing Isotope and Masonry was spent on the documentation. 
+
+ Previously with Masonry, I ran into tedious chore o
+
