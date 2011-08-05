@@ -112,20 +112,6 @@ button {  width: auto; overflow: visible; }
 .clearfix { zoom: 1; }
 
 
-/* Primary Styles
-  Author: David DeSandro
-*/
-
-@font-face {
-	font-family: 'Raleway Metafizzy';
-	src: url('../fonts/raleway-metafizzy-thin-webfont.eot');
-	src: local('☺'), 
-	     url('../fonts/raleway-metafizzy-thin-webfont.woff') format('woff'), 
-	     url('../fonts/raleway-metafizzy-thin-webfont.ttf') format('truetype'), 
-	     url('../fonts/raleway-metafizzy-thin-webfont.svg#webfont') format('svg');
-}
-
-
 body {
   background: #1D1D1D;
   color: #F5F5F5;
@@ -134,10 +120,21 @@ body {
   line-height: 1.8em;
 }
 
-    
+
+/* Alternate font */
+
+h1, h2, h3,
+.index #licenses .acquire .price,
+.index #licenses .acquire .buy,
+.index #licenses .blurb,
+.blog header ul,
+.blog .date,
+#pagination .next,
+#pagination .previous
+{ font-family: 'Omnes Pro', omnes-pro-1,omnes-pro-2, 'Raleway', 'Helvetica Neue', Arial, sans-serif; }
+
 h1, h2, h3 {
-  font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 h1 {
@@ -166,8 +163,9 @@ p, ul, ol, pre, article iframe, blockquote {
 
 
 .blog header h1 {
-  font-size: 26px;
+  font-size: 28px;
   margin-bottom: 0.3em;
+  font-style: italic;
 }
 
 
@@ -209,7 +207,8 @@ a:active { background: white; }
 
 .index #masthead h1 {
   width: 100%;
-  font-weight: 100;
+  font-weight: 200;
+  font-style: italic;
   color: hsla(0 0%, 0%, 0.8);
   font-size: 120px;
   margin-bottom: 0.1em;
@@ -242,26 +241,26 @@ a:active { background: white; }
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.5em;
-  font-size: 18px;
+  font-size: 19px;
+  font-weight: 300;
 }
 
 .index #masthead h2 {
   text-shadow: 1px 1px #111;
   color: #FFF;
-  font-size: 19px;
 }
 
 .index section h3 {
   font-size: 40px;
   line-height: 1.2em;
   color: white;
-  margin-bottom: 0;
+  margin-bottom: 0.1em;
   
 }
 
 /**** Featuring ****/
 
-#featuring {
+#featuring a {
 }
 
 
@@ -275,8 +274,9 @@ a:active { background: white; }
 }
 
 .index #licenses .blurb {
-  font-size: 16px;
+  font-size: 19px;
   font-style: italic;
+  font-weight: 600;
 }
 
 .index #licenses .acquire {
@@ -294,6 +294,7 @@ a:active { background: white; }
   height: 138px;
   border: 1px solid;
   text-align: center;
+  font-weight: 300;
   -webkit-border-radius: 70px;
      -moz-border-radius: 70px;
           border-radius: 70px;
@@ -310,8 +311,6 @@ a:active { background: white; }
 
 .index #licenses .acquire .price,
 .index #licenses .acquire .buy {
-  
-  font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
   display: block;
   position: relative;
 }
@@ -320,6 +319,7 @@ a:active { background: white; }
   font-size: 70px;
   line-height: 1.0em;
   top: 16px;
+  font-style: italic;
 }
 
 .index #licenses .acquire .dollar { 
@@ -360,16 +360,13 @@ a:active { background: white; }
   position: absolute;
   right: 0;
   top: 0.5em;
-  font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 100;
-  font-size: 16px;
 }
 
 .blog header ul li {
   display: inline-block;
-  margin-left: 0.5em;
+  margin-left: 0.8em;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.1em;
 }
 
@@ -377,9 +374,8 @@ a:active { background: white; }
   position: absolute;
   left: -150px;
   font-size: 15px;
-  letter-spacing: 0.15em;
-  font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 100;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .blog .content {
@@ -418,8 +414,7 @@ blockquote p:last-child { margin-bottom: 0; }
 
 #pagination .next,
 #pagination .previous {
-  font-family: 'Raleway Metafizzy', 'Raleway', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   position: absolute;
   top: 0;
   text-transform: uppercase;
@@ -481,7 +476,10 @@ body.order-status {
   padding-top: 40px;
 }
 
-.order-status h1 { font-size: 60px; }
+.order-status h1 {
+  font-size: 64px;
+  font-style: italic;
+}
 
 
 /*
@@ -502,4 +500,3 @@ body.order-status {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
 }
-
