@@ -1,0 +1,44 @@
+---
+
+title: Resolving documentation fragmentation
+category: blog
+layout: blog
+
+---
+
+Managing documentation can easily grow to be an overwhelming and tedious undertaking for any developer who open sources her code. Consider how many places docs, demos, and instructions can appear for one project:
+
++ README
++ within the project source itself
++ GitHub wiki
++ developer's personal site
++ external site just for project
++ project listing page - like [plugins.jquery.com](http://plugins.jquery.com/)
+
+With Masonry v1, my docs had sprawled out to several different locations. To properly update a page, I had to update it in three places: the documentation site, the file in the downloadable project and on another home page. This was a pain as each piece was managed separately: upload via FTP, change a CMS, push via Git. It was a pain and it made me anxious to change anything, lest I tear apart the web of documentation across the various sources.
+
+One of my bigger over-arching goals releasing Isotope was to streamline the documentation. It was a matter of laziness. I just didn't want to bother maintaining multiple sources for related information about my project. Ideally, I wanted to be able to update one source, and have those changes reflected in the various distribution channels -- in both the external project and the downloadable zip of the project.
+
+## Documentation site
+
+My approach now is build the documentation and demos into the project itself, keeping everything in the same place. The project is the doc site is the downloadable zip. This is made possible with [GitHub Pages](http://pages.github.com), which generates a live site from a git repo. All you need to do is add content to a new branch `gh-pages`, and GitHub takes care of the rest for you.
+
+For my purposes, my two branches `gh-pages` and `master` are pretty much identical. `gh-pages` has a couple extra bits just for the live site, like a favicon, 404 page, and analytics scripts. Whenever I make a commit to `master`, I merge it into `gh-pages` and push up both the commits to GitHub. Here's what the commit tree looks like for Masonry.
+
+![Git commits for Masonry](http://i.imgur.com/W3xk1.png)
+
+Note the commit at the bottom of pic, _docs : change analytics back to mint_ which is commited to `gh-pages`, but not `master`.
+
+## Jekyll
+
+GitHub Pages come built with Jekyll, a static-site generator. This is the awesome. For documentation sites, Jekyll's principle feature is templating. Leveraging templates and includes keeps the code across pages consistent and helps you separate proper content from repetitive scaffolding. [Masonry's docs use just one page template](https://github.com/desandro/masonry/blob/61b45b08bf3/_layouts/default.html).
+
+
+## Downloadable zip
+
+
+
+If I had to make an estimate, I would say that two thirds of time developing Isotope and Masonry was spent on the documentation. 
+
+ Previously with Masonry, I ran into tedious chore o
+
