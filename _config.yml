@@ -2,6 +2,6 @@ permalink: /:categories/:title
 name: Metafizzy
 pygments: true
 paginate: 6
-css_version: '03'
-js_version: '02'
+css_version: '04'
+js_version: '03'
 exclude: [ newpost.sh ]
