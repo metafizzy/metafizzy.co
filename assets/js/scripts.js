@@ -51,13 +51,6 @@ ZZ.init = function() {
     return;
   }
   
-  // use proper fi ligature
-  var metafizzies = document.querySelectorAll('.metafizzy');
-  len = metafizzies.length
-  for ( i=0; i<len; i++ ) {
-    metafizzies[i].innerHTML = 'Meta&#64257;zzy';
-  }
-
   // Do some groovin'
   if ( !Modernizr.textshadow ) {
     return;

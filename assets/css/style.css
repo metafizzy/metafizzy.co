@@ -182,13 +182,6 @@ hr {
 }
 
 
-.blog header h1 {
-  font-size: 28px;
-  margin-bottom: 0.3em;
-  font-style: italic;
-}
-
-
 a, a:visited { 
   color: #F83; 
   text-decoration: none;
@@ -234,17 +227,24 @@ a:active { background: white; }
   margin-bottom: 0.1em;
 }
 
+
+/* use custom font for logo */
+.fontface .logo {
+  font-family: 'MetafizzyLogoRegular', sans-serif;
+}
+
+.fontface .logo .etafizzy {
+  display: none;
+}
+
 .fontface .index #masthead h1 {
   font-style: normal;
   font-size: 360px;
   line-height: 0.9em;
   margin-bottom: 0.2em;
-  font-family: 'MetafizzyLogoRegular', sans-serif;
 }
 
-.fontface .index #masthead h1 .etafizzy {
-  display: none;
-}
+
 
 .under-dev {
 }
@@ -395,6 +395,21 @@ hr {
   margin-bottom: 1.0em;
   position: relative;
 }
+
+.blog header h1 {
+  font-size: 28px;
+  margin-bottom: 0.3em;
+  font-style: italic;
+}
+
+.fontface .blog header .logo {
+  font-style: normal;
+  position: absolute;
+  left: -170px;
+  font-size: 150px;
+  line-height: 0.9em;
+}
+
 
 .blog header ul {
   position: absolute;
