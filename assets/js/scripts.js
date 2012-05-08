@@ -37,7 +37,6 @@ Element.prototype.toggleClassName = function (a) {
 // global object
 window.ZZ = {};
 
-
 ZZ.init = function() {
   var i, len;
   
@@ -102,9 +101,10 @@ ZZ.Groover.prototype.animate = function() {
 
   // renders rainbow river
   for ( i = 1; i < this.panes; i++ ) {
-    var normI = i / this.panes,
-        hue = ( normI * 50 + this.colorTime ) % 360,
-        alpha = (1-normI) * 0.8;
+    var normI = Math.floor( ( i / this.panes ) * 12 ) / 12,
+        hue = ( normI * 400 + this.colorTime * 2 ) % 360,
+        // alpha = ( 1 - normI );
+        alpha = 1;
     x = i * 2;
     y = i * 2;
     shadows += this.getTextShadow( x, y, hue, alpha );
