@@ -169,6 +169,11 @@ p, ul, ol, pre, article iframe, blockquote {
   margin-bottom: 1.0em;
 }
 
+hr {
+  margin: 2.0em 0;
+  border: none;
+}
+
 .transitions-ready a {
   -webkit-transition: color 3.0s linear;
      -moz-transition: color 3.0s linear;
@@ -257,9 +262,15 @@ a:active { background: white; }
 
 .index section {
   padding: 40px 0;
+}
+
+.index section,
+hr {
   border-top: 1px solid #333;
   border-color:   hsla( 0, 0%, 100%, 0.05 );
 }
+
+
 
 .index #masthead h2,
 .index section h2 {
@@ -409,6 +420,11 @@ a:active { background: white; }
 
 .blog .content {
   position: relative;
+}
+
+.blog #wrap img {
+  display: block;
+  max-width: 100%;
 }
 
 .blog article {
