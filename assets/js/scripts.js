@@ -92,7 +92,7 @@ ZZ.Groover = function( elem ) {
 };
 
 ZZ.Groover.prototype.getTextShadow = function( x, y, hue, alpha ) {
-  return ', ' + x + 'px ' + y + 'px hsla(' + hue + ', 100%, 40%, ' + alpha + ')';
+  return ', ' + x + 'px ' + y + 'px hsla(' + hue + ', 100%, 45%, ' + alpha + ')';
 };
 
 ZZ.Groover.prototype.animate = function() {
@@ -101,10 +101,11 @@ ZZ.Groover.prototype.animate = function() {
 
   // renders rainbow river
   for ( i = 1; i < this.panes; i++ ) {
-    var normI = Math.floor( ( i / this.panes ) * 12 ) / 12,
-        hue = ( normI * 400 + this.colorTime * 2 ) % 360,
-        // alpha = ( 1 - normI );
+    var normI = i / this.panes,
+        hue = ( normI * 400 + this.colorTime * 8 ) % 360,
+        // alpha = ( 1 - normI ) * 0.8;
         alpha = 1;
+    hue = ( Math.floor( ( hue / 360 ) * 6 ) / 6 ) * 360;
     x = i * 2;
     y = i * 2;
     shadows += this.getTextShadow( x, y, hue, alpha );
