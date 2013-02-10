@@ -43,6 +43,10 @@ And draggable _grid_ layout. Packery will align 'dropped' item elements into it'
 
 ![Packery draggable grid](http://i.imgur.com/janRNzJ.gif)
 
+With multi-touch support
+
+![Packery draggable multi-touch](http://i.imgur.com/QL6ggTH.gif)
+
 Mic. Dropped.
 
 But there's plenty of work to be done. I think most of the features are pretty solid, but I need to write the docs, and make demos, and do all the administration around making a legit digital product. In the next couple weeks, I hope to blog a bit more about the process.
