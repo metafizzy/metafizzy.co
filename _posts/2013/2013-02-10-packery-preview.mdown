@@ -11,7 +11,7 @@ I'm making a new layout library, called Packery. It is awesome because it resolv
 + It fills gaps ([Masonry issue #141](https://github.com/desandro/masonry/issues/141))
 + You can drag item elements ([Masonry issue #45](https://github.com/desandro/masonry/issues/45))
 
-It's been in development for the past several months, and it still has a ways to go until a full public release. But here's a sneak peek, utilizing the best imagery format of all time: GIFs.
+It's been in development for the past several months, and it still has a ways to go until a full public release. Here's a sneak peek.
 
 Packery has support for grid layouts. Okay, this isn't anything new from Masonry...
 
