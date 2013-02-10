@@ -5,11 +5,17 @@
 # usage:
 #   $ ./newpost.sh my-new-post-filename
 
-COPY_FILE=_posts/template.mdown
-# create file
-POST_FILE=_posts/$(date "+%Y/%Y-%m-%d")-$1.mdown
+echo "Creating new post"
+# get template
+read -p "Enter slug, i.e. my-post-slug: " SLUG
 
-echo new post: $POST_FILE
+COPY_FILE=_posts/template.mdown
+
+# create file
+POST_FILE=_posts/$(date "+%Y/%Y-%m-%d")-$SLUG.mdown
+
+# echo new post:
+echo $POST_FILE
 cp $COPY_FILE $POST_FILE
 # open it
 mate $POST_FILE
