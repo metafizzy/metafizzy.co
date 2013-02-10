@@ -31,7 +31,7 @@ Packery does responsive stuff. The red background indicates a breakpoint.
 
 ![Packery responsive](http://i.imgur.com/z99IRHZ.gif)
 
-Much to my shagrin, [Masonry's corner stamp feature](http://masonry.desandro.com/demos/corner-stamp.html) is fairly popular. Packery goes all-out on this concept, allowing you to arbitrarily place certain elements anywhere you like. Note how the gray elements are laid out around the red ones.
+Much to my chagrin, [Masonry's corner stamp feature](http://masonry.desandro.com/demos/corner-stamp.html) is fairly popular. Packery goes all-out on this concept, allowing you to arbitrarily place certain elements anywhere you like. Note how the gray elements are laid out around the red ones.
 
 ![Packery placed elements](http://i.imgur.com/C6Z3q1z.gif)
 
