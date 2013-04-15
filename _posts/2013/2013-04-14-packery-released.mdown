@@ -6,7 +6,7 @@ layout: blog
 
 ---
 
-Packery, the bin-packing layout library, is out. Packery is second product from Metafizzy. We now have a product line.
+Packery, the bin-packing layout library, is out. Packery is the second product from Metafizzy. We now have a product line.
 
 [packery.metafizzy.co](http://packery.metafizzy.co)
 
