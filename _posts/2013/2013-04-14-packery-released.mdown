@@ -3,11 +3,14 @@
 title: Packery released
 category: blog
 layout: blog
-published: false
 
 ---
 
 Packery, the bin-packing layout library, is out. Packery is second product from Metafizzy. We now have a product line.
+
+[packery.metafizzy.co](http://packery.metafizzy.co)
+
+[![packery site](http://i.imgur.com/LVUd29Y.png)](http://packery.metafizzy.co)
 
 > Packery is a JavaScript layout library that uses a bin-packing algorithm. This is a fancy way of saying "it fills empty gaps." Packery layouts can be intelligently ordered or organically wild. Elements can be [stamped](http://packery.metafizzy.co/options.html#stamped) in place, [fit](http://packery.metafizzy.co/methods.html#fit) in an ideal spot, or [dragged](http://packery.metafizzy.co/draggable.html) around.
 
