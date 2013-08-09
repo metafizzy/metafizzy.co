@@ -1,0 +1,34 @@
+---
+
+title: Summer 2013 update
+category: blog
+layout: blog
+
+---
+
+Oh man, while you've been trying to keep cool in the summer shade, the codes have been BLAZING.
+
+## Masonry v3
+
+The trendiest piece of JS in 2011 got a full overhaul for a new era. [Masonry v3](http://masonry.desandro.com) comes with two big wins: 
+
++ removed jQuery dependency
++ added support for responsive layouts with [element sizing](http://masonry.desandro.com/options.html#element-sizing)
+
+If you take a look at the source code, you'll see that the [actual Masonry code](https://github.com/desandro/masonry/blob/v3.1.1/masonry.js) is just over 200 lines. "WHAT?! That's crazy!" you say? Actually, Masonry's code is so small because all the boring stuff is handled by a parent layout library called...
+
+## Outlayer
+
+[Outlayer](http://github.com/metafizzy/outlayer) is "the guts and brains of a layout library." Most of the functionality in Masonry, Isotope, and Packery is the same stuff. Items, resizing, appending, transitioning, yadda yadda yadda. Really, the only difference between these libraries is the algorithm used to position item elements.
+
+Outlayer abstracts all the general work to be done, so that the separate layout libraries focus just on what make them special. [Bower](http://bower.io) puts it all together.
+
+This is a win for users, as it will help centralize work and bug fixes. A bug fixed for Masonry can mean a bug fixed for Packery and Isotope.
+
+## Packery v1.1
+
+Packery has since been updated, utilizing Outlayer as its core. Packaged versions of Packery v1.1 and Masonry v3 share about 75% of the same code. Neat!
+
+## Upcoming Isotope v2
+
+All this work on layout libraries means that the stage is set to take on the mamma bear, Her Majesty Queen [Isotope](http://isotope.metafizzy.co). Work has already begun on the big re-write. I'm aiming for a release in October.
