@@ -1,6 +1,6 @@
 permalink: /:categories/:title
 name: Metafizzy
-pygments: true
+highlighter: pygments
 paginate: 6
 css_version: '04'
 js_version: '03'
