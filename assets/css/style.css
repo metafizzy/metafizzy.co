@@ -489,10 +489,11 @@ blockquote p:last-child { margin-bottom: 0; }
 
 pre { 
   padding: 10px;
+  white-space: pre-wrap;
 }
 
 code {
-  font-size: 12px;
+  font-size: 14px;
   padding: 1px 3px;
 }
 
