@@ -1,12 +1,17 @@
+---
+body_class: blog
+---
+
 {% include html-head.html %}
 
-{% include blog-header.html %}
+<div id="wrap">
+
+  {% include blog-header.html %}
 
   {% assign post = page %}
   {% assign single_post = true %}
   {% include blog-post.html %}
 
-  
 </div> <!-- #wrap -->
-  
+
 {% include html-foot.html %}

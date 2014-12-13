@@ -553,6 +553,19 @@ body.order-status {
   line-height: 0.9em;
 }
 
+/* --- 404 --- */
+
+body.four-oh-four {
+  text-align: center;
+  padding: 20px;
+}
+
+.four-oh-four h1 {
+  font-size: 110px;
+  font-style: italic;
+}
+
+
 /*
  * print styles
  * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/
