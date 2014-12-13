@@ -138,9 +138,9 @@ body {
 /* Alternate font */
 
 h1, h2, h3,
-.index #licenses .acquire .price,
-.index #licenses .acquire .buy,
-.index #licenses .blurb,
+.homepage #licenses .acquire .price,
+.homepage #licenses .acquire .buy,
+.homepage #licenses .blurb,
 .blog header ul,
 .blog .date,
 #pagination .next,
@@ -213,12 +213,12 @@ a:active { background: white; }
 
 /**** Index ****/
 
-.index #masthead {
+.homepage #masthead {
   text-align: center;
   padding: 20px;
 }
 
-.index #masthead h1 {
+.homepage #masthead h1 {
   width: 100%;
   font-weight: 200;
   font-style: italic;
@@ -237,7 +237,7 @@ a:active { background: white; }
   display: none;
 }
 
-.fontface .index #masthead h1 {
+.fontface .homepage #masthead h1 {
   font-style: normal;
   font-size: 360px;
   line-height: 0.9em;
@@ -249,22 +249,22 @@ a:active { background: white; }
 .under-dev {
 }
 
-.index  .under-dev a {
+.homepage  .under-dev a {
   font-style: italic;
   text-shadow: 1px 1px #111;
 }
 
-.index #wrap {
+.homepage #wrap {
   width: 640px;
   margin: 0 auto;
 }
 
 
-.index section {
+.homepage section {
   padding: 40px 0;
 }
 
-.index section,
+.homepage section,
 hr {
   border-top: 1px solid #333;
   border-color:   hsla( 0, 0%, 100%, 0.05 );
@@ -272,8 +272,8 @@ hr {
 
 
 
-.index #masthead h2,
-.index section h2 {
+.homepage #masthead h2,
+.homepage section h2 {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.5em;
@@ -281,12 +281,12 @@ hr {
   font-weight: 300;
 }
 
-.index #masthead h2 {
+.homepage #masthead h2 {
   text-shadow: 1px 1px #111;
   color: #FFF;
 }
 
-.index section h3 {
+.homepage section h3 {
   font-size: 40px;
   line-height: 1.2em;
   color: white;
@@ -308,24 +308,24 @@ hr {
 /**** Licenses ****/
 
 
-.index .license {
+.homepage .license {
   position: relative;
   margin-bottom: 50px;
 }
 
-.index #licenses .blurb {
+.homepage #licenses .blurb {
   font-size: 19px;
   font-style: italic;
   font-weight: 600;
 }
 
-.index #licenses .acquire {
+.homepage #licenses .acquire {
   position: absolute;
   right: 0;
   top: 20px;
 }
 
-.index #licenses .acquire a {
+.homepage #licenses .acquire a {
   display: block;
   position: absolute;
   right: 0;
@@ -340,7 +340,7 @@ hr {
           border-radius: 70px;
 }
 
-.index #licenses .acquire a:hover {
+.homepage #licenses .acquire a:hover {
   border-width: 10px;
   top: -9px;
   right: -9px;
@@ -349,27 +349,27 @@ hr {
           border-radius: 79px;
 }
 
-.index #licenses .acquire .price,
-.index #licenses .acquire .buy {
+.homepage #licenses .acquire .price,
+.homepage #licenses .acquire .buy {
   display: block;
   position: relative;
 }
 
-.index #licenses .acquire .price {
+.homepage #licenses .acquire .price {
   font-size: 70px;
   line-height: 1.0em;
   top: 16px;
   font-style: italic;
 }
 
-.index #licenses .acquire .dollar { 
+.homepage #licenses .acquire .dollar { 
   font-size: 36px; 
   vertical-align: top;
   padding-top: 0.0em;
   padding-right: 0.1em;
 }
 
-.index #licenses .acquire .buy {
+.homepage #licenses .acquire .buy {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.5em;
@@ -377,7 +377,7 @@ hr {
   top: 16px;
 }
 
-.index .license ul {
+.homepage .license ul {
   width: 480px;
 }
 

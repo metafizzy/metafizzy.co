@@ -1,19 +1,8 @@
-  {% if paginator_page %}
-    <title>Blog page {{ paginator.page }} &middot; {{ site.name }}</title>
-  {% else %}
-    <title>{{ page.title }} &middot; {{ site.name }} Blog</title>
-  {% endif %}
-  
-</head>
-<body class="blog">
-  
-<div id="wrap">
-
   <header>
     <h1>
       <a class="logo" href="/">M<span class="etafizzy">etafizzy</span></a>
       <a href="/blog/">blog</a>
-      {% if paginator_page %} page {{ paginator.page }} {% endif %}
+      {% if paginator.page > 1 %} page {{ paginator.page }} {% endif %}
     </h1>
     <ul>
       <li><a href="/blog/archive.html">Archive</a></li>

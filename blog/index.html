@@ -1,9 +1,13 @@
 ---
 title: Blog
+body_class: blog
 ---
+
 {% include html-head.html %}
 
-{% include blog-header.html %}
+<div id="wrap">
+
+  {% include blog-header.html %}
 
   {% for post in paginator.posts %}
     {% include blog-post.html %}

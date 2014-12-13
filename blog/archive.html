@@ -1,10 +1,14 @@
 ---
 title: Blog archive
+body_class: blog
 ---
+
 {% include html-head.html %}
 
-{% include blog-header.html %}
-  
+<div id="wrap">
+
+  {% include blog-header.html %}
+
   {% for post in site.posts %}
     <article class="archive">
       <div class="content">
@@ -13,8 +17,8 @@ title: Blog archive
       </div>
     </article>
   {% endfor %}
-  
+
 </div> <!-- #wrap -->
 
-  
+
 {% include html-foot.html %}
