@@ -4,18 +4,28 @@ title: Blog
 {% include html-head.html %}
 
 {% include blog-header.html %}
-  
-  
-  {% for post in site.posts limit:paginator.per_page %}
+
+  {% for post in paginator.posts %}
     {% include blog-post.html %}
   {% endfor %}
-  
+
   <nav id="pagination">
-    <p class="current">Page 1 of {{ paginator.total_pages }}</p>
-    <p class="next"><a href="../page2">Next</a></p>
+    <p class="previous">
+      {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+          <a href="/blog/">Previous</a>
+        {% else %}
+          <a href="/blog/page{{ paginator.previous_page }}/">Previous</a>
+        {% endif %}
+      {% endif %}
+    </p>
+    <p class="current">Page {{ paginator.page }} of {{ paginator.total_pages }}</p>
+    {% if paginator.next_page %}
+      <p class="next"><a href="/blog/page{{ paginator.next_page }}/">Next</a></p>
+    {% endif %}
   </nav>
-  
+
 </div> <!-- #wrap -->
 
-  
+
 {% include html-foot.html %}
