@@ -508,6 +508,7 @@ pre code { padding: 0; }
 code .s1,
 code .s { color: #78BD55; } /* string */
 code .mi, /* integer */
+code .mf, /* number */
 code .cp, /* doctype */
 code .kc { color: #5298D4; } /*boolean*/
 code .k { color: #E39B79; } /* keyword */
