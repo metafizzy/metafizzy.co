@@ -3,6 +3,7 @@
       <a class="logo" href="/">M<span class="etafizzy">etafizzy</span></a>
       <a href="/blog/">blog</a>
       {% if paginator.page > 1 %} page {{ paginator.page }} {% endif %}
+      {% if page.is_archive %} archive {% endif %}
     </h1>
     <ul>
       <li><a href="/blog/archive.html">Archive</a></li>

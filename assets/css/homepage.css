@@ -12,7 +12,7 @@
   font-style: italic;
   color: hsla(0 0%, 0%, 0.8);
   font-size: 120px;
-  margin-bottom: 0.1em;
+  margin: 0 0 0.1em;
 }
 
 
@@ -35,29 +35,23 @@
 
 
 .homepage #wrap {
-  width: 640px;
+  max-width: 640px;
   margin: 0 auto;
+  padding: 10px;
 }
 
 
 .homepage section {
   padding: 40px 0;
-}
-
-.homepage section,
-hr {
-  border-top: 1px solid #333;
-  border-color:   hsla( 0, 0%, 100%, 0.05 );
+  border-top: 1px solid #383838;
 }
 
 
-
-.homepage #masthead h2,
-.homepage section h2 {
+.homepage h2 {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.5em;
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 300;
 }
 

@@ -9,7 +9,7 @@
 }
 
 .blog header {
-  border-bottom: 1px solid #282828;
+  border-bottom: 1px solid #3D3D3D;
   margin-bottom: 1.0em;
   position: relative;
 }
@@ -33,6 +33,7 @@
   position: absolute;
   right: 0;
   top: 0.5em;
+  margin: 0;
 }
 
 .blog header ul li {
@@ -46,6 +47,7 @@
 .blog .date {
   position: absolute;
   left: -150px;
+  margin: 0;
   font-size: 15px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -62,11 +64,21 @@
 
 .blog article {
   padding: 3.0em 0;
-  border-bottom: 1px solid #282828;
+  border-bottom: 1px solid #383838;
 }
+
+/* archive */
 
 .blog article.archive {
   padding: 1.5em 0;
+}
+
+/* has to clear the metafizzy logo */
+article.archive:first-of-type { margin-top: 70px; }
+
+article.archive h2,
+article.archive .date {
+  margin-top: 0.5em;
 }
 
 /* Pagination */
@@ -86,6 +98,7 @@
   font-size: 15px;
   position: absolute;
   top: 0;
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.3em;
 }
