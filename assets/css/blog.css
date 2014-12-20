@@ -1,10 +1,11 @@
 /* blog
 ------------------------- */
 
+
 .blog #wrap {
-  width: 620px;
+  max-width: 620px;
   padding: 10px;
-  padding-left: 170px;
+/*  padding-left: 170px;*/
   margin: 0 auto;
 }
 
@@ -22,12 +23,11 @@
 
 .fontface .blog header .logo {
   font-style: normal;
-  position: absolute;
-  left: -170px;
-  font-size: 150px;
-  line-height: 0.9em;
+  font-size: 2.0em;
+  position: relative;
+  top: 0.3em;
+  line-height: 0;
 }
-
 
 .blog header ul {
   position: absolute;
@@ -45,9 +45,6 @@
 }
 
 .blog .date {
-  position: absolute;
-  left: -150px;
-  margin: 0;
   font-size: 15px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -63,7 +60,7 @@
 }
 
 .blog article {
-  padding: 3.0em 0;
+  padding: 1.0em 0 2.0em;
   border-bottom: 1px solid #383838;
 }
 
@@ -105,3 +102,33 @@ article.archive .date {
 
 #pagination .previous { left: 0; }
 #pagination .next { right: 0; }
+
+
+/* bigger, desktop & tablets & big-ass phones */
+
+@media screen and (min-width: 730px) {
+
+  .blog #wrap {
+    padding-left: 170px;
+  }
+
+  .fontface .blog header .logo {
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    left: -170px;
+    font-size: 150px;
+    line-height: 0.9em;
+  }
+
+  .blog .date {
+    position: absolute;
+    left: -150px;
+    margin: 0;
+  }
+
+  .blog article {
+    padding: 3.0em 0;
+  }
+
+}
