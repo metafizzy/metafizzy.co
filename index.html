@@ -20,6 +20,17 @@ body_class: homepage
       <p>Bin-packing layout library</p>
     </section>
 
+    <section>
+      <h2><a href="blog">Blog</a></h2>
+
+      {% for post in site.posts limit:3 %}
+        <article class="blog-preview">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        </article>
+      {% endfor %}
+
+    </section>
+
     <section id="support">
       <h2 id="support-license">Support</h2>
 
@@ -33,11 +44,6 @@ body_class: homepage
       </ul>
 
     </section>  <!-- #support -->
-
-    <section>
-      <h2><a href="blog">Read blog</a></h2>
-    </section>
-
 
     <section id="contact">
       <h2>Contact</h2>
