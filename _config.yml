@@ -3,6 +3,6 @@ name: Metafizzy
 highlighter: pygments
 paginate: 6
 paginate_path: blog/page:num
-css_version: '06'
+css_version: '07'
 js_version: '03'
 exclude: [ newpost.sh ]

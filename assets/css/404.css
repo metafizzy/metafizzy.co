@@ -1,0 +1,12 @@
+/* 404
+------------------------- */
+
+body.four-oh-four {
+  text-align: center;
+  padding: 20px;
+}
+
+.four-oh-four h1 {
+  font-size: 110px;
+  font-style: italic;
+}

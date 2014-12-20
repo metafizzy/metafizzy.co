@@ -1,0 +1,84 @@
+/* homepage
+------------------------- */
+
+.homepage #masthead {
+  text-align: center;
+  padding: 20px;
+}
+
+.homepage #masthead h1 {
+  width: 100%;
+  font-weight: 200;
+  font-style: italic;
+  color: hsla(0 0%, 0%, 0.8);
+  font-size: 120px;
+  margin-bottom: 0.1em;
+}
+
+
+/* use custom font for logo */
+.fontface .logo {
+  font-family: 'MetafizzyLogoRegular', sans-serif;
+}
+
+.fontface .logo .etafizzy {
+  display: none;
+}
+
+.fontface .homepage #masthead h1 {
+  font-style: normal;
+  font-size: 360px;
+  line-height: 0.9em;
+  margin-bottom: 0.2em;
+}
+
+
+
+.homepage #wrap {
+  width: 640px;
+  margin: 0 auto;
+}
+
+
+.homepage section {
+  padding: 40px 0;
+}
+
+.homepage section,
+hr {
+  border-top: 1px solid #333;
+  border-color:   hsla( 0, 0%, 100%, 0.05 );
+}
+
+
+
+.homepage #masthead h2,
+.homepage section h2 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5em;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.homepage #masthead h2 {
+  text-shadow: 1px 1px #111;
+  color: #FFF;
+}
+
+.homepage section h3 {
+  font-size: 40px;
+  line-height: 1.2em;
+  color: white;
+  margin-bottom: 0.1em;
+  
+}
+
+/**** Featuring ****/
+
+#featuring {
+  text-align: center;
+}
+
+#featuring a {
+}

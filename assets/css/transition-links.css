@@ -1,0 +1,30 @@
+/* transition links
+------------------------- */
+
+/* slowly transition color of links*/
+
+.transitions-ready a {
+  -webkit-transition: color 3.0s linear;
+     -moz-transition: color 3.0s linear;
+       -o-transition: color 3.0s linear;
+          transition: color 3.0s linear;
+}
+
+.transitions-ready.color0 a  { color: hsl(  10, 90%, 60% ); }
+.transitions-ready.color1 a  { color: hsl(  30, 90%, 60% ); }
+.transitions-ready.color2 a  { color: hsl(  50, 90%, 60% ); }
+.transitions-ready.color3 a  { color: hsl(  70, 90%, 60% ); }
+.transitions-ready.color4 a  { color: hsl(  90, 90%, 60% ); }
+.transitions-ready.color5 a  { color: hsl( 110, 90%, 60% ); }
+.transitions-ready.color6 a  { color: hsl( 130, 90%, 60% ); }
+.transitions-ready.color7 a  { color: hsl( 150, 90%, 60% ); }
+.transitions-ready.color8 a  { color: hsl( 170, 90%, 60% ); }
+.transitions-ready.color9 a  { color: hsl( 190, 90%, 60% ); }
+.transitions-ready.color10 a { color: hsl( 210, 90%, 60% ); }
+.transitions-ready.color11 a { color: hsl( 230, 90%, 60% ); }
+.transitions-ready.color12 a { color: hsl( 250, 90%, 60% ); }
+.transitions-ready.color13 a { color: hsl( 270, 90%, 60% ); }
+.transitions-ready.color14 a { color: hsl( 290, 90%, 60% ); }
+.transitions-ready.color15 a { color: hsl( 310, 90%, 60% ); }
+.transitions-ready.color16 a { color: hsl( 330, 90%, 60% ); }
+.transitions-ready.color17 a { color: hsl( 350, 90%, 60% ); }

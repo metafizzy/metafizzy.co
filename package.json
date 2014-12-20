@@ -1,0 +1,20 @@
+{
+  "name": "metafizzy.co",
+  "version": "1.2.0",
+  "description": "Metafizzy site",
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "^0.5.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/metafizzy/metafizzy.co.git"
+  },
+  "author": "Metafizzy",
+  "license": "CC BY",
+  "bugs": {
+    "url": "https://github.com/metafizzy/metafizzy.co/issues"
+  },
+  "homepage": "http://metafizzy.co"
+}

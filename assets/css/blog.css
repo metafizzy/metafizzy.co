@@ -1,0 +1,94 @@
+/* blog
+------------------------- */
+
+.blog #wrap {
+  width: 620px;
+  padding: 10px;
+  padding-left: 170px;
+  margin: 0 auto;
+}
+
+.blog header {
+  border-bottom: 1px solid #282828;
+  margin-bottom: 1.0em;
+  position: relative;
+}
+
+.blog header h1 {
+  font-size: 28px;
+  margin-bottom: 0.3em;
+  font-style: italic;
+}
+
+.fontface .blog header .logo {
+  font-style: normal;
+  position: absolute;
+  left: -170px;
+  font-size: 150px;
+  line-height: 0.9em;
+}
+
+
+.blog header ul {
+  position: absolute;
+  right: 0;
+  top: 0.5em;
+}
+
+.blog header ul li {
+  display: inline-block;
+  margin-left: 0.8em;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+}
+
+.blog .date {
+  position: absolute;
+  left: -150px;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.blog .content {
+  position: relative;
+}
+
+.blog #wrap img {
+  display: block;
+  max-width: 100%;
+}
+
+.blog article {
+  padding: 3.0em 0;
+  border-bottom: 1px solid #282828;
+}
+
+.blog article.archive {
+  padding: 1.5em 0;
+}
+
+/* Pagination */
+
+#pagination {
+  position: relative;
+  margin: 3.0em 0;
+}
+
+#pagination .current {
+  text-align: center;
+  font-style: italic;
+}
+
+#pagination .next,
+#pagination .previous {
+  font-size: 15px;
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+#pagination .previous { left: 0; }
+#pagination .next { right: 0; }
