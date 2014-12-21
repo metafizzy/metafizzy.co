@@ -1,0 +1,66 @@
+/* product footer
+------------------------- */
+
+.product-footer {
+  background: hsla(0, 0%, 0%, 0.5);
+  padding: 2.0em 0;
+}
+
+.product-footer .blurb {
+  font-size: 20px;
+  margin: 1.0em 0;
+}
+
+
+.product {
+  min-height: 100px;
+  margin-bottom: 2.0em;
+}
+
+.product a {
+  position: relative;
+  display: block;
+  padding-left: 110px;
+  border: none;
+}
+
+.transitions-ready .product a:hover {
+  color: white;
+  transition: none;
+}
+
+.product img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.product h3 {
+  font-size: 32px;
+  line-height: 0.9;
+  margin: 0 0 0.4em;
+}
+
+.product .description {
+  margin: 0;
+}
+
+/* bigger, desktop & tablets & big-ass phones */
+
+@media screen and (min-width: 730px) {
+
+  .row .cell {
+    float: left;
+    width: 48%;
+  }
+
+  .row .cell {
+    float: left;
+    width: 48%;
+  }
+
+  .row .cell:nth-child(2n+1) { margin-right: 4%; }
+
+}

@@ -2,10 +2,9 @@
 ------------------------- */
 
 
-.blog #wrap {
-  max-width: 620px;
+.blog .container {
+  max-width: 790px;
   padding: 10px;
-/*  padding-left: 170px;*/
   margin: 0 auto;
 }
 
@@ -48,6 +47,11 @@
   font-size: 15px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.blog .content img {
+  display: block;
+  max-width: 100%;
 }
 
 .blog .content {
@@ -108,7 +112,7 @@ article.archive .date {
 
 @media screen and (min-width: 730px) {
 
-  .blog #wrap {
+  .blog .blog-container {
     padding-left: 170px;
   }
 

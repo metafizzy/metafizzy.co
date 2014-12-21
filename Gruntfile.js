@@ -8,6 +8,7 @@ var cssFiles = [
   'assets/css/transition-links.css',
   'assets/css/homepage.css',
   'assets/css/blog.css',
+  'assets/css/product-footer.css',
   'assets/css/order-status.css',
   'assets/css/syntax-highlight.css',
   'assets/css/404.css'
