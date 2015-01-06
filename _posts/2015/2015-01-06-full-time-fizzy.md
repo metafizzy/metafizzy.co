@@ -8,7 +8,7 @@ layout: blog
 
 Yesterday was my last at Twitter. Today is my first, full-time at Metafizzy.
 
-[When I started this business four years ago](/blog/beginning/), it was an experiment and a side-project. It was based on the idea that code can be worth more than GitHub stars and Twitter favorites. I've spent my mornings, nights, and weekends developing it. Even with this limited amount of time, the business has grown well — well enough to my main gig.
+[When I started this business four years ago](/blog/beginning/), it was an experiment and a side-project. It was based on the idea that code can be worth more than GitHub stars and Twitter favorites. I've spent my mornings, nights, and weekends developing it. Even with this limited amount of time, the business has grown well — well enough to be my main gig.
 
 Just like when I started, there are plenty of uncertainties. Gone are the comforts of steady income, deferred management, and company benefits. It's all up to me now. Things are getting _real_.
 
