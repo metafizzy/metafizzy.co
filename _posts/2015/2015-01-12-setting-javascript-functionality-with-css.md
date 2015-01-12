@@ -6,7 +6,7 @@ layout: blog
 
 ---
 
-One of [Slick](kenwheeler.github.io/slick/)'s hotter feature request is to [disable Slick functionality at certain CSS breakpoints](https://github.com/kenwheeler/slick/issues/542). This touches at a tricky issue: setting JavaScript functionality with CSS. Imagine this CSS pseudo-code:
+One of [Slick](http://kenwheeler.github.io/slick/)'s hotter feature request is to [disable Slick functionality at certain CSS breakpoints](https://github.com/kenwheeler/slick/issues/542). This touches at a tricky issue: setting JavaScript functionality with CSS. Imagine this CSS pseudo-code:
 
 {% highlight css %}
 /* default css, small devices like phones, less than 768px */
