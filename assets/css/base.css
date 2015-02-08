@@ -41,6 +41,8 @@ h1, h2, h3,
 .product-footer .blurb
 { font-family: 'Omnes Pro', omnes-pro-1,omnes-pro-2, 'Raleway', 'Helvetica Neue', Arial, sans-serif; }
 
+code, pre { font-family: Consolas, Menlo, monospace; }
+
 h1, h2, h3 {
   font-weight: 200;
 }
@@ -93,7 +95,7 @@ pre {
 }
 
 code {
-  font-size: 14px;
+  font-size: 15px;
   padding: 1px 3px;
 }
 

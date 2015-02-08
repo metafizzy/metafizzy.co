@@ -11,7 +11,8 @@ var cssFiles = [
   'assets/css/product-footer.css',
   'assets/css/order-status.css',
   'assets/css/syntax-highlight.css',
-  'assets/css/404.css'
+  'assets/css/404.css',
+  'assets/css/fit-video.css'
 ];
 
 module.exports = function( grunt ) {
