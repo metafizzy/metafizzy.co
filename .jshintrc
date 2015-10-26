@@ -1,6 +1,5 @@
 {
-  "browser": true,
-  "strict": true,
+  "node": true,
   "unused": true,
   "undef": true
 }

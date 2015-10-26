@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Metafizzy blog</title>
+
+</head>
+<body>
+
+<div class="container">
+  <p><a href="/blog">Metafizzy blog</a></p>
+</div>
+
+<ul>
+  {{#each posts}}
+  <li>{{dateCode}} | {{slug}}</li>
+  {{/each}}
+</ul>
+
+<div class="container">
+  {{#each pagePosts}}
+    <div class="post">
+      <h1 class="post__title">{{title}}</h1>
+      <p class="post__date">{{date}}</p>
+      <div class="post__content">
+        {{content}}
+      </div>
+    </div>
+  {{/each}}
+
+  <nav class="pagination">
+    {{#if previousPage}}
+      <a class="pagination__prevoius" href="/blog/page{{previousPage}}">Previous {{previousPage}}</a>
+    {{/if}}
+    <span class="pagination__current">Page {{currentPage}} of {{totalPages}}</span>
+    {{#if nextPage}}
+      <a class="pagination__next" href="/blog/page{{nextPage}}">Next {{nextPage}}</a>
+    {{/if}}
+  </nav>
+
+</div>
+
+</body>
+</html>
