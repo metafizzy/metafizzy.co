@@ -20,7 +20,7 @@ I use [QUnit](http://qunitjs.com/) for testing. QUnit has everything I need for 
 
 Here's what the test for initializing a Flickity instance looks like:
 
-{% highlight js %}
+``` js
 test( 'init', function() {
 
   var elem = document.querySelector('#init');
@@ -39,7 +39,7 @@ test( 'init', function() {
   equal( flkty.x + flkty.cursorPosition, 0, 'x + cursorPosition = 0' );
 
 });
-{% endhighlight %}
+```
 
 As you can see, thrilling stuff. I'm checking that elements are in place, cells have been made & positioned, and the slider is in the correct position. It's basic, almost obvious. But when things start changing around, this basic code can save my butt.
 

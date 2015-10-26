@@ -8,7 +8,7 @@ layout: blog
 
 You can now bind to jQuery events in [Isotope](http://isotope.metafizzy.co/), [Packery](http://packery.metafizzy.co/), and [Masonry](http://desandro.masonry.com). The recent upgrades allow you to use standard jQuery event methods `.on()`, `.off`, and `.one()`, rather than using ugly plugin method syntax.
 
-{% highlight js %}
+``` js
 // previous plugin method syntax
 // Isotope <= v2.2.0
 $grid.isotope( 'on', 'layoutComplete', function() {...})
@@ -16,7 +16,7 @@ $grid.isotope( 'on', 'layoutComplete', function() {...})
 // standard jQuery event
 // Isotope >= v2.2.1
 $grid.on( 'layoutComplete', function() {...})
-{% endhighlight %}
+```
 
 [View Isotope layoutComplete demo on CodePen](http://codepen.io/desandro/pen/scajv).
 
@@ -26,7 +26,7 @@ This feature is already in [Flickity](http://flickity.metafizzy.co/) and [Dragga
 
 Events are a great API design pattern to add to any library. They enable developers to build functionality on top of a library, without having to add lots of code into a big config object. Take a look at [this Draggabilly demo](http://codepen.io/desandro/pen/LVQqgm), which disables other draggables so that only one can be dragged at a time.
 
-{% highlight js %}
+``` js
 var $draggable = $('.draggable').draggabilly();
 
 // disable other draggabillies on dragStart
@@ -39,11 +39,11 @@ $draggable.on( 'dragStart', function( event ) {
 $draggable.on( 'dragEnd', function() {
   $draggable.draggabilly('enable');
 });
-{% endhighlight %}
+```
 
 Unfortunately, events are often missing from jQuery plugins. Many plugins stick to the config object pattern for this kind of logic. Here's that same code block re-written using a config object.
 
-{% highlight js %}
+``` js
 var $draggable = $('.draggable').draggabilly({
   onDragStart: function( event ) {
     $draggable.filter( function( i, elem ) {
@@ -54,13 +54,13 @@ var $draggable = $('.draggable').draggabilly({
     $draggable.draggabilly('enable');
   }
 });
-{% endhighlight %}
+```
 
 While this code is more compact, it comes at a cost. Config objects make sense for settings. They align well with novice developers thinking _declaratively_, like writing HTML and CSS. But events are not settings. Events can be turned on and off asychronously. The same event can have multiple listeners. Events can require _programmatic_ thinking. Using events and listeners can open up how to think like a programmer.
 
 Consider a scenario where I want to bind to an event after one event has happened, or a scenario when I want to unbind an event.
 
-{% highlight js %}
+``` js
 $draggable.on( 'dragStart', function() {
   // listen to dragEnd after dragStart
   $draggable.on( 'dragEnd', onDragEnd );
@@ -71,7 +71,7 @@ function onDragEnd() {
   // unbind listener
   $draggable.off( 'dragEnd', onDragEnd )
 }
-{% endhighlight %}
+```
 
 Re-writing this code with a config object pattern would look ugly. Using the event pattern makes for less complex code that's easier to follow. It exposes a different kind of programmatic logic that's not possible with declarative config objects.
 
@@ -79,7 +79,7 @@ Re-writing this code with a config object pattern would look ugly. Using the eve
 
 Looking under the hood, triggering jQuery and vanilla JS events is handled by the `dispatchEvent` method:
 
-{% highlight js %}
+``` js
 /**
  * emits events via eventEmitter and jQuery events
  * @param {String} type - name of event
@@ -104,20 +104,20 @@ Widget.prototype.dispatchEvent = function( type, event, args ) {
     }
   }
 };
-{% endhighlight %}
+```
 
 `dispatchEvent` emits an event with [EventEmitter for vanilla JS events](https://github.com/Olical/EventEmitter), and creates and triggers a jQuery event. `dispatchEvent` is then used in the widget's logic:
 
-{% highlight js %}
+``` js
 // with Event object
 this.dispatchEvent( 'eventName', event, [ arg1, arg2 ] );
 // no Event object
 this.dispatchEvent( 'eventName', null, [ arg1, arg2 ] );
-{% endhighlight %}
+```
 
 Developers can then bind listeners with jQuery or vanilla JS.
 
-{% highlight js %}
+``` js
 // jQuery
 $elem.on( 'eventName', function( event, arg1, arg2 ) {
   //...
@@ -127,6 +127,6 @@ $elem.on( 'eventName', function( event, arg1, arg2 ) {
 widget.on( 'eventName', function( event, arg1, arg2 ) {
   //...
 })
-{% endhighlight %}
+```
 
 Adding jQuery events is a small feature, but it allows developers to re-use code patterns they are familiar with, which makes Metafizzy libraries more approachable. Compared to the previous syntax, a novice developer can look over event demo code and think "Yeah, I can do that."

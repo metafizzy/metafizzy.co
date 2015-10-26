@@ -10,7 +10,7 @@ layout: blog
 
 Although I was [breaking up code into logical sections and features](/blog/lots-of-files/), these features were hard-coded together. For example, activating page dots and previous/next buttons was handled [within `Flickity.prototype.activate()`](https://github.com/metafizzy/flickity/blob/v0.1.0/js/flickity.js#L202-L211).
 
-{% highlight js %}
+``` js
 Flickity.prototype.activate = function() {
   // ...
   // activate prev/next buttons, page dots
@@ -24,17 +24,17 @@ Flickity.prototype.activate = function() {
     this.pageDots.activate();
   }
 }
-{% endhighlight %}
+```
 
 [`Flickity.prototype.pointerDown()`](https://github.com/metafizzy/flickity/blob/v0.1.0/js/drag.js#L105) made a direct call to `this.player`.
 
-{% highlight js %}
+``` js
 Flickity.prototype.pointerDown = function() {
   // ...
   // stop auto play
   this.player.stop();
 };
-{% endhighlight %}
+```
 
 Everything was interconnected. If you wanted to use Flickity, you would need to use all its parts.
 
@@ -46,7 +46,7 @@ Ideally, Flickity could be structured in a way that features could be completely
 
 I use [Wolfy87/EventEmitter](https://github.com/Wolfy87/EventEmitter) for event handling in all my libraries ([Flickity](http://flickity.metafizzy.co), [Isotope](http://isotope.metafizzy.co), [Draggabilly](http://draggabilly.desandro.com), [imagesLoaded](http://imagesloaded.desandro.com)). EventEmitter was developed as a browser-port of [node's EventEmitter class](http://nodejs.org/api/events.html#events_class_events_eventemitter). It emits evens with `.emit()` or `.emitEvent()`, and binds events with `.on()`, `.off()`, and `.once()`.
 
-{% highlight js %}
+``` js
 function Library() {}
 // inherit EventEmitter methods
 Library.prototype = new EventEmitter();
@@ -57,7 +57,7 @@ lib.on( 'tacoTuesday', function( message, hours ) {
 });
 lib.emit( 'tacoTuesday', 'gonna be chill', 4 );
 // -> logs 'REJOICE! TT gonna be chill for 4 hours'
-{% endhighlight %}
+```
 
 With EventEmitter, I have a proper API for [pub-sub](http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
 
@@ -65,15 +65,15 @@ With EventEmitter, I have a proper API for [pub-sub](http://en.wikipedia.org/wik
 
 You might typically think of events as hooks that are used by developers and third-party libraries to build on top of a library. For example, [Bootstrap's carousel triggers `slide`](http://getbootstrap.com/javascript/#carousel-events).
 
-{% highlight js %}
+``` js
 $('#myCarousel').on( 'slide', function () {
   console.log('carousel slide happening')
 })
-{% endhighlight %}
+```
 
 Events can also be used internally within the library. Within Flickity, I was already using events across features. Previous/next buttons and page dots were being updated by listening to the `select` event.
 
-{% highlight js %}
+``` js
 Flickity.prototype.select = function( index ) {
   // ...
   this.selectedIndex = index;
@@ -89,20 +89,20 @@ PrevNextButton.prototype._create = function() {
     _this.update();
   });
 };
-{% endhighlight %}
+```
 
 I used this same concept to replace all hard-coded features with events. For example, [in `Flickity.prototype.activate()`](https://github.com/metafizzy/flickity/blob/70cf18a7eb/js/flickity.js#L192), I removed checking for features like `this.prevButton`, and replaced it with emitting the `activate` event.
 
-{% highlight js %}
+``` js
 Flickity.prototype.activate = function() {
   // ...
   this.emit('activate');
 };
-{% endhighlight %}
+```
 
 I moved the previous/next button activation logic into `prev-next-button.js`. This file adds [necessary methods to `Flickity.prototype`](https://github.com/metafizzy/flickity/blob/70cf18a7eb/js/prev-next-button.js#L198) that are specific to the previous/next buttons.
 
-{% highlight js %}
+``` js
 Flickity.createMethods.push('_createPrevNextButtons');
 
 Flickity.prototype._createPrevNextButtons = function() {
@@ -120,11 +120,11 @@ Flickity.prototype.activatePrevNextButtons = function() {
   this.prevButton.activate();
   this.nextButton.activate();
 };
-{% endhighlight %}
+```
 
 Instead of `Flickity.prototype.pointerDown()` calling `this.player.stop()`, the `Player` class [listens to the `pointerDown` event](https://github.com/metafizzy/flickity/blob/70cf18a7eb/js/player.js#L141).
 
-{% highlight js %}
+``` js
 Flickity.createMethods.push('_createPlayer');
 
 Flickity.prototype._createPlayer = function() {
@@ -136,11 +136,11 @@ Flickity.prototype._createPlayer = function() {
 Flickity.prototype.stopPlayer = function() {
   this.player.stop();
 };
-{% endhighlight %}
+```
 
 There's some extra glue required to put this together. Feature-specific `Flickity.prototype` methods need to be triggered on creation. Events need to be bound before they are emitted. To handle this, within `Flickity.prototype.create()`, each method in [`Flickity.createMethods` gets triggered](https://github.com/metafizzy/flickity/blob/70cf18a7eb/js/flickity.js#L143-L146).
 
-{% highlight js %}
+``` js
 // flickity.js
 Flickity.prototype._create = function() {
   // ...
@@ -150,18 +150,18 @@ Flickity.prototype._create = function() {
     this[ method ]();
   }
 };
-{% endhighlight %}
+```
 
 Features can then register their create methods:
 
-{% highlight js %}
+``` js
 // feature.js
 Flickity.createMethods.push('_createFeature');
 
 Flickity.prototype._createFeature = function() {
   // do feature-specific creation and event binding
 };
-{% endhighlight %}
+```
 
 A feature's code exists only in that feature's `.js` file, and not sprinkled through out the project.
 

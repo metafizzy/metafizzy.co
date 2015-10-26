@@ -8,7 +8,7 @@ layout: blog
 
 One of [Slick](http://kenwheeler.github.io/slick/)'s hotter feature request is to [disable Slick functionality at certain CSS breakpoints](https://github.com/kenwheeler/slick/issues/542). This touches at a tricky issue: setting JavaScript functionality with CSS. Imagine this CSS pseudo-code:
 
-{% highlight css %}
+``` css
 /* default css, small devices like phones, less than 768px */
 
 /* JS widget is enabled by default */
@@ -18,11 +18,11 @@ One of [Slick](http://kenwheeler.github.io/slick/)'s hotter feature request is t
   
   /* JS widget is now disabled */
 }
-{% endhighlight %}
+```
 
 Slick has an awesome feature where you can set variations of options for various breakpoints.
 
-{% highlight css %}
+``` css
 $('.responsive').slick({
   slidesToShow: 4,
   slidesToScroll: 4,
@@ -43,7 +43,7 @@ $('.responsive').slick({
     }
   ]
 });
-{% endhighlight %}
+```
 
 But this approach comes with issues. It works by setting style information in JavaScript, when it should be kept in CSS. Also, [JavaScript can mis-interpret the window width](https://github.com/kenwheeler/slick/issues/560), causing a mismatch between the breakpoint used in JavaScript versus CSS.
 
@@ -51,7 +51,7 @@ But this approach comes with issues. It works by setting style information in Ja
 
 With Isotope, I tried a technique to set options via the state of CSS. You can set the [`columnWidth`](http://isotope.metafizzy.co/layout-modes/masonry.html#columnwidth) by pointing to [the size of a dummy element](http://isotope.metafizzy.co/options.html#element-sizing).
 
-{% highlight html %}
+``` html
 <div class="container">
   <!-- dummy element for size of columnWidth -->
   <div class="grid-sizer"></div>
@@ -59,9 +59,9 @@ With Isotope, I tried a technique to set options via the state of CSS. You can s
   <div class="item"></div>
   ...
 </div>
-{% endhighlight %}
+```
 
-{% highlight css %}
+``` css
 /* default, 3 columns */
 .grid-sizer, .item { width: 33.333%; }
 
@@ -69,9 +69,9 @@ With Isotope, I tried a technique to set options via the state of CSS. You can s
   /* larger devices, 5 columns */
   .grid-sizer, .item { width: 20%; }
 }
-{% endhighlight %}
+```
 
-{% highlight js %}
+``` js
 $('.container').isotope({
   itemSelector: '.item',
   masonry: {
@@ -79,7 +79,7 @@ $('.container').isotope({
     columnWidth: '.grid-sizer'
   }
 });
-{% endhighlight %}
+```
 
 <p data-height="356" data-theme-id="0" data-slug-hash="BypgYq" data-default-tab="result" data-user="desandro" class='codepen'>See the Pen <a href='http://codepen.io/desandro/pen/BypgYq/'>Isotope - element sizing columnWidth</a> by David DeSandro (<a href='http://codepen.io/desandro'>@desandro</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
@@ -91,21 +91,21 @@ Back to the first problem: How can the widget be enabled or disabled with CSS? I
 
 I like Jeremy Keith's [Conditional CSS technique](https://adactio.com/journal/5429). It works by reading the `content` of a pseudo-element `:after`.
 
-{% highlight css %}
+``` css
 @media all and (min-width: 45em) {
   body:after {
     content: 'widescreen';
     display: none;
   }
 }
-{% endhighlight %}
+```
 
-{% highlight js %}
+``` js
 var size = getComputedStyle( document.body,':after' ).content;
 if ( size.indexOf('widescreen') !=-1 ) {
     // do widescreen stuff
 }
-{% endhighlight %}
+```
 
 Try resizing the window on [this CodePen to see this technique in effect](http://codepen.io/desandro/pen/emgwPJ).
 

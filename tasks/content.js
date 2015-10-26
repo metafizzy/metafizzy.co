@@ -30,6 +30,7 @@ gulp.task( 'content-homepage', function() {
 
 var moment = require('moment');
 var marked = require('gulp-marked');
+var highlight = require('highlight.js');
 
 // array of all posts
 var posts = [];
@@ -46,19 +47,15 @@ gulp.task( 'posts', function() {
       remove: true
     }) )
     .pipe( through.obj( function( file, encoding, callback ) {
+      // get dateCode and slug from basename
       var basename = path.basename( file.path, path.extname( file.path ) );
-      // get dateCode and slug
       var matches = basename.match( rePostPath );
       file.dateCode = matches[1];
       file.slug = matches[2];
-      file.date = new Date( file.dateCode ); // used for sorting
       // file data
+      file.date = new Date( file.dateCode ); // used for sorting
       file.timestamp = moment( file.date ).format('D MMM YYYY');
       file.title = file.frontMatter.title;
-
-      // get markdown html
-      // var contents = file.contents.toString();
-      // file.contentHTML =
 
       posts.push( file );
       return callback( null, file );
@@ -80,7 +77,11 @@ gulp.task( 'posts', function() {
         callback();
       }
     ))
-    .pipe( marked() )
+    .pipe( marked({
+      highlight: function( code ) {
+        return highlight.highlightAuto( code ).value;
+      }
+    }) )
     // create post permalink pages
     .pipe( rename( function( postPath ) {
       var matches = postPath.basename.match( rePostPath );

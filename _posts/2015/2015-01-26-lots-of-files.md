@@ -8,7 +8,7 @@ layout: blog
 
 Right now, if you wanted to use [Flickity](http://flickity.metafizzy.co) using every source file, you would need to hook up 17 different JavaScript files. I actually do this for the [sandbox demos used for development](https://github.com/metafizzy/flickity/blob/v0.1.0/sandbox/basic.html#L138-L155).
 
-{% highlight html %}
+``` html
 <!-- dependencies -->
 <script src="../bower_components/get-style-property/get-style-property.js"></script>
 <script src="../bower_components/get-size/get-size.js"></script>
@@ -28,7 +28,7 @@ Right now, if you wanted to use [Flickity](http://flickity.metafizzy.co) using e
 <script src="../js/animate.js"></script>
 <script src="../js/cell-change.js"></script>
 <script src="../js/flickity.js"></script>
-{% endhighlight %}
+```
 
 Granted, this looks like madness. If you're a front-end developer worth your salt, seeing 17 consecutive `<script>` tags should make you  cringe. But this madness has a purpose.
 
@@ -38,7 +38,7 @@ Encapsulation is a powerful programming concept. I like to think of it in a lite
 
 Typically, encapsulation is exhibited in how you structure code. Consider this function used to check support for a browser feature:
 
-{% highlight js %}
+``` js
 var supportsConditionalCSS = ( function() {
   var supports;
   return function checkSupport() {
@@ -57,11 +57,11 @@ var supportsConditionalCSS = ( function() {
     return supports;
   };
 })();
-{% endhighlight %}
+```
 
 This can be simplified conceptually:
 
-{% highlight js %}
+``` js
 var checkSupport = ( function() {
   var support;
   function check() {
@@ -76,7 +76,7 @@ var checkSupport = ( function() {
   }
   return check;
 })();
-{% endhighlight %}
+```
 
 The `checkSupport` logic is enclosed in a IIFE. It's internal variables, `support` and `check()` are kept private within the IIFE, so they don't have naming conflicts with outside variables, nor can they be interfered with. There's a performance benefit, as data within the IIFE can be garbage collected. The only exposed piece of logic is `checkSupport()`.
 
@@ -90,7 +90,7 @@ When we write code, we are writing instructions — stories for machines to act 
 
 Take Flickity's [Player](https://github.com/metafizzy/flickity/blob/v0.1.0/js/player.js) class. Its one purpose is to tick every couple of seconds and advance the gallery to the next cell. I could have built this functionality right into the core `flickity.js` file. By making it a separate concept, the code makes for a cleaner API.
 
-{% highlight js %}
+``` js
 this.player = new Player( this );
 this.player.play();
 this.player.stop();
@@ -98,7 +98,7 @@ this.player.stop();
 this.player.pause();
 // unpauses resumes playing, if not stopped while paused
 this.player.unpause();
-{% endhighlight %}
+```
 
 A clean API is a programmer's way of saying _an easy story_. The `Flickity` instance doesn't need to keep track of the `player`'s state. Nor does the `player` need to know how the `Flickity` instance works. Both classes are self-contained in little stories.
 

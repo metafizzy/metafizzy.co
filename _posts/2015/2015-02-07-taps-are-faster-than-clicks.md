@@ -30,9 +30,9 @@ Interestingly, if you hold down the tap a bit longer, the click event fires imme
 
 The solution recommended there is to use disable page zooming.
 
-{% highlight html %}
+``` html
 <meta name="viewport" content="width=device-width, user-scalable=no">
-{% endhighlight %}
+```
 
 This may work for some recent mobile browsers, but in [my testing](http://codepen.io/desandro/full/EabQpZ), I don't see an improvement. It also requires changing with the meta `viewport` tag, which is something a third-party library shouldn't be messing with.
 

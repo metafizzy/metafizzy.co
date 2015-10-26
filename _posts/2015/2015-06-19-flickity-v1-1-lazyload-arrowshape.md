@@ -12,10 +12,10 @@ Flickity get its first minor release with v1.1. Just in time for summer with Met
 
 [lazyLoad](http://flickity.metafizzy.co/options.html#lazyload) works by loading images when a cell is selected.
 
-{% highlight html %}
+``` html
 <!-- set image's URL to load with data-flickity-lazyload -->
 <img data-flickity-lazyload="full.jpg" />
-{% endhighlight %}
+```
 
 Set `lazyLoad: true` in the Flickity options.
 
