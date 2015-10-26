@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Metafizzy</title>
+
+</head>
+<body>
+
+<h1>Metafizzy</h1>
+
+<p>Delightful web UI</p>
+
+<section class="homepage-section">
+
+  <h2 class="homepage-section__title">Featuring</h2>
+
+  <div class="feature-group">
+    <div class="feature">
+      <h3 class="feature__title">Isotope</h3>
+      <p class="feature__description">Filter &amp; sort magical layouts</p>
+      <div class="feature__demo"></div>
+    </div>
+
+    <div class="feature">
+      <h3 class="feature__title">Flickity</h3>
+      <p class="feature__description">Touch, responsive, flickable galleries</p>
+      <div class="feature__demo"></div>
+    </div>
+
+    <div class="feature">
+      <h3 class="feature__title">Packery</h3>
+      <p class="feature__description">Gap-less &amp; draggable layouts</p>
+      <div class="feature__demo"></div>
+    </div>
+  </div>
+
+</section> {{! .homepage-section }}
+
+<section class="homepage-section">
+  <h2 class="homepage-section__title">Blog</h2>
+  {{#each homepageBlogPosts}}
+    <a class="homepage-blog-item" href="{{url}}">
+      <h3 class="homepage-blog-item">{{title}}</h3>
+    </a>
+  {{/each}}
+
+  <p class="homepage-blog-tagline"><a href="/blog">Read more in our blog</a></p>
+</section>
+
+<section class="homepage-section">
+  <h2 class="homepage-section__title">About</h2>
+
+  <div class="homepage-about-copy">
+    <p>Web design is not a niche craft anymore. It is part of everyone&rsquo;s job today. Metafizzy builds delightful UI libraries so anyone can create compelling, captivating experiences on the web. You don&rsquo;t have to know the nitty-gritty. That&rsquo;s our job.</p>
+
+    <p>You make the stuff that matters. We make the widgets.</p>
+
+    <p>Metafizzy is a small web development shop, led by David DeSandro in Alexandria, VA. We&rsquo;ve been building and supporting our libraries for over 5 years. We enjoy making things and hope you do too.</p>
+  </div>
+</section>
+
+</body>
+</html>
