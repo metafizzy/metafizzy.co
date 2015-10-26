@@ -13,17 +13,11 @@
   <p><a href="/blog">Metafizzy blog</a></p>
 </div>
 
-<ul>
-  {{#each posts}}
-  <li>{{dateCode}} | {{slug}}</li>
-  {{/each}}
-</ul>
-
 <div class="container">
   {{#each pagePosts}}
     <div class="post">
-      <h1 class="post__title">{{title}}</h1>
-      <p class="post__date">{{date}}</p>
+      <h1 class="post__title"><a href="/blog/{{slug}}">{{{title}}}</a></h1>
+      <p class="post__date">{{timestamp}} | {{dateCode}}</p>
       <div class="post__content">
         {{content}}
       </div>
@@ -32,7 +26,7 @@
 
   <nav class="pagination">
     {{#if previousPage}}
-      <a class="pagination__prevoius" href="/blog/page{{previousPage}}">Previous {{previousPage}}</a>
+      <a class="pagination__prevoius" href="{{previousPage.url}}">Previous {{previousPage.index}}</a>
     {{/if}}
     <span class="pagination__current">Page {{currentPage}} of {{totalPages}}</span>
     {{#if nextPage}}
