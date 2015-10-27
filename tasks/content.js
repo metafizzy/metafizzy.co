@@ -27,24 +27,7 @@ registerPostsTask( posts, paginatedPosts, Handlebars );
 // -------------------------- css -------------------------- //
 
 var registerCSSTask = require('./css');
-
-var cssSrcs = [
-  'bower_components/normalize-css/normalize.css',
-  'modules/*/*.css'
-];
-
-var cssPaths = utils.getGlobPaths( cssSrcs );
-siteData.cssPaths = cssPaths.map( function( cssPath ) {
-  return utils.getBasename( cssPath ) + '.css';
-});
-
-gulp.task( 'copy-css', function() {
-  gulp.src( cssSrcs )
-    .pipe( rename({
-      dirname: ''
-    }))
-    .pipe( gulp.dest('build/css') );
-});
+registerCSSTask( siteData );
 
 // -------------------------- content -------------------------- //
 

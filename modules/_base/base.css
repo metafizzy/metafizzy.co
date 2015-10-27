@@ -1,0 +1,63 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ---- webfonts ---- */
+
+/*
+  Just use WOFF2 and WOFF for webfonts
+  http://css-tricks.com/snippets/css/using-font-face/ */
+
+/* Texta Regular */
+@font-face {
+  font-family: 'Texta';
+  src: url('/fonts/2D333F_2_0.woff2') format('woff2'),
+    url('/fonts/2D333F_2_0.woff') format('woff');
+}
+
+/* Texta Heavy */
+@font-face {
+  font-family: 'Texta';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/fonts/2D333F_0_0.woff2') format('woff2'),
+    url('/fonts/2D333F_0_0.woff') format('woff');
+}
+
+/* Texta Italic */
+@font-face {
+  font-family: 'Texta';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/fonts/2D333F_1_0.woff2') format('woff2'),
+    url('/fonts/2D333F_1_0.woff') format('woff');
+}
+
+/* ---- base ---- */
+
+/* set on html for rem */
+html {
+  font-family: Texta, sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+body {
+  background: #333;
+  color: #F5F5F5;
+}
+
+
+a {
+  color: #D36;
+  text-decoration: none;
+}
+
+/* ---- modules ---- */
+
+.container {
+  padding: 0 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}

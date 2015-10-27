@@ -4,35 +4,29 @@ var gulp = require('gulp');
 // var rename = require('gulp-rename');
 // var through = require('through2');
 
-require('./tasks/content');
 
-// -------------------------- serve -------------------------- //
+// ----- assets ----- //
+
+// copy assets to build
+gulp.task( 'assets', function() {
+  return gulp.src('assets/**/*.*')
+    .pipe( gulp.dest('build') );
+});
+
+// ----- serve ----- //
 
 var serve = require('gulp-serve');
 
 gulp.task( 'serve', serve('build') );
 
-// -------------------------- utils -------------------------- //
+// ----- content ----- //
 
-var glob = require('glob');
+require('./tasks/content');
 
-/**
- * getGlobPaths
- * takes glob src and returns expanded paths
- * @param {Array} src
- * @returns {Array} paths
- */
-function getGlobPaths( src ) {
-  var paths = [];
-  // replace all glob paths with expanded paths
-  src.forEach( function( filepath ) {
-    if ( glob.hasMagic( filepath ) ) {
-      var files = glob.sync( filepath );
-      // replace glob with paths
-      paths = paths.concat( files );
-    } else {
-      paths.push( filepath );
-    }
-  });
-  return paths;
-}
+// ----- default ----- //
+
+gulp.task( 'default', [
+  'assets',
+  'copy-css',
+  'content'
+]);
