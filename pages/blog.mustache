@@ -15,13 +15,7 @@
 
 <div class="container">
   {{#each pagePosts}}
-    <div class="post">
-      <h1 class="post__title"><a href="/blog/{{slug}}">{{{title}}}</a></h1>
-      <p class="post__date">{{timestamp}} | {{dateCode}}</p>
-      <div class="post__content">
-        {{content}}
-      </div>
-    </div>
+    {{> post}}
   {{/each}}
 
   <nav class="pagination">
