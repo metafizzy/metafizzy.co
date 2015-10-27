@@ -2,7 +2,8 @@ var gulp = require('gulp');
 var through = require('through2');
 var Handlebars = require('handlebars');
 var rename = require('gulp-rename');
-var path = require('path');
+var utils = require('./utils');
+// var path = require('path');
 
 // ----- vars ----- //
 
@@ -10,6 +11,8 @@ var path = require('path');
 var posts = [];
 // hash of posts per page
 var paginatedPosts = [];
+
+var siteData = {};
 
 // -------------------------- partials -------------------------- //
 
@@ -23,16 +26,32 @@ registerPostsTask( posts, paginatedPosts, Handlebars );
 
 // -------------------------- css -------------------------- //
 
-var cssSources = [
+var registerCSSTask = require('./css');
+
+var cssSrcs = [
   'bower_components/normalize-css/normalize.css',
   'modules/*/*.css'
 ];
+
+var cssPaths = utils.getGlobPaths( cssSrcs );
+siteData.cssPaths = cssPaths.map( function( cssPath ) {
+  return utils.getBasename( cssPath ) + '.css';
+});
+
+gulp.task( 'copy-css', function() {
+  gulp.src( cssSrcs )
+    .pipe( rename({
+      dirname: ''
+    }))
+    .pipe( gulp.dest('build/css') );
+});
 
 // -------------------------- content -------------------------- //
 
 // templating plugin, builds content with Handlebars
 function template( data ) {
   data = data || {};
+  utils.extend( data, siteData );
 
   return through.obj( function( file, encoding, callback ) {
     var fileContents = file.contents.toString();

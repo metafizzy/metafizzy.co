@@ -6,6 +6,10 @@
 
   <title>Metafizzy blog</title>
 
+  {{#each cssPaths}}
+    <link rel="stylesheet" href="/css/{{this}}" media="screen" />
+  {{/each}}
+
 </head>
 <body>
 
@@ -21,7 +25,7 @@
 
   <nav class="pagination">
     {{#if previousPage}}
-      <a class="pagination__prevoius" href="{{previousPage.url}}">Previous {{previousPage.index}}</a>
+      <a class="pagination__previous" href="{{previousPage.url}}">Previous {{previousPage.index}}</a>
     {{/if}}
     <span class="pagination__current">Page {{currentPage}} of {{totalPages}}</span>
     {{#if nextPage}}
