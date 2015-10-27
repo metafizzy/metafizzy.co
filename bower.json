@@ -1,0 +1,24 @@
+{
+  "name": "metafizzy.co",
+  "version": "2.0.0",
+  "dependencies": {
+    "packery": "~1.4.3",
+    "flickity": "~1.1.1",
+    "isotope": "~2.2.2",
+    "normalize-css": "~3.0.3"
+  },
+  "homepage": "https://github.com/metafizzy/metafizzy.co",
+  "authors": [
+    "Metafizzy"
+  ],
+  "description": "Metafizzy site",
+  "license": "BY CC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

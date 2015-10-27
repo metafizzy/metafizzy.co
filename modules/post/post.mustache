@@ -2,6 +2,7 @@
   <h1 class="post__title"><a href="/blog/{{slug}}">{{{title}}}</a></h1>
   <p class="post__date">{{timestamp}} | {{dateCode}}</p>
   <div class="post__content">
-    {{{contents}}}
+{{! remove preceding whitespace for <pre><code> blocks }}
+{{{contents}}}
   </div>
 </article>

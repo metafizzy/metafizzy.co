@@ -15,7 +15,8 @@
 
 <div class="container">
   {{#each pagePosts}}
-    {{> post}}
+{{! no whitespace for <pre><code> blocks }}
+{{> post}}
   {{/each}}
 
   <nav class="pagination">
