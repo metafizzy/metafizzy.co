@@ -54,6 +54,10 @@ a {
   text-decoration: none;
 }
 
+svg {
+  fill: white;
+}
+
 /* ---- modules ---- */
 
 .container {
