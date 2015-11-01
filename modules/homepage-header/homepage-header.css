@@ -1,4 +1,44 @@
+.homepage-header {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.homepage-header__side {
+  width: 25%;
+}
+
+.homepage-header__logo {
+  display: block;
+  max-width: 100%;
+}
+
+.homepage-header__content {
+  flex-grow: 1;
+  position: relative;
+}
+
+.homepage-header__title {
+  margin: 0;
+  padding-top: 30px;
+}
+
+/* hide text for svg */
 .homepage-header__title__text {
-  display: inline-block;
+  display: block;
   text-indent: -9999rem;
+  height: 0;
+}
+
+.homepage-header__wordmark {
+  width: 100%;
+  height: 210px;
+}
+
+.homepage-header__tagline {
+  position: absolute;
+  left: 60px;
+  bottom: 5px;
+  font-size: 50px;
+  font-style: italic;
+  margin: 0;
 }
