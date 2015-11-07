@@ -18,8 +18,14 @@ gulp.task( 'copy-css', function() {
     .pipe( gulp.dest('build/css') );
 });
 
-module.exports = function( siteData ) {
-  siteData.cssPaths = cssPaths.map( function( cssPath ) {
+module.exports = function( site ) {
+
+  site.data.cssPaths = cssPaths.map( function( cssPath ) {
     return utils.getBasename( cssPath ) + '.css';
+  });
+
+  site.watches.push({
+    src: cssSrcs,
+    tasks: [ 'copy-css' ]
   });
 };

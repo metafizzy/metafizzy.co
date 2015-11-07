@@ -12,13 +12,19 @@ var postsPerPage = 6;
 
 var rePostPath = /(\d\d\d\d\-\d\d\-\d\d)\-([\w\d\-_]+)/;
 
-module.exports = function( posts, paginatedPosts, Handlebars ) {
+var postsSrc = '_posts/2015/**.md';
+
+module.exports = function( site ) {
+  var Handlebars = site.Handlebars;
+  var posts = site.posts;
+  var paginatedPosts = site.paginatedPosts;
+
   gulp.task( 'posts', [ 'partials' ], function() {
 
     var blogPermalinkSrc = fs.readFileSync( 'pages/blog-permalink.mustache', 'utf8' );
     var blogPermalinkTemplate = Handlebars.compile( blogPermalinkSrc );
 
-    return gulp.src('_posts/2015/**.md')
+    return gulp.src( postsSrc )
       .pipe( frontMatter({
         property: 'frontMatter',
         remove: true
@@ -77,6 +83,11 @@ module.exports = function( posts, paginatedPosts, Handlebars ) {
       .pipe( gulp.dest('build') );
 
   });
-  
+
+  site.watches.push({
+    src: postsSrc,
+    tasks: [ 'posts' ]
+  });
+
 };
 
