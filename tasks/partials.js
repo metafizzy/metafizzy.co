@@ -25,7 +25,7 @@ module.exports = function( site ) {
 
   site.watches.push({
     src: partialsSrc,
-    tasks: [ 'partials' ]
+    tasks: [ 'partials', 'content' ]
   });
 
 };

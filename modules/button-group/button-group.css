@@ -1,0 +1,22 @@
+/* button group
+------------------------- */
+
+/* clearfix */
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+}
+
+.button-group .button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.button-group .button:last-child {
+  border-radius: 0 8px 8px 0;
+  border-right: 1px solid #BBB;
+}
