@@ -6,6 +6,12 @@
 
 var wordmarkImg = document.querySelector('.homepage-header__title__image');
 var canvas = document.querySelector('.homepage-header__title__canvas');
+
+// bail if wordmark is not on page
+if ( !wordmarkImg ) {
+  return;
+}
+
 var ctx = canvas.getContext('2d');
 var trailCount = 100;
 

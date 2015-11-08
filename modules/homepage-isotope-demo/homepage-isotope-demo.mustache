@@ -1,9 +1,10 @@
 <div class="homepage-isotope-demo homepage-product__demo">
 
   <div class="button-group">
-    <button class="button is-selected" data-arrange="original">Original</button>
-    <button class="button" data-arrange="red123">Red 123</button>
-    <button class="button" data-arrange="blueOrangeZYX">Blue &amp; Gold ZYX</button>
+    <button class="button is-selected" data-arrange='{ "filter": "*", "sortBy": "original-order" }'>Original</button>
+    <button class="button" data-arrange='{ "filter": ".homepage-isotope-demo__grid__item--red" }'>Red</button>
+    <button class="button" data-arrange='{ "filter": ".homepage-isotope-demo__grid__item--red, .homepage-isotope-demo__grid__item--gold" }'>Red &amp; Gold</button>
+    <button class="button" data-arrange='{ "sortBy": "number" }'>123</button>
   </div>
 
   <div class="homepage-isotope-demo__grid">
