@@ -42,6 +42,7 @@ site.addWatch( assetsSrc, [ 'assets' ] );
 require('./tasks/partials')( site );
 require('./tasks/posts')( site );
 require('./tasks/css')( site );
+require('./tasks/js')( site );
 require('./tasks/content')( site );
 
 // ----- serve ----- //
@@ -55,6 +56,7 @@ gulp.task( 'serve', serve('build') );
 gulp.task( 'default', [
   'assets',
   'copy-css',
+  'copy-js',
   'content'
 ]);
 

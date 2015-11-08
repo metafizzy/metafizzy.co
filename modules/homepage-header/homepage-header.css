@@ -13,7 +13,7 @@
 }
 
 .homepage-header__content {
-  flex-grow: 1;
+  width: 75%;
   position: relative;
 }
 
@@ -27,6 +27,19 @@
   display: block;
   text-indent: -9999rem;
   height: 0;
+}
+
+.homepage-header__title__canvas {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 110%; /* canvas is 1100px, img is 1000 */
+}
+
+.homepage-header__title__image {
+  display: block;
+  max-width: 100%;
+  position: relative;
 }
 
 .homepage-header__wordmark {

@@ -1,15 +1,14 @@
 /* button group
 ------------------------- */
 
-/* clearfix */
-.button-group:after {
-  content: '';
-  display: block;
-  clear: both;
+.button-group {
+  margin-bottom: 20px;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .button-group .button {
-  float: left;
+  margin-right: 1px;
 }
 
 .button-group .button:first-child {

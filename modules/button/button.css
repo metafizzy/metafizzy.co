@@ -4,8 +4,7 @@
 .button {
   display: block;
   padding: 6px 20px;
-  border: 1px solid #BBB;
-  border-right: none;
+  border: none;
   background-color: #EEE;
   background-image: linear-gradient( hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.1) );
   color: #333;

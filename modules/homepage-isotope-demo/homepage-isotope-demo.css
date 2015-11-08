@@ -1,3 +1,8 @@
+.homepage-isotope-demo .button {
+  padding: 4px 12px;
+  font-size: 0.9rem;
+}
+
 .homepage-isotope-demo__grid__item {
   position: relative;
   float: left;

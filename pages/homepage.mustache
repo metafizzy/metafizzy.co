@@ -21,33 +21,7 @@
 
   <section class="homepage-section">
 
-    <h2 class="homepage-section__title">Products</h2>
-
-    <div class="homepage-products">
-      <div class="homepage-product">
-        <a class="homepage-product__link" href="http://isotope.metafizzy.co">
-          <h3 class="homepage-product__title">Isotope</h3>
-          <p class="homepage-product__description">Filter &amp; sort magical layouts</p>
-        </a>
-        {{> homepage-isotope-demo}}
-      </div>
-
-      <div class="homepage-product">
-        <a class="homepage-product__link" href="http://flickity.metafizzy.co">
-          <h3 class="homepage-product__title">Flickity</h3>
-          <p class="homepage-product__description">Touch, responsive, flickable galleries</p>
-        </a>
-        <div class="homepage-product__demo"></div>
-      </div>
-
-      <div class="homepage-product">
-        <a class="homepage-product__link" href="http://packery.metafizzy.co">
-          <h3 class="homepage-product__title">Packery</h3>
-          <p class="homepage-product__description">Gap-less, draggable layouts</p>
-        </a>
-        <div class="homepage-product__demo"></div>
-      </div>
-    </div>
+    {{> homepage-products}}
 
   </section>
 
@@ -90,6 +64,10 @@
   </section>
 
 </div> {{! .container }}
+
+{{#each jsPaths}}
+  <script src="/js/{{this}}"></script>
+{{/each}}
 
 </body>
 </html>
