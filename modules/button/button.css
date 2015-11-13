@@ -8,6 +8,7 @@
   background-color: #EEE;
   background-image: linear-gradient( hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.1) );
   color: #333;
+  line-height: 1;
 }
 
 .button:hover {
@@ -27,6 +28,6 @@
 }
 
 .button.is-selected {
-  background-color: #E62;
+  background-color: #19F;
   color: white;
 }

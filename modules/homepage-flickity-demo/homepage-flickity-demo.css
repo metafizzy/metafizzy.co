@@ -1,5 +1,5 @@
-.homepage-flickity-demo {
-  background: #222;
+:root .homepage-flickity-demo {
+  padding: 20px 0 30px;
 }
 
 .homepage-flickity-demo__cell {

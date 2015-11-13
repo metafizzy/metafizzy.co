@@ -3,7 +3,7 @@
 
 .button-group {
   margin-bottom: 20px;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 

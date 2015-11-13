@@ -1,6 +1,7 @@
 .homepage-header {
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  padding-top: 40px;
 }
 
 .homepage-header__side {

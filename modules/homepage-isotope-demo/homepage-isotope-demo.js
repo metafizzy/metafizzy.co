@@ -15,6 +15,7 @@ if ( !demo ) {
 var grid = demo.querySelector('.homepage-isotope-demo__grid');
 var iso = new Isotope( grid, {
   layoutMode: 'fitRows',
+  percentPosition: true,
   getSortData: {
     letter: '.homepage-isotope-demo__grid__item__letter',
     number: '.homepage-isotope-demo__grid__item__number parseInt'
