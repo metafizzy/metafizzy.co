@@ -13,6 +13,7 @@
 
 .homepage-product__link:hover {
   background: #C25;
+  color: white;
 }
 
 .homepage-product__title {
@@ -52,6 +53,7 @@
 
 .homepage-product__big-button:hover {
   background: #19F;
+  color: white;
 }
 
 @media screen and (min-width: 768px) {

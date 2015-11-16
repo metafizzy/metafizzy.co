@@ -4,3 +4,33 @@
 .homepage-section {
   margin-top: 60px;
 }
+
+.homepage-section__title {
+  font-size: 3.0rem;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.homepage-copy {
+  font-size: 1.2rem;
+}
+
+/* ---- homepage-posts ---- */
+
+.homepage-posts {
+  list-style: none;
+  padding: 0;
+}
+
+.homepage-posts__item {
+  margin-bottom: 20px;
+}
+
+.homepage-posts__item__link {
+  display: block;
+}
+
+.homepage-posts__item__title {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
