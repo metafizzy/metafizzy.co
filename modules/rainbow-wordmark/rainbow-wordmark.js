@@ -4,13 +4,15 @@
 
 ( function() {
 
-var wordmarkImg = document.querySelector('.homepage-header__title__image');
-var canvas = document.querySelector('.homepage-header__title__canvas');
+var wordmark = document.querySelector('.rainbow-wordmark');
 
 // bail if wordmark is not on page
-if ( !wordmarkImg ) {
+if ( !wordmark ) {
   return;
 }
+
+var wordmarkImg = wordmark.querySelector('.rainbow-wordmark__image');
+var canvas = wordmark.querySelector('.rainbow-wordmark__canvas');
 
 var ctx = canvas.getContext('2d');
 var trailCount = 100;

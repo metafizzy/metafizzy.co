@@ -6,6 +6,12 @@
 
 (function() {
 
+var grid = document.querySelector('.homepage-packery-demo__grid');
+
+if ( !grid ) {
+  return;
+}
+
 var pckry = new Packery( '.homepage-packery-demo__grid', {
   itemSelector: '.homepage-packery-demo__grid__item',
   columnWidth: '.homepage-packery-demo__grid__sizer',

@@ -1,0 +1,24 @@
+.rainbow-wordmark {
+  position: relative;
+  margin: 0;
+}
+
+/* hide text for svg */
+.rainbow-wordmark__text {
+  display: block;
+  text-indent: -9999rem;
+  height: 0;
+}
+
+.rainbow-wordmark__canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 110%; /* canvas is 1100px, img is 1000 */
+}
+
+.rainbow-wordmark__image {
+  display: block;
+  max-width: 100%;
+  position: relative;
+}

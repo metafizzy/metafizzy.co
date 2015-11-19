@@ -7,13 +7,27 @@
 }
 
 .blog-header__logo {
-  height: 72px;
+  height: 100px;
   vertical-align: bottom;
   margin-right: 5px;
 }
 
+.blog-header .rainbow-wordmark {
+  width: 220px;
+}
+
 .blog-header__title-link {
-  font-size: 2.2rem;
-  line-height: 72px;
+  display: inline-block;
+  text-shadow: 1px 1px #222, 2px 2px #222;
+}
+
+.blog-header__title-blog-text {
+  position: relative;
+  display: block;
+  font-size: 1.4rem;
   font-style: italic;
+  line-height: 1;
+  margin-top: -0.5rem;
+  padding-left: 10px;
+  color: white;
 }

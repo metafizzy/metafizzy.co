@@ -1,16 +1,20 @@
 <header class="homepage-header">
 
-  <div class="homepage-header__side">
-    <img class="homepage-header__logo" src="/img/metafizzy-logo.png" alt="Metafizzy logo" />
-  </div>
+  <div class="container">
 
-  <div class="homepage-header__content">
-    <h1 class="homepage-header__title">
-      <span class="homepage-header__title__text">Metafizzy</span>
-      <canvas class="homepage-header__title__canvas" width="1100" height="400"></canvas>
-      <img class="homepage-header__title__image" src="/img/wordmark-white.png" alt="Metafizzy" />
-    </h1>
-    <p class="homepage-header__tagline">Delightful web UI</p>
+    <div class="homepage-header__container">
+
+      <div class="homepage-header__side">
+        <img class="homepage-header__logo" src="/img/metafizzy-logo.png" alt="Metafizzy logo" />
+      </div>
+
+      <div class="homepage-header__content">
+        {{> rainbow-wordmark}}
+        <p class="homepage-header__tagline">Delightful web UI</p>
+      </div>
+
+    </div>
+
   </div>
 
 </header>
