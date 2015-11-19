@@ -1,3 +1,57 @@
+/* post
+------------------------- */
+
 .post {
   display: block;
+  max-width: 660px;
+  padding: 50px 0;
+  position: relative;
+}
+
+.post ~ .post:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  background: #222;
+  border-radius: 3px;
+}
+
+.post__title {
+  line-height: 1.0;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.post__date {
+  color: #E62;
+  margin: 0 0 30px;
+}
+
+.post__content a {
+  color: #19F;
+}
+
+.post__content a:hover {
+  color: #EA0;
+  text-decoration: underline;
+}
+
+.post__content img {
+  display: block;
+  margin: 1.0rem 0;
+  max-width: 100%;
+}
+
+.post__content iframe {
+  margin: 1.0rem 0;
+}
+
+.post__content hr {
+  border: none;
+  border-top: 4px solid #222;
+  margin: 2.0rem 0;
 }

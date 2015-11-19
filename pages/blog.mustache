@@ -16,10 +16,10 @@
 {{> blog-header}}
 
 <div class="container">
-  {{#each pagePosts}}
 {{! no whitespace for <pre><code> blocks }}
+{{#each pagePosts}}
 {{> post}}
-  {{/each}}
+{{/each}}
 
   <nav class="pagination">
     {{#if previousPage}}

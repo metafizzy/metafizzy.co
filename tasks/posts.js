@@ -37,8 +37,8 @@ module.exports = function( site ) {
         remove: true
       }) )
       .pipe( marked({
-        highlight: function( code ) {
-          return highlight.highlightAuto( code ).value;
+        highlight: function( code, lang ) {
+          return lang ? highlight.highlight( lang, code ).value : code;
         }
       }) )
       .pipe( through.obj( function( file, encoding, callback ) {
@@ -62,10 +62,11 @@ module.exports = function( site ) {
             return b.date - a.date;
           });
           // arrange in pages
+
+          var paginatedPosts = site.paginatedPosts = [];
           site.posts.forEach( function( postFile, i ) {
             var pageIndex = Math.floor( i / postsPerPage );
             // add new array of posts if not there
-            var paginatedPosts = site.paginatedPosts;
             paginatedPosts[ pageIndex ] = paginatedPosts[ pageIndex ] || [];
             paginatedPosts[ pageIndex ].push( postFile );
           });
