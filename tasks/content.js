@@ -11,9 +11,10 @@ module.exports = function( site ) {
   var homepageSrc = 'pages/homepage.mustache';
 
   gulp.task( 'content-homepage', [ 'posts', 'partials' ], function() {
+    var homepagePosts = site.posts.slice( 0, 5 );
     return gulp.src( homepageSrc )
       .pipe( template({
-        homepagePosts: site.posts.slice( 0, 5 )
+        homepagePosts: homepagePosts
       }) )
       .pipe( rename('index.html') )
       .pipe( gulp.dest('build') );

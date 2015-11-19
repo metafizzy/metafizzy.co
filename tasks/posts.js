@@ -16,8 +16,6 @@ var blogPermalinkSrc = 'pages/blog-permalink.mustache';
 
 module.exports = function( site ) {
   var Handlebars = site.Handlebars;
-  var posts = site.posts;
-  var paginatedPosts = site.paginatedPosts;
 
   var blogPermalinkTemplate;
 
@@ -29,9 +27,9 @@ module.exports = function( site ) {
       }));
   });
 
-  console.log( site.cssPaths);
-
   gulp.task( 'posts', [ 'partials', 'blog-permalink-template' ], function() {
+    // reset posts
+    site.posts = [];
 
     return gulp.src( postsSrc )
       .pipe( frontMatter({
@@ -54,19 +52,20 @@ module.exports = function( site ) {
         file.timestamp = moment( file.date ).format('D MMM YYYY');
         file.title = file.frontMatter.title;
         // add file to posts collection
-        posts.push( file.clone() );
+        site.posts.push( file.clone() );
         return callback( null, file );
       },
         // flush function: sort posts and put into pages
         function( callback ) {
           // sort by date
-          posts.sort( function( a, b ) {
+          site.posts.sort( function( a, b ) {
             return b.date - a.date;
           });
           // arrange in pages
-          posts.forEach( function( postFile, i ) {
+          site.posts.forEach( function( postFile, i ) {
             var pageIndex = Math.floor( i / postsPerPage );
             // add new array of posts if not there
+            var paginatedPosts = site.paginatedPosts;
             paginatedPosts[ pageIndex ] = paginatedPosts[ pageIndex ] || [];
             paginatedPosts[ pageIndex ].push( postFile );
           });
