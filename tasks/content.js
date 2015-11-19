@@ -5,8 +5,6 @@ var utils = require('./utils');
 
 module.exports = function( site ) {
   var Handlebars = site.Handlebars;
-  var posts = site.posts;
-  var paginatedPosts = site.paginatedPosts;
 
   // ----- homepage ----- //
 
@@ -15,7 +13,7 @@ module.exports = function( site ) {
   gulp.task( 'content-homepage', [ 'posts', 'partials' ], function() {
     return gulp.src( homepageSrc )
       .pipe( template({
-        homepagePosts: posts.slice( 0, 5 )
+        homepagePosts: site.posts.slice( 0, 5 )
       }) )
       .pipe( rename('index.html') )
       .pipe( gulp.dest('build') );
@@ -28,6 +26,7 @@ module.exports = function( site ) {
   var blogSrc = 'pages/blog.mustache';
 
   gulp.task( 'content-blog', [ 'posts', 'partials' ], function() {
+    var paginatedPosts = site.paginatedPosts;
 
     paginatedPosts.forEach( function( pagePosts, i ) {
       var currentPage = i + 1;

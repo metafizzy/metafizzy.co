@@ -5,7 +5,6 @@ var marked = require('gulp-marked');
 var highlight = require('highlight.js');
 var through = require('through2');
 var rename = require('gulp-rename');
-var fs = require('fs');
 var utils = require('./utils');
 
 var postsPerPage = 6;
@@ -13,16 +12,26 @@ var postsPerPage = 6;
 var rePostPath = /(\d\d\d\d\-\d\d\-\d\d)\-([\w\d\-_]+)/;
 
 var postsSrc = '_posts/2015/**.md';
+var blogPermalinkSrc = 'pages/blog-permalink.mustache';
 
 module.exports = function( site ) {
   var Handlebars = site.Handlebars;
   var posts = site.posts;
   var paginatedPosts = site.paginatedPosts;
 
-  gulp.task( 'posts', [ 'partials' ], function() {
+  var blogPermalinkTemplate;
 
-    var blogPermalinkSrc = fs.readFileSync( 'pages/blog-permalink.mustache', 'utf8' );
-    var blogPermalinkTemplate = Handlebars.compile( blogPermalinkSrc );
+  gulp.task( 'blog-permalink-template', function() {
+    return gulp.src( blogPermalinkSrc )
+      .pipe( through.obj( function( file, enc, callback ) {
+        blogPermalinkTemplate = Handlebars.compile( file.contents.toString() );
+        callback( null, file );
+      }));
+  });
+
+  console.log( site.cssPaths);
+
+  gulp.task( 'posts', [ 'partials', 'blog-permalink-template' ], function() {
 
     return gulp.src( postsSrc )
       .pipe( frontMatter({
@@ -70,6 +79,7 @@ module.exports = function( site ) {
         var data = {
           post: file
         };
+        utils.extend( data, site.data );
         file.contents = new Buffer( blogPermalinkTemplate( data ) );
         callback( null, file );
       }))
@@ -89,5 +99,9 @@ module.exports = function( site ) {
     tasks: [ 'posts' ]
   });
 
-};
+  site.watches.push({
+    src: blogPermalinkSrc,
+    tasks: [ 'posts' ]
+  });
 
+};

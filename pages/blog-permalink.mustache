@@ -4,14 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <title>Metafizzy blog</title>
+  <title>{{post.title}} &middot; Metafizzy blog</title>
+
+  {{#each cssPaths}}
+    <link rel="stylesheet" href="/css/{{this}}" media="screen" />
+  {{/each}}
 
 </head>
 <body>
 
-<div class="container">
-  <p><a href="/blog">Metafizzy blog</a></p>
-</div>
+{{> blog-header}}
 
 <div class="container">
 {{#with post}}

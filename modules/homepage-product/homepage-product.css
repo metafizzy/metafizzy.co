@@ -69,7 +69,7 @@
   }
 
   .homepage-product__demo {
-    height: 320px;
+    min-height: 320px;
   }
 
   .homepage-product:last-child {

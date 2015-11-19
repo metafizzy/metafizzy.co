@@ -1,0 +1,19 @@
+/* blog-header
+------------------------- */
+
+.blog-header {
+  padding: 10px 0;
+  background: #222;
+}
+
+.blog-header__logo {
+  height: 72px;
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+
+.blog-header__title-link {
+  font-size: 2.2rem;
+  line-height: 72px;
+  font-style: italic;
+}
