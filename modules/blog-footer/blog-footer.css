@@ -1,0 +1,15 @@
+/* blog-footer
+------------------------- */
+
+.blog-footer {
+  background: #222;
+  padding: 40px 0 60px;
+}
+
+.blog-footer__fizzy-makes {
+  font-size: 1.6rem;
+}
+
+.blog-footer .showcase__product {
+  background: #333;
+}

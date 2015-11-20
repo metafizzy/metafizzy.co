@@ -1,30 +1,30 @@
 /* homepage packery demo
 ------------------------- */
 
-.homepage-packery-demo__grid__item,
-.homepage-packery-demo__grid__sizer {
+.showcase-packery-demo__grid__item,
+.showcase-packery-demo__grid__sizer {
   width: 22%;
   width: calc((100% - 15px) / 4);
   height: 65px;
 }
 
-.homepage-packery-demo__grid__item {
+.showcase-packery-demo__grid__item {
   float: left;
   background: #EA0;
   margin-bottom: 5px;
   border-radius: 5px;
 }
 
-.homepage-packery-demo__grid__item--width2 {
+.showcase-packery-demo__grid__item--width2 {
   width: 44%;
   width: calc((100% - 15px) / 2 + 5px);
 }
 
-.homepage-packery-demo__grid__item--height2 {
+.showcase-packery-demo__grid__item--height2 {
   height: 135px;
 }
 
-.homepage-packery-demo__grid__item--draggable {
+.showcase-packery-demo__grid__item--draggable {
   position: relative; /* for label */
   background: #19F;
   z-index: 1; /* above other items */
@@ -35,14 +35,14 @@
   cursor: grab;
 }
 
-.homepage-packery-demo__grid__item--draggable.is-dragging {
+.showcase-packery-demo__grid__item--draggable.is-dragging {
   opacity: 0.85;
   box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.25);
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.homepage-packery-demo__grid__item__draggable-label {
+.showcase-packery-demo__grid__item__draggable-label {
   display: block;
   position: absolute;
   width: 100%;

@@ -1,0 +1,32 @@
+:root .showcase-flickity-demo {
+  padding: 20px 0 30px;
+}
+
+.showcase-flickity-demo__cell {
+  position: relative;
+  border-radius: 5px;
+  width: 65%;
+  height: 270px;
+  margin-right: 15px;
+}
+
+.showcase-flickity-demo__cell:nth-child(4n+1) { background: #19F; }
+.showcase-flickity-demo__cell:nth-child(4n+2) { background: #EA0; }
+.showcase-flickity-demo__cell:nth-child(4n+3) { background: #E62; }
+.showcase-flickity-demo__cell:nth-child(4n+0) { background: #C25; }
+
+.showcase-flickity-demo__cell__number {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%); /* vertical center */
+  font-size: 80px;
+  text-align: center;
+}
+
+.showcase-flickity-demo .flickity-page-dots .dot {
+  background: white;
+}
+
