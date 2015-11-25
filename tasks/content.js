@@ -89,6 +89,19 @@ module.exports = function( site ) {
 
   site.addWatch( rssFeedSrc, [ 'content-rss' ] );
 
+  // ----- rss ----- //
+
+  var fourOhFourSrc = 'pages/404.mustache';
+
+  gulp.task( 'content-404', [ 'posts' ], function() {
+    return gulp.src( fourOhFourSrc )
+      .pipe( template() )
+      .pipe( rename('404.html') )
+      .pipe( gulp.dest('build') );
+  });
+
+  site.addWatch( fourOhFourSrc, [ 'content-404' ] );
+
   // ----- template ----- //
 
   // templating plugin, builds content with Handlebars
@@ -110,7 +123,8 @@ module.exports = function( site ) {
     'content-homepage',
     'content-blog',
     'content-blog-archive',
-    'content-rss'
+    'content-rss',
+    'content-404',
   ]);
 
 };

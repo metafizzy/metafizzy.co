@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Metafizzy &middot; Page not found</title>
+
+  {{#each cssPaths}}
+    <link rel="stylesheet" href="/css/{{this}}" media="screen" />
+  {{/each}}
+
+</head>
+<body>
+
+{{> svg-symbols}}
+
+{{> site-header}}
+
+<div class="container">
+
+  <h1 class="section-title">Page not found</h1>
+
+  <p>Sorry about that!</p>
+
+  <p>Is a page or file supposed to be here? <a href="https://github.com/metafizzy/metafizzy.co/issues">Report missing stuff.</a></p>
+
+  <p><img src="http://i.imgur.com/ZbjdOWn.gif" alt="Seal spinning perfectly towards transcendence" /></p>
+
+</div>
+
+{{> site-footer}}
+
+{{#each jsPaths}}
+  <script src="/js/{{this}}"></script>
+{{/each}}
+
+</body>
+</html>

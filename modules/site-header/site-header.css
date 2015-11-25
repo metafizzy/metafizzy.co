@@ -1,47 +1,48 @@
-/* blog-header
+/* site-header
 ------------------------- */
 
-.blog-header {
+.site-header {
   padding: 10px 0;
   background: #222;
 }
 
-.blog-header .container {
+.site-header .container {
   position: relative;
 }
 
-.blog-header__logo {
+.site-header__logo {
   height: 100px;
   vertical-align: bottom;
   margin-right: 5px;
 }
 
-.blog-header .rainbow-wordmark {
+.site-header .rainbow-wordmark {
   width: 220px;
+  padding-bottom: 13px;
 }
 
-.blog-header__title-link {
+.site-header__title-link {
   display: inline-block;
   text-shadow: 1px 1px #222, 2px 2px #222;
 }
 
-.blog-header__title-blog-text {
-  position: relative;
+.site-header__title-blog-text {
   display: block;
+  position: absolute;
+  bottom: 0;
+  padding-left: 20px;
   font-size: 1.4rem;
   font-style: italic;
   line-height: 1;
-  margin-top: -0.5rem;
-  padding-left: 10px;
   color: white;
 }
 
-.blog-header__extras {
+.site-header__extras {
   position: absolute;
   right: 10px;
   bottom: 10px;
 }
 
-.blog-header__extras__link {
+.site-header__extras__link {
   margin-left: 15px;
 }
