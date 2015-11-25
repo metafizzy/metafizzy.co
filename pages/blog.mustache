@@ -23,15 +23,7 @@
 {{> post}}
 {{/each}}
 
-  <nav class="pagination">
-    {{#if previousPage}}
-      <a class="pagination__previous" href="{{previousPage.url}}">Previous {{previousPage.index}}</a>
-    {{/if}}
-    <span class="pagination__current">Page {{currentPage}} of {{totalPages}}</span>
-    {{#if nextPage}}
-      <a class="pagination__next" href="/blog/page{{nextPage}}">Next {{nextPage}}</a>
-    {{/if}}
-  </nav>
+  {{> pagination}}
 
 </div>
 
