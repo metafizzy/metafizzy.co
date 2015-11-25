@@ -20,14 +20,6 @@
   vertical-align: middle;
 }
 
-.site-footer-links__link {
-  color: #19F;
-}
-
-.site-footer-links__link:hover {
-  color: #EA0;
-}
-
 .site-footer-links__link:hover .site-footer-links__symbol {
-  fill: #EA0;
+  fill: #D26;
 }

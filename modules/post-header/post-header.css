@@ -6,6 +6,7 @@
   line-height: 1.0;
   font-size: 2.2rem;
   font-weight: normal;
+  color: #D26;
 }
 
 .post-header__date {
@@ -13,6 +14,7 @@
   margin: 0 0 30px;
 }
 
+.post-header:hover .post-header__title,
 .post-header:hover .post-header__date {
   color: #19F;
 }

@@ -48,15 +48,22 @@ body {
   color: #F5F5F5;
 }
 
+/* ---- links ---- */
 
 a {
-  color: #D36;
+  color: #19F;
   text-decoration: none;
 }
 
 a:hover {
-  color: #19F;
+  color: #D26;
 }
+
+a:active {
+  color: #EA0;
+}
+
+/* ----  ---- */
 
 svg {
   fill: white;

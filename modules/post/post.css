@@ -20,12 +20,7 @@
   border-radius: 3px;
 }
 
-.post__content a {
-  color: #19F;
-}
-
 .post__content a:hover {
-  color: #EA0;
   text-decoration: underline;
 }
 

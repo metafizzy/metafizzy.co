@@ -13,6 +13,7 @@
 
 .homepage-copy {
   font-size: 1.2rem;
+  max-width: 34em;
 }
 
 /* ---- homepage-posts ---- */
