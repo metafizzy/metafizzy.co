@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # creates a new post
-# format as _posts/YYYY/YYYY-MM-DD-filename.ext
-# usage:
-#   $ ./newpost.sh my-new-post-filename
+# format as _posts/YYYY/YYYY-MM-DD-slug.md
 
 echo "Creating new post"
 # get template
