@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Metafizzy blog archive</title>
+
+  {{#each cssPaths}}
+    <link rel="stylesheet" href="/css/{{this}}" media="screen" />
+  {{/each}}
+
+</head>
+<body>
+
+{{> svg-symbols}}
+
+{{> blog-header}}
+
+<div class="container">
+
+  <h1 class="section-title">Archive</h1>
+
+  {{#each posts}}
+    <div class="archive-post">
+      {{> post-header}}
+    </div>
+  {{/each}}
+
+</div>
+
+{{> blog-footer}}
+
+{{#each jsPaths}}
+  <script src="/js/{{this}}"></script>
+{{/each}}
+
+</body>
+</html>

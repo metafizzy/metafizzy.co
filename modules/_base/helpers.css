@@ -1,0 +1,13 @@
+/* helpers
+------------------------- */
+
+.container {
+  padding: 0 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 3.0rem;
+  margin: 40px 0;
+}

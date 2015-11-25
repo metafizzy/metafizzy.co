@@ -114,11 +114,3 @@ code .hljs-m  { color: #DE8E50; } /* CSS value */
 code .hljs-nd { color: #9FAD7E; } /* CSS pseudo selector */
 code .hljs-hexcolor { color: #F63; }
 code .hljs-at_rule { color: #088; }
-
-/* ---- modules ---- */
-
-.container {
-  padding: 0 10px;
-  max-width: 1000px;
-  margin: 0 auto;
-}

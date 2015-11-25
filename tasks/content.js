@@ -58,6 +58,37 @@ module.exports = function( site ) {
 
   site.addWatch( blogSrc, [ 'content-blog' ] );
 
+  // ----- blog archive ----- //
+
+  var blogArchiveSrc = 'pages/blog-archive.mustache';
+
+  gulp.task( 'content-blog-archive', [ 'posts', 'partials' ], function() {
+    return gulp.src( blogArchiveSrc )
+      .pipe( template({
+        posts: site.posts
+      }) )
+      .pipe( rename('index.html') )
+      .pipe( gulp.dest('build/blog/archive') );
+  });
+
+  site.addWatch( blogArchiveSrc, [ 'content-blog-archive' ] );
+
+  // ----- rss ----- //
+
+  var rssFeedSrc = 'pages/rss-feed.mustache';
+
+  gulp.task( 'content-rss', [ 'posts' ], function() {
+    return gulp.src( rssFeedSrc )
+      .pipe( template({
+        updated: site.posts[0].xmlTimestamp,
+        posts: site.posts
+      }) )
+      .pipe( rename('index.xml') )
+      .pipe( gulp.dest('build/feed') );
+  });
+
+  site.addWatch( rssFeedSrc, [ 'content-rss' ] );
+
   // ----- template ----- //
 
   // templating plugin, builds content with Handlebars
@@ -77,7 +108,9 @@ module.exports = function( site ) {
 
   gulp.task( 'content', [
     'content-homepage',
-    'content-blog'
+    'content-blog',
+    'content-blog-archive',
+    'content-rss'
   ]);
 
 };

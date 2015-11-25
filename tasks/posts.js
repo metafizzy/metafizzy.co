@@ -49,7 +49,9 @@ module.exports = function( site ) {
         file.slug = matches[2];
         // file data
         file.date = new Date( file.dateCode ); // used for sorting
-        file.timestamp = moment( file.date ).format('D MMM YYYY');
+        var momentDate = moment( file.date );
+        file.timestamp = momentDate.format('D MMM YYYY');
+        file.xmlTimestamp = momentDate.format('YYYY-MM-DD') + 'T12:00:00-05:00';
         file.title = file.frontMatter.title;
         // add file to posts collection
         site.posts.push( file.clone() );

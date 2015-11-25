@@ -6,6 +6,10 @@
   background: #222;
 }
 
+.blog-header .container {
+  position: relative;
+}
+
 .blog-header__logo {
   height: 100px;
   vertical-align: bottom;
@@ -30,4 +34,14 @@
   margin-top: -0.5rem;
   padding-left: 10px;
   color: white;
+}
+
+.blog-header__extras {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.blog-header__extras__link {
+  margin-left: 15px;
 }
