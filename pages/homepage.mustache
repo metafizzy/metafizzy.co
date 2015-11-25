@@ -1,14 +1,7 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+{{> html-head}}
 
   <title>Metafizzy</title>
-
-  {{#each cssPaths}}
-    <link rel="stylesheet" href="/css/{{this}}" media="screen" />
-  {{/each}}
+  <meta name="description" content="Metafizzy makes delightful web UI like Isotope, Flickity, and Packery." />
 
 </head>
 <body>
@@ -76,9 +69,7 @@
 
 {{> site-footer}}
 
-{{#each jsPaths}}
-  <script src="/js/{{this}}"></script>
-{{/each}}
+{{> scripts}}
 
 <script src="http://platform.twitter.com/widgets.js"></script>
 

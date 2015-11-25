@@ -1,0 +1,7 @@
+{{#if isDev}}
+  {{#each jsPaths}}
+    <script src="/js/{{this}}"></script>
+  {{/each}}
+{{else}}
+  <script src="/scripts.js"></script>
+{{/if}}

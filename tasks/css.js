@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var rename = require('gulp-rename');
+var concat = require('gulp-concat');
 var utils = require('./utils');
 
 var cssSrcs = [
@@ -8,8 +9,14 @@ var cssSrcs = [
   'modules/*/*.css'
 ];
 
-var cssPaths = utils.getGlobPaths( cssSrcs );
+// build styles.css
+gulp.task( 'css', function() {
+  gulp.src( cssSrcs )
+    .pipe( concat('styles.css') )
+    .pipe( gulp.dest('build') );
+});
 
+// copy css, use for dev
 gulp.task( 'copy-css', function() {
   gulp.src( cssSrcs )
     .pipe( rename({
@@ -20,12 +27,13 @@ gulp.task( 'copy-css', function() {
 
 module.exports = function( site ) {
 
-  site.data.cssPaths = cssPaths.map( function( cssPath ) {
-    return utils.getBasename( cssPath ) + '.css';
-  });
+  if ( site.data.isDev ) {
+    var cssPaths = utils.getGlobPaths( cssSrcs );
+    site.data.cssPaths = cssPaths.map( function( cssPath ) {
+      return utils.getBasename( cssPath ) + '.css';
+    });
+  }
 
-  site.watches.push({
-    src: cssSrcs,
-    tasks: [ 'copy-css' ]
-  });
+  site.addWatch( cssSrcs, [ 'copy-css' ] );
+
 };

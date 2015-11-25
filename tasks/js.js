@@ -1,8 +1,8 @@
 var gulp = require('gulp');
-var rename = require('gulp-rename');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var utils = require('./utils');
 var through = require('through2');
-var path = require('path');
 
 var jsSrcs = [
   'bower_components/get-style-property/get-style-property.js',
@@ -45,10 +45,17 @@ var jsSrcs = [
   'modules/*/*.js'
 ];
 
-var jsPaths = utils.getGlobPaths( jsSrcs );
-var cwd = process.cwd();
+// build scripts.js
+gulp.task( 'js', function() {
+  gulp.src( jsSrcs )
+    .pipe( uglify() )
+    .pipe( concat('scripts.js') )
+    .pipe( gulp.dest('build') );
+});
 
+// copy js into build/, used for dev
 gulp.task( 'copy-js', function() {
+  var cwd = process.cwd();
   gulp.src( jsSrcs )
     .pipe( through.obj( function( file, encoding, callback ) {
       file.base = cwd;
@@ -59,10 +66,9 @@ gulp.task( 'copy-js', function() {
 
 module.exports = function( site ) {
 
-  site.data.jsPaths = jsPaths;
+  if ( site.data.isDev ) {
+    site.data = utils.getGlobPaths( jsSrcs );
+  }
 
-  site.watches.push({
-    src: 'modules/*/*.js',
-    tasks: [ 'copy-js' ]
-  });
+  site.addWatch( 'modules/*/*.js', [ 'copy-js' ] );
 };

@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  {{#if isDev}}
+    {{#each cssPaths}}
+      <link rel="stylesheet" href="/css/{{this}}" />
+    {{/each}}
+  {{else}}
+    <link rel="stylesheet" href="/styles.css" />
+  {{/if}}

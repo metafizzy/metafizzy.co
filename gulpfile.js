@@ -8,7 +8,9 @@ var Handlebars = require('handlebars');
 // stuff used across tasks
 var site = {
   // templating data
-  data: {},
+  data: {
+    isDev: process.argv[2] == 'dev'
+  },
   // array of all posts
   posts: [],
   // hash of posts per page
@@ -55,14 +57,14 @@ gulp.task( 'serve', serve('build') );
 
 gulp.task( 'default', [
   'assets',
-  'copy-css',
-  'copy-js',
+  'css',
+  'js',
   'content'
 ]);
 
 // ----- watch ----- //
 
-gulp.task( 'watch', [ 'default', 'serve' ], function() {
+gulp.task( 'dev', [ 'assets', 'copy-css', 'copy-js', 'content', 'serve' ], function() {
   site.watches.forEach( function( watchable ) {
     gulp.watch( watchable.src, watchable.tasks );
   });
