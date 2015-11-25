@@ -1,6 +1,5 @@
 <article class="post">
-  <h1 class="post__title"><a href="/blog/{{slug}}">{{{title}}}</a></h1>
-  <p class="post__date">{{timestamp}}</p>
+  {{> post-header}}
   <div class="post__content">
 {{! remove preceding whitespace for <pre><code> blocks }}
 {{{contents}}}

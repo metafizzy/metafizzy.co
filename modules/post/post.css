@@ -20,17 +20,6 @@
   border-radius: 3px;
 }
 
-.post__title {
-  line-height: 1.0;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.post__date {
-  color: #E62;
-  margin: 0 0 30px;
-}
-
 .post__content a {
   color: #19F;
 }

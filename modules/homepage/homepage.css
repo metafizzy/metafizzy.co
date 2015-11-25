@@ -25,12 +25,3 @@
 .homepage-posts__item {
   margin-bottom: 20px;
 }
-
-.homepage-posts__item__link {
-  display: block;
-}
-
-.homepage-posts__item__title {
-  font-size: 1.8rem;
-  line-height: 1.2;
-}

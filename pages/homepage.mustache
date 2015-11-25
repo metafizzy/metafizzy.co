@@ -31,10 +31,7 @@
     <ul class="homepage-posts">
       {{#each homepagePosts}}
         <li class="homepage-posts__item">
-          <a class="homepage-posts__item__link" href="/blog/{{slug}}">
-            <div class="homepage-posts__item__title">{{{title}}}</div>
-            <div class="homepage-posts__item__date">{{timestamp}}</div>
-          </a>
+          {{> post-header}}
         </li>
       </a>
       {{/each}}
