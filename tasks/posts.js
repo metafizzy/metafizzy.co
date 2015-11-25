@@ -54,7 +54,9 @@ module.exports = function( site ) {
         file.xmlTimestamp = momentDate.format('YYYY-MM-DD') + 'T12:00:00-05:00';
         file.title = file.frontMatter.title;
         // add file to posts collection
-        site.posts.push( file.clone() );
+        if ( file.frontMatter.published !== false ) {
+          site.posts.push( file.clone() );
+        }
         return callback( null, file );
       },
         // flush function: sort posts and put into pages
