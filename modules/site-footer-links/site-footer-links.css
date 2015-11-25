@@ -1,0 +1,33 @@
+/* site-footer-links
+------------------------- */
+
+.site-footer-links {
+  list-style: none;
+  padding: 0;
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.site-footer-links__item {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.site-footer-links__symbol {
+  width: 1.3em;
+  height: 1.3em;
+  fill: #19F;
+  vertical-align: middle;
+}
+
+.site-footer-links__link {
+  color: #19F;
+}
+
+.site-footer-links__link:hover {
+  color: #EA0;
+}
+
+.site-footer-links__link:hover .site-footer-links__symbol {
+  fill: #EA0;
+}

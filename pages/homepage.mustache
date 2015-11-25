@@ -69,6 +69,12 @@
 
 </div> {{! .container }}
 
+<footer class="site-footer">
+  <div class="container">
+    {{> site-footer-links}}
+  </div>
+</footer>
+
 {{#each jsPaths}}
   <script src="/js/{{this}}"></script>
 {{/each}}

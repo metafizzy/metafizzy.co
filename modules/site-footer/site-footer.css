@@ -1,15 +1,16 @@
-/* blog-footer
+/* site-footer
 ------------------------- */
 
-.blog-footer {
+.site-footer {
   background: #222;
   padding: 40px 0 60px;
+  margin-top: 60px;
 }
 
-.blog-footer__fizzy-makes {
+.site-footer__fizzy-makes {
   font-size: 1.6rem;
 }
 
-.blog-footer .showcase__product {
+.site-footer .showcase__product {
   background: #333;
 }

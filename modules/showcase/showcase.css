@@ -1,3 +1,7 @@
+.showcase {
+  margin-bottom: 60px;
+}
+
 .showcase__product {
   background: #222;
   border-radius: 5px;
