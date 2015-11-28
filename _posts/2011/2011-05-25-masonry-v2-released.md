@@ -26,14 +26,12 @@ Masonry v2.0 adds new features, performs better and resolves several lingering i
 
 Updating from v1 is fairly easy. The general functionality and basic options of the plugin remains the same.
 
-{% highlight javascript %}
-
+``` javascript
 $('#container').masonry({
   itemSelector: '.item',
   columnWidth: 240
 });
-
-{% endhighlight %}
+```
 
 Here are the changes you need to be aware of when updating:
 

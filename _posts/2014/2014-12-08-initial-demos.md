@@ -22,20 +22,20 @@ First demo is a draggable particle dot with barebones physics. You can drag and 
 
 <p data-height="268" data-theme-id="0" data-slug-hash="GgoGrP" data-default-tab="result" data-user="desandro" class='codepen'>See the Pen <a href='http://codepen.io/desandro/pen/GgoGrP/'>Flickity initial demo 1: draggable dot</a> by David DeSandro (<a href='http://codepen.io/desandro'>@desandro</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-{% highlight js %}
+``` js
 Particle.prototype.update = function() {
   this.velocity += this.accel;
   this.velocity *= ( 1 - friction );
   this.x += this.velocity;
   this.accel = 0;
 };
-{% endhighlight %}
+```
 
 I'm trying to see how a gallery would move if it worked like a physics demo, with dragging and attraction forces. Demo #2 add two attractors that pull the dot in.
 
 <p data-height="268" data-theme-id="0" data-slug-hash="xbZzqX" data-default-tab="result" data-user="desandro" class='codepen'>See the Pen <a href='http://codepen.io/desandro/pen/xbZzqX/'>Flickity initial demo 2: attractors</a> by David DeSandro (<a href='http://codepen.io/desandro'>@desandro</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-{% highlight js %}
+``` js
 // apply force of attractors to particle
 if ( !isDragging ) {
   for ( var i=0, len = attractors.length; i < len; i++ ) {
@@ -49,7 +49,7 @@ if ( !isDragging ) {
     particle.applyForce( force );
   }
 }
-{% endhighlight %}
+```
 
 This was my first idea on how the force fields should work.  As the dot gets closer to the attractor, the force of attraction increases. This is how gravity works. I modeled this demo after the basic [gravity demo in The Nature of Code](http://natureofcode.com/book/chapter-2-forces/#chapter02_example6). This lets the dot ease-in to the force field. But it hits the attractor abruptly, then starts shaking. If you try to flick the dot from one attractor to another, it feels like it has to pass over a big hump.
 
@@ -57,25 +57,25 @@ Demo #3 reverses the force field. Instead of attraction being highest at the cen
 
 <p data-height="268" data-theme-id="0" data-slug-hash="KwVeqV" data-default-tab="result" data-user="desandro" class='codepen'>See the Pen <a href='http://codepen.io/desandro/pen/KwVeqV/'>Flickity initial demo 3: attractors</a> by David DeSandro (<a href='http://codepen.io/desandro'>@desandro</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-{% highlight js %}
+``` js
 var distance = attractor.x - particle.x;
 var force = Math.abs( distance ) <= maxDistance ? distance : 0;
 force *= 0.03;
 particle.applyForce( force );
-{% endhighlight %}
+```
 
 Those force multipliers like `force *= 0.03` and `force *= 4` are completely arbitrary. It's the result of me fiddling with the numbers to get better behavior.
 
 This demo is an improvement over the previous, but it's wobbly and could use some fiddling. Demo #4 fiddles with friction and force.
 
-{% highlight js %}
+``` js
 var friction = 0.3;
 
 var force = Math.abs( distance ) < maxDistance ?
   Math.abs( distance ) / maxDistance : 0;
 force *= 8;
 force = distance < 0 ? -force : force;
-{% endhighlight %}
+```
 
 <p data-height="268" data-theme-id="0" data-slug-hash="WbryZb" data-default-tab="result" data-user="desandro" class='codepen'>See the Pen <a href='http://codepen.io/desandro/pen/WbryZb/'>Flickity initial demo 4: fiddling</a> by David DeSandro (<a href='http://codepen.io/desandro'>@desandro</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
@@ -83,7 +83,7 @@ This is feeling good. I can flick the dot to the next attractor. I can also flic
 
 My next idea is to adjust friction so that the particle can escape its current attractor and easily get to its next one.
 
-{% highlight js %}
+``` js
 var force = Math.abs( distance ) < maxDistance ?
   Math.abs( distance ) / maxDistance : 0;
 var friction = force ? 1 - force : 0;
@@ -92,7 +92,7 @@ force *= 8;
 force = distance < 0 ? -force : force;
 particle.friction = Math.max( particle.friction, friction );
 particle.applyForce( force );
-{% endhighlight %}
+```
 
 I don't understand my own code here, but I don't care either. I only care about the resulting behavior.
 

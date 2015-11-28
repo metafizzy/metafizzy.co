@@ -10,14 +10,12 @@ I've just released the docs for [Extending Isotope](http://isotope.metafizzy.co/
 
 As for the layout modes, each one is comprised of four methods that perform the same roles for their mode, `Reset`, `Layout`, `GetContainerSize`, and `ResizeChanged`. They work together by following the same naming convention, for example, the methods for the _masonry_ layout mode  are:
 
-{% highlight javascript %}
-
+``` javascript
 _masonryReset : function() { ... },
 _masonryLayout : function( $elems ) { ... },
 _masonryGetContainerSize : function() { ... },
 _masonryResizeChanged : function() { ... }
-
-{% endhighlight %}
+```
 
 This means you can build your own custom layout mode just by adding these methods. There's no need to fork the project or fiddle with jquery.isotope.js. All of your custom code can live outside of the core Isotope script where you can do as you wish. The layout logic is separate from the other logic like filtering, sorting, inserting, so you can reliably use all of Isotope's features cohesively with your own custom additions.
 

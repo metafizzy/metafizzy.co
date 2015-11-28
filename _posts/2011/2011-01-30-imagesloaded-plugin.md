@@ -22,8 +22,7 @@ Now Masonry users no longer have to rely on `$(window).load()` to load every ima
 
 Additionally, you can use `imagesLoaded` inside the Infinite Scroll callback.
 
-{% highlight javascript %}
-
+``` javascript
 // call masonry as a callback
 function( newElements ) {
   var $elems = $(newElements);
@@ -32,5 +31,4 @@ function( newElements ) {
     $('#container').masonry({ appendedContent: $elems })
   })
 }
-
-{% endhighlight %}
+```

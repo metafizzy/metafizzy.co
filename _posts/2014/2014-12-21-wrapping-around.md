@@ -22,16 +22,16 @@ Another way is to clone cells so there's overlap to work with. Both Jssor and Sl
 
 Now the slider can be repositioned when the overlap is visible. The slider position needs to be kept between `cellWidth` and `-sliderWidth + cellWidth`, or 0 and `sliderWidth` if you subtract `cellWidth`. This math makes use of the remainder operator `%`.
 
-{% highlight js %}
+``` js
 var modNum = ( ( num % max ) + max ) % max
-{% endhighlight %}
+```
 
 I've come to learn that is is a [modulo operation](http://en.wikipedia.org/wiki/Modulo_operation), which [JavaScript lacks](http://javascript.about.com/od/problemsolving/a/modulobug.htm). This is a useful operation you might see used when calculating an angle, to keep it between 0 and 360.
 
-{% highlight js %}
+``` js
 // keep angle between 0 and 360
 angle = ( ( angle % 360 ) + 360 ) % 360
-{% endhighlight %}
+```
 
 The tracked position can move outside these bounds, but when it is applied to the rendered position of the slider, then it is wrapped.
 

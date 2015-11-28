@@ -10,7 +10,7 @@ imagesLoaded now [supports background images](http://imagesloaded.desandro.com/#
 
 Set `{ background: true }` to detect when the element's background image has loaded.
 
-{% highlight javascript %}
+``` javascript
 // jQuery
 $('#container').imagesLoaded( { background: true }, function() {
   console.log('#container background image loaded');
@@ -20,7 +20,7 @@ $('#container').imagesLoaded( { background: true }, function() {
 imagesLoaded( '#container', { background: true }, function() {
   console.log('#container background image loaded');
 });
-{% endhighlight %}
+```
 
 <p data-height="268" data-theme-id="0" data-slug-hash="pjVMPB" data-default-tab="result" data-user="desandro" class='codepen'>See the Pen <a href='http://codepen.io/desandro/pen/pjVMPB/'>imagesLoaded - background</a> by David DeSandro (<a href='http://codepen.io/desandro'>@desandro</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>

@@ -16,7 +16,7 @@ But the aim of this product is gallery — something that has size.
 
 This demo works similarly to the initial particle demo. Instead of positioning the particle, the cells are positioned by the slider.
 
-{% highlight js %}
+``` js
 // render cells
 ctx.save();
 // position cells by slider
@@ -27,7 +27,7 @@ for ( var i=0, len = cells.length; i < len; i++ ) {
   ctx.fillRect( cell.x, 20, cell.width, cell.height );
 }
 ctx.restore();
-{% endhighlight %}
+```
 
 The last particle demo used attraction on the particle so it would land nicely at a target.
 
@@ -37,7 +37,7 @@ Instead of a particle being attracted to targets, the position of the slider sho
 
 <p data-height="240" data-theme-id="0" data-slug-hash="WbwJQd" data-default-tab="result" data-user="desandro" class='codepen'>See the Pen <a href='http://codepen.io/desandro/pen/WbwJQd/'>slider demo 2: cell attraction</a> by David DeSandro (<a href='http://codepen.io/desandro'>@desandro</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-{% highlight js %}
+``` js
 function dragEnd() {
   // get closest cell to end position
   var minDistance = Infinity;
@@ -61,7 +61,7 @@ function getAttraction() {
   var force = distance * 0.03;
   return force;
 }
-{% endhighlight %}
+```
 
 This works well enough when you flick by 2 cells. By you really got to tug it to get it to move to the next cell. Open up your phone's home screen. You can flick to the next screen by just moving it a couple pixels.
 
@@ -69,7 +69,7 @@ This demo fixes that. It adds additional logic so that if the selected cell hasn
 
 <p data-height="240" data-theme-id="0" data-slug-hash="vEGjOG" data-default-tab="result" data-user="desandro" class='codepen'>See the Pen <a href='http://codepen.io/desandro/pen/vEGjOG/'>slider demo 3: cell attraction</a> by David DeSandro (<a href='http://codepen.io/desandro'>@desandro</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-{% highlight js %}
+``` js
 // if not enough velocity to escape current attractor
 // boost it
 if ( selectedIndex === prevIndex  ) {
@@ -84,7 +84,7 @@ if ( selectedIndex === prevIndex  ) {
     selectedIndex--;
   }
 }
-{% endhighlight %}
+```
 
 Niiiiiiiice.
 

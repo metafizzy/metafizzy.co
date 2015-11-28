@@ -12,17 +12,17 @@ I need a name. For now, let's go with _Flickity_.
 
 I have a head start as I'm building on the experience of developing other libraries, like [Isotope](http://isotope.metafizzy.co), [Packery](http://packery.metafizzy.co), and [Draggabilly](http://draggabilly.desandro.com). They all have the same basic structure.
 
-{% highlight js %}
+``` js
 // initialize new Flickity instance
 var element = document.querySelector('#gallery')
 var flickity = new Flickity( element, {
   // options
 })
-{% endhighlight %}
+```
 
 The constructor has two parameters: `element`, the element that will hold the gallery and its cells; and `options`, and object with options. The `Flickity` constructor method takes care of these two parameters.
 
-{% highlight js %}
+``` js
 // Flickity constructor
 function Flickity( element, options ) {
   // use element as selector string
@@ -47,7 +47,7 @@ Flickity.defaults = {
 Flickity.prototype.option = function( opts ) {
   U.extend( this.options, opts );
 };
-{% endhighlight %}
+```
 
 With this generic setup, all the specialized functionality will go into the `Flickity.prototype` methods.
 

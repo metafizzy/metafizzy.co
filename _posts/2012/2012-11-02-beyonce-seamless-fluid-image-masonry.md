@@ -16,13 +16,13 @@ Aside from the glorious aura that is Beyoncé, this site actually has an awesome
 
 designedmemory came up with a much better solution. Instead of trying to get exactly 3 columns in the layout, the columns are sized just a fraction to be less than the ideal. Then the images are sized to be just a little bit bigger to cover the gap. _Brilliant!_
 
-{% highlight css %}
+``` css
 /* not quite 33.3% */
 .item { width: 33.2%; }
 
 /* images cover up the gap */
 .item img { width: 100.5%; }
-{% endhighlight %}
+```
 
 [Crack open this example on CodePen!](http://codepen.io/desandro/pen/myBxD)
 

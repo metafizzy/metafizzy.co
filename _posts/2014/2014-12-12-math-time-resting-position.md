@@ -22,7 +22,7 @@ Steven mentions that calculating final position could be done with integration a
 
 Flicking is done by applying a velocity to the dot when you release it from a drag. Once flicked, the dot will keep moving, decelerating due to friction.
 
-{% highlight js %}
+``` js
 function dragEnd() {
   // set particle velocity
   particle.velocity = ( particle.x - previousX ) / ( currentTime - previousTime );
@@ -36,28 +36,28 @@ Particle.prototype.update = function() {
   // reset acceleration
   this.accel = 0;
 };
-{% endhighlight %}
+```
 
 I have all the variables I need to calculate its end position: acceleration, velocity, position. But I need the math to do it. This is where I stumble to remember rusty math skills from high school. I know velocity is decreasing due to friction. With each tick of the animation, the velocity is multiplied by the friction effect.
 
-{% highlight js %}
+``` js
 this.velocity *= ( 1 - this.friction );
-{% endhighlight %}
+```
 
 I can calculate the velocity after 3 ticks of animation by multiplying it by the friction effect three times over.
 
-{% highlight js %}
+``` js
 veloAfter3 = this.velocity * ( 1 - this.friction ) * ( 1 - this.friction ) * ( 1 - this.friction )
-{% endhighlight %}
+```
 
 This looks to be exponential. 
 
 ## log pow
 
-{% highlight js %}
+``` js
 // t is number of ticks of animation
 endVelo = startVelo * ( 1 - friction ) ^ t
-{% endhighlight %}
+```
 
 Eventually, velocity will reach 0, and the dot stops moving. I can't get its end position from this equation, but I can figure out how many ticks of animation happen. The number in question is `t`. This looks like algebra, which I can handle. It's an exponent, which leads me to remember logarithms. I forget how they work. [Khan Academy refreshes](https://www.khanacademy.org/math/algebra2/logarithms-tutorial/logarithm_basics/v/logarithms) my memory. `eV` is end velocity, `sV` is start velocity.
 
@@ -65,17 +65,17 @@ Eventually, velocity will reach 0, and the dot stops moving. I can't get its end
 
 I've got the equation worked out. Now to bring it into JavaScript. [`Math.log` is in base `e`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log), and this equation has a different base `1 - f`. The MDN article even covers using [`Math.log` with different bases](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log#Example.3A_Using_Math.log_with_a_different_base).
 
-{% highlight js %}
+``` js
 var ticks = getBaseLog( 1 - this.friction, restingVelo / Math.abs( this.velocity ) );
 
 function getBaseLog( a, b ) {
   return Math.log( b ) / Math.log( a );
 }
-{% endhighlight %}
+```
 
 I've got the number of ticks of animation for the particle to reach its resting position. With this, I can use the position equation, which is just `x = x + velocity` every frame. With each frame velocity decreases due to the friction factor `velocity = velocity * ( 1 - friction)`. 
 
-{% highlight js %}
+``` js
 // fF = 1 - friction = friction factor
 // initial tick
 v = v * fF;
@@ -93,22 +93,22 @@ x = x + v;
 restingX = x + (v * fF) + (v * fF^2) + (v * fF^3) + ... (v * fF^t)
 // factor out v
 restingX = x + v * (1 + fF^1 + fF^2 + fF^3 + ... fF^t)
-{% endhighlight %}
+```
 
 I could solve this with a loop, but this feels like there's a smarty-pants math technique that can solve the ascending exponential portion. Turns out, [there is](http://mikestoolbox.com/powersum.html)!
 
-{% highlight js %}
+``` js
 restingX = x + v * (1 + fF^1 + fF^2 + fF^3 + ... fF^t)
 restingX = x + v * ( (fF^t - 1) / (t - 1) )
-{% endhighlight %}
+```
 
-{% highlight js %}
+``` js
 var sum = ( Math.pow( fFriction, ticks + 1 ) - 1 ) / ( fFriction - 1 );
 // resting position
 return this.x + this.velocity  * sum;
-{% endhighlight %}
+```
 
-{% highlight js %}
+``` js
 // as implemented
 Particle.prototype.getRestingPosition = function() {
   // get how many ticks until velocity is slow
@@ -124,13 +124,13 @@ Particle.prototype.getRestingPosition = function() {
 function getBaseLog( a, b ) {
   return Math.log( b ) / Math.log( a );
 }
-{% endhighlight %}
+```
 
 ## Programming loop
 
 I tackled this problem with algebra because it felt like the proper way to do it. But my initial inclination was to run a sort of simulation, using a programming loop — a more familiar concept. I was able to write this code in one shot.
 
-{% highlight js %}
+``` js
 // little simulation where thing will rest
 var restingVelo = 0.07;
 var velo = this.velocity;
@@ -141,7 +141,7 @@ while ( Math.abs( velo ) > restingVelo ) {
   restX += velo;
 }
 return restX;
-{% endhighlight %}
+```
 
 And wouldn't ya know it. This code works just as well.
 

@@ -22,45 +22,37 @@ This example requires Isotope v1.0.110220. If nothing happens when you click the
 
 There's a lot of cool things going on here. Let's break it down...
 
-{% highlight javascript %}
-
+``` javascript
 var isotopeData = $container.data('isotope'),
-
-{% endhighlight %}
+```
 
 You can get an instance's options and properties using `.data('isotope')`. This is a perk of using the [jQuery UI widget bridge](http://www.erichynds.com/jquery/using-jquery-ui-widget-factory-bridge/).
 
-{% highlight javascript %}
-
+``` javascript
 applyStyleFnName = isotopeData.applyStyleFnName,
-
-{% endhighlight %}
+```
 
 `applyStyleFnName` is the either jQuery method -- either `.css()` or `.animate()` -- used on item elements when applying CSS style. It is dependant on the `animationEngine` option and if the browser supports CSS transitions.
 
-{% highlight javascript %}
-
+``` javascript
 newStyle = $container.isotope( 'getPositionStyles', $container.width(), 
   $container.height() );
 
 $.extend( newStyle, isotopeData.options.hiddenStyle );
 // apply style
 $newItems.css( newStyle );
-
-{% endhighlight %}
+```
 
 `newStyle` is going to be the positioning, opacity, and scale style for the new items. Here I set the position to the bottom right of the container, using the undocumented `getPositionStyles` method.  This method returns position styles (top/left, or translate) depending on Isotope options and CSS transform support. This allows you to position elements using the same layout logic that the Isotope instance is using.
 
 
 I get the zero opacity and tiny scale from the Isotope's instance options.  That style gets immediately applied to the new items.
 
-{% highlight javascript %}
-
+``` javascript
 $container.append( $newItems ).isotope( 'appended', $newItems );
 // fade new items to full opacity
 $newItems[ applyStyleFnName ]( isotopeData.options.visibleStyle, aniOpts);
-
-{% endhighlight %}
+```
 
 After the new items get appended, the visible style gets applied via `applyStyleFnName`.
 

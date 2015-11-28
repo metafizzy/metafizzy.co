@@ -55,8 +55,7 @@ The drawback to relying on a templating engine to generate pages is that the sou
 
 I still want to provide a downloadable zip of the project that anyone can open up, start exploring, and tinker around with. My solution was to zip up the Jekyll generated content and host it on my site. I've whittled this task down into a bash script:
 
-{% highlight bash %}
-
+``` bash
 function zipup() {
   mkdir $1
   # copies Jekyll generated _site
@@ -72,8 +71,7 @@ function zipup() {
 
 # in use
 zipup isotope-site
-
-{% endhighlight %}
+```
 
 This script generates the zip files you'll find in [meta.metafizzy.co/files](http://meta.metafizzy.co/files).
 

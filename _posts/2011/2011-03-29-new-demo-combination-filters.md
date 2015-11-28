@@ -14,8 +14,7 @@ Check it out in all its Playskool glory!
 
 The JS isn't too heavy. I'm using an object to store the filter for each group.  Then when a new item is clicked, I update the object, compile an array of the filters, and then merge them together as one string. To allow a filter of nothing for each group, I assign an empty string for that group.
 
-{% highlight javascript %}
-
+``` javascript
 var $container = $('#container'),
     filters = {};
 
@@ -36,5 +35,4 @@ $('.filter a').click(function(){
 
   return false;
 });
-
-{% endhighlight %}
+```

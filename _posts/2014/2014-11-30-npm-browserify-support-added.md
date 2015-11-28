@@ -8,17 +8,17 @@ layout: blog
 
 Isotope, Packery, Masonry, [Draggabilly](http://draggabilly.desandro.com/), and [imagesLoaded](http://imagesloaded.desandro.com/) all got big upgrades in the past weeks, adding npm and [Browserify](http://browserify.org/) support. Now using these libraries with Browserify is as simple as a couple lines of code:
 
-{% highlight bash %}
+``` bash
 npm install isotope-layout
-{% endhighlight %}
+```
 
-{% highlight js %}
+``` js
 var Isotope = require('isotope-layout');
 
 var iso = new Isotope( '#container', {
   // options...
 });
-{% endhighlight %}
+```
 
 Look over the specific docs for more details for each library.
 
@@ -30,7 +30,7 @@ Look over the specific docs for more details for each library.
 
 Getting Browserify support meant adding CommonJS export to the libraries, and all to all their dependencies. I used the [UMD spec](https://github.com/umdjs/umd/blob/master/returnExportsGlobal.js), which has exports to support AMD, CommonJS, and browser globals. Here's Masonry's exports:
 
-{% highlight js %}
+``` js
 if ( typeof define === 'function' && define.amd ) {
   // AMD
   define( [
@@ -51,7 +51,7 @@ if ( typeof define === 'function' && define.amd ) {
     window.getSize
   );
 }
-{% endhighlight %}
+```
 
 Adding CommonJS support is a simple task, but getting it done required updating all those dependency libraries. So much code wrangling.
 

@@ -18,11 +18,9 @@ As a jQuery user, I was unsatisfied with Quicksand's implementation. The user sh
 
 I would say ease of use is the principal difference between Quicksand and Isotope. To filter a group with Isotope, you only need to pass in a jQuery selector string to the `filter` option:
 
-{% highlight javascript %}
-
+``` javascript
 $('#container').isotope({ filter: '.foo' });
-
-{% endhighlight %}
+```
     
 But the differences extend beyond that. Here's a list of features you get with Isotope that aren't currently in Quicksand:
 
