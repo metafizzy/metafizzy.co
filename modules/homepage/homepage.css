@@ -3,6 +3,25 @@
 
 .homepage-section {
   margin-top: 60px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.homepage-section ~ .homepage-section {
+  margin-top: 80px;
+  padding-top: 20px;
+}
+
+.homepage-section ~ .homepage-section:before {
+  content: '';
+  display: block;
+  height: 6px;
+  background: #222;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .homepage-copy {
