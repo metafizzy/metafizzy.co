@@ -67,7 +67,7 @@ gulp.task( 'copy-js', function() {
 module.exports = function( site ) {
 
   if ( site.data.isDev ) {
-    site.data = utils.getGlobPaths( jsSrcs );
+    site.data.jsPaths = utils.getGlobPaths( jsSrcs );
   }
 
   site.addWatch( 'modules/*/*.js', [ 'copy-js' ] );
