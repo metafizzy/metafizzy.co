@@ -39,3 +39,9 @@
   border-top: 4px solid #222;
   margin: 2.0rem 0;
 }
+
+.post__content h2 {
+  font-size: 1.7rem;
+  margin-top: 1.6em;
+  line-height: 1;
+}

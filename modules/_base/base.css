@@ -79,6 +79,7 @@ pre {
   padding: 10px;
   border-radius: 5px;
   line-height: 1.5;
+  white-space: pre-wrap;
 }
 
 code {
@@ -101,6 +102,7 @@ code .hljs-params { color: #98D; }
 code .hljs-regexp  { color: #FC8; } /* regex */
 code .hljs-o  { color: #F63; }   /* operator */
 code .hljs-nb { color: #AA97AC;} /* support */
+code .hljs-built_in { color: #E3A; }
 
 /* comment */
 code .hljs-comment { color: #999; font-style: italic; }
