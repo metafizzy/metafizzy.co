@@ -48,10 +48,10 @@ module.exports = function( site ) {
         file.dateCode = matches[1];
         file.slug = matches[2];
         // file data
-        file.date = new Date( file.dateCode ); // used for sorting
-        var momentDate = moment( file.date );
-        file.timestamp = momentDate.format('D MMM YYYY');
-        file.xmlTimestamp = momentDate.format('YYYY-MM-DD') + 'T12:00:00-05:00';
+        file.momentDate = moment( file.dateCode );
+        file.sortDate = parseInt( file.momentDate.format('YYYYMMDD') );
+        file.timestamp = file.momentDate.format('D MMM YYYY');
+        file.xmlTimestamp = file.momentDate.format('YYYY-MM-DD') + 'T12:00:00-05:00';
         file.title = file.frontMatter.title;
         // add file to posts collection
         if ( file.frontMatter.published !== false ) {
@@ -63,7 +63,7 @@ module.exports = function( site ) {
         function( callback ) {
           // sort by date
           site.posts.sort( function( a, b ) {
-            return b.date - a.date;
+            return b.sortDate - a.sortDate;
           });
           // arrange in pages
 
