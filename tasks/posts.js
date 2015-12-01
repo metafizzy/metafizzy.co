@@ -11,7 +11,7 @@ var postsPerPage = 6;
 
 var rePostPath = /(\d\d\d\d\-\d\d\-\d\d)\-([\w\d\-_]+)/;
 
-var postsSrc = '_posts/2015/**.md';
+var postsSrc = '_posts/*/**.md';
 var blogPermalinkSrc = 'pages/blog-permalink.mustache';
 
 module.exports = function( site ) {
