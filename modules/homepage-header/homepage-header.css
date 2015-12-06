@@ -1,10 +1,15 @@
+/* homepage-header
+------------------------- */
+
 .homepage-header {
   padding: 20px 0;
   background: #222;
 }
 
 .homepage-header__container {
+  display: -webkit-box;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -18,18 +23,34 @@
 }
 
 .homepage-header__content {
-  width: 60%;
+  width: 70%;
   position: relative;
 }
 
 .homepage-header .rainbow-wordmark {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .homepage-header__tagline {
   position: relative;
-  font-size: 42px;
+  font-size: 1.4rem;
   font-style: italic;
   line-height: 1;
-  margin: -30px 0 0 50px;
+  margin: 0 0 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage-header__content {
+    width: 60%;
+  }
+
+  .homepage-header .rainbow-wordmark {
+    margin-top: 30px;
+  }
+
+  .homepage-header__tagline {
+    font-size: 2.2rem;
+    margin: -30px 0 0 50px;
+  }
+
 }

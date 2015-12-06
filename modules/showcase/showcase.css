@@ -5,12 +5,13 @@
 .showcase__product {
   background: #222;
   border-radius: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .showcase__product__link {
   display: block;
   padding: 10px 10px 20px;
-/*  background: #C25;*/
   color: white;
   border-radius: 5px 5px 0 0;
 }
@@ -44,7 +45,7 @@
 }
 
 .showcase__product__big-button {
-  margin: 20px 10px 10px;
+  margin: 20px 10px 0;
   display: block;
   font-size: 1.2rem;
   text-align: center;
@@ -68,7 +69,9 @@
 @media screen and (min-width: 768px) {
 
   .showcase {
+    display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
   }
 

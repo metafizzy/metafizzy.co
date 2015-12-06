@@ -4,7 +4,7 @@
 .post-header__title {
   margin-bottom: 10px;
   line-height: 1.0;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: normal;
   color: #D26;
 }
@@ -17,4 +17,10 @@
 .post-header:hover .post-header__title,
 .post-header:hover .post-header__date {
   color: #19F;
+}
+
+@media screen and (min-width: 768px) {
+  .post-header__title {
+    font-size: 2.2rem;
+  }
 }

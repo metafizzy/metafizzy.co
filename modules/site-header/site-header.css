@@ -11,13 +11,13 @@
 }
 
 .site-header__logo {
-  height: 100px;
+  height: 60px;
   vertical-align: bottom;
   margin-right: 5px;
 }
 
 .site-header .rainbow-wordmark {
-  width: 220px;
+  width: 160px;
   padding-bottom: 13px;
 }
 
@@ -30,8 +30,8 @@
   display: block;
   position: absolute;
   bottom: 0;
-  padding-left: 20px;
-  font-size: 1.4rem;
+  padding-left: 15px;
+  font-size: 1.2rem;
   font-style: italic;
   line-height: 1;
   color: white;
@@ -40,9 +40,29 @@
 .site-header__extras {
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 0;
 }
 
 .site-header__extras__link {
   margin-left: 15px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .site-header__logo {
+    height: 100px;
+  }
+
+  .site-header .rainbow-wordmark {
+    width: 220px;
+  }
+
+  .site-header__title-blog-text {
+     font-size: 1.4rem;
+  }
+
+  .site-header__extras {
+    bottom: 10px;
+  }
+
 }

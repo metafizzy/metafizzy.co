@@ -4,7 +4,7 @@
 .post {
   display: block;
   max-width: 660px;
-  padding: 50px 0;
+  padding: 20px 0;
   position: relative;
 }
 
@@ -44,4 +44,12 @@
   font-size: 1.7rem;
   margin-top: 1.6em;
   line-height: 1;
+}
+
+@media screen and (min-width: 768px) {
+
+  .post {
+    padding: 50px 0;
+  }
+
 }
