@@ -16,6 +16,8 @@ var grid = demo.querySelector('.showcase-isotope-demo__grid');
 var iso = new Isotope( grid, {
   layoutMode: 'fitRows',
   percentPosition: true,
+  stagger: 30,
+  transitionDuration: '0.3s',
   getSortData: {
     letter: '.showcase-isotope-demo__grid__item__letter',
     number: '.showcase-isotope-demo__grid__item__number parseInt'

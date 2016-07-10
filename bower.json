@@ -2,11 +2,11 @@
   "name": "metafizzy.co",
   "version": "2.0.0",
   "dependencies": {
-    "packery": "~1.4.3",
-    "flickity": "~1.1.1",
-    "isotope": "~2.2.2",
-    "normalize-css": "~3.0.3",
-    "draggabilly": "~1.2.4"
+    "packery": "^2.1.1",
+    "flickity": "^2.0.0",
+    "isotope": "^3.0.1",
+    "normalize-css": "^4.2.0",
+    "draggabilly": "^2.1.0"
   },
   "homepage": "https://github.com/metafizzy/metafizzy.co",
   "authors": [
