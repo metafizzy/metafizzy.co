@@ -1,0 +1,4 @@
+softTabs = true
+tabSize = 2
+excludeInFileChooser = "{$exclude,build,components,bower_components,node_modules}"
+excludeInFolderSearch = "{$exclude,build,components,bower_components,node_modules}"
