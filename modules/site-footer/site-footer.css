@@ -14,3 +14,8 @@
 .site-footer .showcase__product {
   background: #333;
 }
+
+.site-footer__newsletter {
+  margin: 40px 0;
+  font-size: 1.2rem;
+}

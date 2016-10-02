@@ -46,6 +46,7 @@ require('./tasks/posts')( site );
 require('./tasks/css')( site );
 require('./tasks/js')( site );
 require('./tasks/content')( site );
+require('./tasks/cache-bust')( site );
 
 // ----- serve ----- //
 
