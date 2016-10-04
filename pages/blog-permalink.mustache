@@ -2,6 +2,27 @@
 
   <title>{{{post.title}}} &middot; Metafizzy blog</title>
 
+  {{! Twitter card }}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@metafizzyco" />
+  <meta name="twitter:title" content="{{post.title}}" />
+  {{! Facebook OpenGraph }}
+  <meta property="og:url" content="http://metafizzy.co/blog/{{post.slug}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{post.title}}" />
+  <meta property="og:site_name" content="Metafizzy" />
+  {{! blurb }}
+  {{#if post.blurb}}
+    <meta name="description" content="{{post.blurb}}" />
+    <meta name="twitter:description" content="{{post.blurb}}" />
+    <meta property="og:description" content="{{post.blurb}}" />
+  {{/if}}
+  {{! image }}
+  {{#if post.image}}
+    <meta name="twitter:image" content="{{post.image}}" />
+    <meta property="og:image" content="{{post.image}}" />
+  {{/if}}
+
 </head>
 <body>
 

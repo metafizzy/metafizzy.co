@@ -1,5 +1,7 @@
 ---
 title: Logo Pizza Delivered
+blurb: "I've been able to work on some great logo projects, but I've been itching to do more. Rather than wait for projects to come my way, I gave myself a project of my own: design 50 logos."
+image: http://i.imgur.com/u40AMfs.png
 ---
 
 [![Logo Pizza](http://i.imgur.com/u40AMfs.png)](http://logo.pizza)

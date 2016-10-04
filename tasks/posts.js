@@ -52,7 +52,7 @@ module.exports = function( site ) {
         file.sortDate = parseInt( file.momentDate.format('YYYYMMDD') );
         file.timestamp = file.momentDate.format('D MMM YYYY');
         file.xmlTimestamp = file.momentDate.format('YYYY-MM-DD') + 'T12:00:00-05:00';
-        file.title = file.frontMatter.title;
+        utils.extend( file, file.frontMatter );
         // add file to posts collection
         if ( file.frontMatter.published !== false ) {
           site.posts.push( file.clone() );
