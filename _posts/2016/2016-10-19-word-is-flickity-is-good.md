@@ -1,6 +1,6 @@
 ---
 title: Word is Flickity is good
-description: Flickity has been getting good looks from some of the web's top developers.
+blurb: Flickity has been getting good looks from some of the webs top developers.
 ---
 
 [Flickity](http://flickity.metafizzy.co) has been getting good looks from some of the web's top developers.

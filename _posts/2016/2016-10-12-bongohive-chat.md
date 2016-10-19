@@ -1,6 +1,6 @@
 ---
 title: BongoHive chat
-description: I was recently invited by BongoHive to chat about Metafizzy on their Slack channel.
+blurb: I was recently invited by BongoHive to chat about Metafizzy on their Slack channel.
 ---
 
 I was recently invited by Silumesii Maboshe of [BongoHive](http://bongohive.co.zm/) to chat about Metafizzy on their Slack channel. BongoHive is a entreprenurial community based in Zambia. The African start-up scene seems like a distant realm, one I'm hardly familar with, but jumping on a Slack brings it as close as any other community. Below is an edited transcript of the chat session.
