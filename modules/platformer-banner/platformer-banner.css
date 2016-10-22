@@ -1,0 +1,20 @@
+/* platformer-banner
+------------------------- */
+
+.platformer-banner {
+  background: #222;
+  margin-top: 60px;
+}
+
+.platformer-banner__image {
+  display: block;
+  width: 100%;
+}
+
+.platformer-banner__caption {
+  margin-bottom: 0;
+}
+
+.platformer-banner ~ .site-footer {
+  margin-top: 0;
+}
