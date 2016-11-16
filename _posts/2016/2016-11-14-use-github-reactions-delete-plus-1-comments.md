@@ -26,9 +26,3 @@ Going forward, I will continue to request people use reactions, but also make it
 Reactions carry the intent of +1 comments, but they do not subscribe users to the issue like comments do. So I point to using the subscribe button.
 
 You know the faucet is leaky. Now you don't have to hear the drips.
-
----
-
-This leads me to a subject I'm working on: **GitHub cares little for its power users.** It cares about new users who grow the product. It cares about enterprise users who pay for the product. But for the people that maintain its high-profile projects, for the people that have put GitHub on the map, GitHub is listless.
-
-It has built its product to promote activity and puts the burden of managing all that activity on the shoulders of project contributors. This whole "Use reactions, delete +1 comments" hack job is just one of many strategies project maintainers have to employ to keep their heads above water on GitHub.

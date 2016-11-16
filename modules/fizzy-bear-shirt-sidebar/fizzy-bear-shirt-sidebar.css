@@ -1,0 +1,44 @@
+/* fizzy-bear-shirt-sidebar
+------------------------- */
+
+.fizzy-bear-shirt-sidebar {
+  max-width: 400px;
+  margin-top: 40px;
+}
+
+.fizzy-bear-shirt-sidebar__link {
+  display: block;
+  padding: 10px;
+  background: #222;
+  border-radius: 5px;
+}
+
+.fizzy-bear-shirt-sidebar__link:hover {
+  background: #19F;
+  color: white;
+}
+
+.fizzy-bear-shirt-sidebar__title {
+  line-height: 1;
+  margin: 0 0 10px;
+}
+
+.fizzy-bear-shirt-sidebar__image {
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.fizzy-bear-shirt-sidebar__description {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+@media screen and ( min-width: 1020px ) {
+  .fizzy-bear-shirt-sidebar {
+    max-width: 260px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+}
