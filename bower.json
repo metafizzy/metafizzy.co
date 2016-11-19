@@ -6,7 +6,8 @@
     "flickity": "^2.0.0",
     "isotope": "^3.0.1",
     "normalize-css": "^4.2.0",
-    "draggabilly": "^2.1.0"
+    "draggabilly": "^2.1.0",
+    "huebee": "^1.0.0"
   },
   "homepage": "https://github.com/metafizzy/metafizzy.co",
   "authors": [

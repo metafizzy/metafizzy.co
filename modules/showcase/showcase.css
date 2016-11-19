@@ -86,16 +86,15 @@
 
   .showcase__product {
     float: left;
-    width: calc((100% - 40px) / 3);
+    width: calc((100% - 20px) / 2);
     margin-right: 20px;
+    margin-bottom: 20px;
   }
+
+  .showcase__product:nth-child(2n+0) { margin-right: 0; }
 
   .showcase__product__demo {
     min-height: 320px;
-  }
-
-  .showcase__product--right {
-    margin-right: 0;
   }
 
   .showcase__product--banner {

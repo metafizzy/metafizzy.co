@@ -6,6 +6,7 @@ var utils = require('./utils');
 var cssSrcs = [
   'bower_components/normalize-css/normalize.css',
   'bower_components/flickity/css/flickity.css',
+  'bower_components/huebee/huebee.css',
   'modules/*/*.css'
 ];
 

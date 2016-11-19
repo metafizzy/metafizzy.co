@@ -38,6 +38,8 @@ var jsSrcs = [
   'bower_components/flickity/js/prev-next-button.js',
   'bower_components/flickity/js/page-dots.js',
   'bower_components/flickity/js/drag.js',
+  // huebee
+  'bower_components/huebee/huebee.js',
   // modules
   'modules/*/*.js'
 ];
