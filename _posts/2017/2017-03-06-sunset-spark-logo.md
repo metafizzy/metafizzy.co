@@ -1,6 +1,7 @@
 ---
 title: Sunset Spark logo
-blurb: "I'm proud to have designed the new logo for Sunset Spark, a technology and science school in Sunset Park, NY." 
+blurb: "I'm proud to have designed the new logo for Sunset Spark, a technology and science school in Sunset Park, NY."
+image: http://i.imgur.com/cs95O5g.png
 ---
 
 ![Sunset Spark logo](http://i.imgur.com/c40SxNg.png)
