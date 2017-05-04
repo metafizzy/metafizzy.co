@@ -33,7 +33,7 @@ For my purposes, my two branches `gh-pages` and `master` are pretty much identic
 
 Here's what the commit tree looks like for Masonry.
 
-![Git commits for Masonry](http://i.imgur.com/W3xk1.png)
+![Git commits for Masonry](https://i.imgur.com/W3xk1.png)
 
 Note the commit at the bottom of pic, _docs : change analytics back to mint_ which is commited to `gh-pages`, but not `master`.
 

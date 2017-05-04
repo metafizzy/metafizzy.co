@@ -8,7 +8,7 @@ layout: blog
 
 Brag time. <a href="http://iam.beyonce.com">Beyoncé's Tumblr</a> uses Masonry.
 
-[![iam.beyonce.com](http://i.imgur.com/712e6.jpg)](http://iam.beyonce.com)
+[![iam.beyonce.com](https://i.imgur.com/712e6.jpg)](http://iam.beyonce.com)
 
 It was designed by NYC design agency [designedmemory](http://www.designedmemory.com/).
 

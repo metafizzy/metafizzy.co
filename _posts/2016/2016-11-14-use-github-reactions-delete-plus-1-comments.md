@@ -9,7 +9,7 @@ After [the community called out GitHub on +1 comments](https://github.com/dear-g
 
 I have since experimented with requesting reactions, asking people to add a reaction to show their interest in the issue. See [Masonry#873 - Maintain left-to-right order](https://github.com/desandro/masonry/issues/873) and [Packery#353 - Add back drag / fit packing behavior from v1](https://github.com/metafizzy/packery/issues/353).
 
-[![Masonry#873](http://i.imgur.com/B1xqVIW.png)](https://github.com/desandro/masonry/issues/873)
+[![Masonry#873](https://i.imgur.com/B1xqVIW.png)](https://github.com/desandro/masonry/issues/873)
 
 Masonry#873 has been wildly successful with this strategy, gaining 71 thumbs-up reactions and no +1 comments. Packery#353 has had lesser success with 40 reactions, but several +1 comments continue to pop up.
 

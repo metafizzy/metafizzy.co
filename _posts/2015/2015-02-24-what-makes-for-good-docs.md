@@ -27,7 +27,7 @@ So how does documentation get people to use your code? **By being useful**. Docu
 
 I've designed the Flickity docs to prioritize for utility. The first piece of homepage content is a big demo. This demo immediately shows what Flickity can do. Rather than explain its features, it demonstrates them. A feature list could say anything, but a demo is the proof.
 
-[![Flickity homepage](http://i.imgur.com/Ppo66hO.png)](http://flickity.metafizzy.co)
+[![Flickity homepage](https://i.imgur.com/Ppo66hO.png)](http://flickity.metafizzy.co)
 
 The second piece are quick-start instructions, followed by download links, then by Getting Started instructions. When I look at other sites for libraries, these are the things I immediately search for. I want to learn about the library by trying it out for myself. My intention is to remove any barrier to decision about the library and let the user get their hands on it.
 

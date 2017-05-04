@@ -5,7 +5,7 @@ title: Choose Metafizzy's next project
 
 Help decide what Metafizzy’s next project will be. We've opened a [GitHub issue tracker where you can +1 proposals](https://github.com/metafizzy/next-project/issues) or submit your own. We've got several good ideas, but, like choosing sunglasses at the mall, we need help picking out _the one._
 
-[![Metafizzy's next project](http://i.imgur.com/F8WHQqr.png)](https://github.com/metafizzy/next-project/issues)
+[![Metafizzy's next project](https://i.imgur.com/F8WHQqr.png)](https://github.com/metafizzy/next-project/issues)
 
 Current proposals include:
 

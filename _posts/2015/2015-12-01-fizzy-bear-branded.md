@@ -4,7 +4,7 @@ title: Fizzy bear branded
 
 Fizzy's got a brand new brand.
 
-![Metafizzy brand](http://i.imgur.com/T0sVgzD.png)
+![Metafizzy brand](https://i.imgur.com/T0sVgzD.png)
 
 [The previous logotype was a beaut](/blog/logotype-james-edmondson) and served Metafizzy well. But it did have some issues (No fault of James' — these issues were all self-inflicted as I requested).
 
@@ -16,21 +16,21 @@ But the big reason for a rebrand was that I saw how popular the [Bower logo](htt
 
 Metafizzy needed a mascot. The bear has long since been a part of company lore. Erin likes to tease this enterprise, calling it "Lil Bear Designs." Back in 2012, I tried out the concept, sketching a couple bears. You can see how close these sketches were to the final version.
 
-![Metafizzy bear old sketches](http://i.imgur.com/JTAGo.jpg)
+![Metafizzy bear old sketches](https://i.imgur.com/JTAGo.jpg)
 
 I liked the leaping treatment, but the execution looked awkward. Opening up the sketchbook three years later, I thumbnailed a variety of little bears.
 
-![Metafizzy bear sketches](http://i.imgur.com/vSPwb0h.jpg)
+![Metafizzy bear sketches](https://i.imgur.com/vSPwb0h.jpg)
 
-![Metafizzy bear sketches](http://i.imgur.com/3UIH4gx.jpg)
+![Metafizzy bear sketches](https://i.imgur.com/3UIH4gx.jpg)
 
 I felt like a simplified runner bear was the winner.
 
-![Metafizzy runner bear iterations](http://i.imgur.com/nT7Ko4E.png)
+![Metafizzy runner bear iterations](https://i.imgur.com/nT7Ko4E.png)
 
 But [it turns](https://twitter.com/hacks/status/651839881900093440) out [pedobear](https://en.wikipedia.org/wiki/Pedobear) is a thing. So I went back to the leaping bear concept.
 
-![Metafizzy leaping bear iterations](http://i.imgur.com/ahH87P3.png)
+![Metafizzy leaping bear iterations](https://i.imgur.com/ahH87P3.png)
 
 It looks simple enough, but getting to this final form took hundreds of iterations, tweaking line styles, adjusting arm and leg positions, and figuring out what to do with that damn right ear.
 
@@ -38,17 +38,17 @@ This logo checks off all the boxes: reducible, mascot, and it's flexible. It wor
 
 With the new bear logo, the wordmark needed revisiting. The geometric logo treatment did not pair well with the humanistic letter forms. Fortunately, when James submitted the logotype, he also provided a couple geometric logotype treatments. As a bumbling novice typographer, I attempted to retool these to better suit the new logo and resolve the legibility issues.
 
-![Metafizzy wordmark process](http://i.imgur.com/UIjrGAu.png)
+![Metafizzy wordmark process](https://i.imgur.com/UIjrGAu.png)
 
 Better together.
 
-![Metafizzy logo and wordmark](http://i.imgur.com/EAN3K21.png)
+![Metafizzy logo and wordmark](https://i.imgur.com/EAN3K21.png)
 
 The wordmark still doesn't feel 100%. It does its job sitting next to the logo. But alone, it's missing the bounce and lilt of the previous version. It's a bit too generic and safe. As Erin noted, it could work just as well on packaging for baby formula.
 
 To help convince myself, I started using the new brand in practice. Rather than writing this blog post and declaring "It's done!", putting the logo and wordmark on stuff would be the best test to see how it worked in context.
 
-![Metafizzy brand in use](http://i.imgur.com/KgDS1w2.jpg)
+![Metafizzy brand in use](https://i.imgur.com/KgDS1w2.jpg)
 
 I love it. The bear is in.
 
@@ -58,4 +58,4 @@ Logos are important, even for a one-man company. After all, it's just me and the
 
 This one marks the next chapter.
 
-![Metafizzy logo timeline](http://i.imgur.com/KRqAAUI.png)
+![Metafizzy logo timeline](https://i.imgur.com/KRqAAUI.png)

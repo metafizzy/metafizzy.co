@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/metafizzy/metafizzy.co/issues"
   },
-  "homepage": "http://metafizzy.co",
+  "homepage": "https://metafizzy.co",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

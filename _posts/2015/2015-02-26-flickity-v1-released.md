@@ -8,11 +8,11 @@ layout: blog
 
 [Flickity](http://flickity.metafizzy.co) v1.0.0 is out and ready for prime-time.
 
-[![Flickity homepage](http://i.imgur.com/KN5sDYj.png)](http://flickity.metafizzy.co)
+[![Flickity homepage](https://i.imgur.com/KN5sDYj.png)](http://flickity.metafizzy.co)
 
 Check out the gif.
 
-![Flickity animated illustration](http://i.imgur.com/GmO1pVY.gif)
+![Flickity animated illustration](https://i.imgur.com/GmO1pVY.gif)
 
 ## How much does a widget cost?
 

@@ -16,7 +16,7 @@ Did it work as expected? What trouble did you run into? Is there something else 
 + Email [yo@metafizzy.co](mailto:yo@metafizzy.co?subject=Flickity beta feedback)
 + Tweet [@metafizzyco](https://twitter.com/metafizzyco)
 
-![Metafizzy swag](http://i.imgur.com/4oT9QwG.jpg)
+![Metafizzy swag](https://i.imgur.com/4oT9QwG.jpg)
 
 This swag could be yours.
 

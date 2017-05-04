@@ -8,7 +8,7 @@ layout: blog
 
 Flickity needs buttons.
 
-![Flickity needs buttons](http://i.imgur.com/5XB9XBG.jpg)
+![Flickity needs buttons](https://i.imgur.com/5XB9XBG.jpg)
 
 They need to be:
 

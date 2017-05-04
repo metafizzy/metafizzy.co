@@ -8,7 +8,7 @@ layout: blog
 
 [imagesLoaded just got a big upgrade this week](http://desandro.github.io/imagesloaded). It just got a whole lot more reliable and consistent across browsers.
 
-[![imagesLoaded](http://i.imgur.com/bhH0cj8.png)](http://desandro.github.io/imagesloaded)
+[![imagesLoaded](https://i.imgur.com/bhH0cj8.png)](http://desandro.github.io/imagesloaded)
 
 Prior to the fresh version 3, imagesLoaded relied on a hack, flipping out an images `src` in order to clear it from a browser cache. Now, the script checks for `naturalWidth`, and then fallbacks to listening for `load` or `error` event on proxy images.
 

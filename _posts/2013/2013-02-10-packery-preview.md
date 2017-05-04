@@ -15,37 +15,37 @@ It's been in development for the past several months, and it still has a ways to
 
 Packery has support for grid layouts. Okay, this isn't anything new from Masonry...
 
-![Packery grid](http://i.imgur.com/CODwUNY.png)
+![Packery grid](https://i.imgur.com/CODwUNY.png)
 
 ... but you can go totally off the grid and have lots of random item sizes. Packery is perfect for this.
 
-![Packery](http://i.imgur.com/ADEA9M4.png)
+![Packery](https://i.imgur.com/ADEA9M4.png)
 
 For next couple preview images, we'll have to use the best imagery format of all time: GIFs.
 
 Behold, Packery fills in the gaps! As well as adding and removing item elements.
 
-![Packery fill in gaps](http://i.imgur.com/zFtJzSV.gif)
+![Packery fill in gaps](https://i.imgur.com/zFtJzSV.gif)
 
 Packery does responsive stuff. The red background indicates a breakpoint.
 
-![Packery responsive](http://i.imgur.com/z99IRHZ.gif)
+![Packery responsive](https://i.imgur.com/z99IRHZ.gif)
 
 Much to my chagrin, [Masonry's corner stamp feature](http://masonry.desandro.com/demos/corner-stamp.html) is fairly popular. Packery goes all-out on this concept, allowing you to arbitrarily place certain elements anywhere you like. Note how the gray elements are laid out around the red ones.
 
-![Packery placed elements](http://i.imgur.com/C6Z3q1z.gif)
+![Packery placed elements](https://i.imgur.com/C6Z3q1z.gif)
 
 Here come the big guns. Draggable layout.
 
-![Packery draggable](http://i.imgur.com/8Ox4Yxi.gif)
+![Packery draggable](https://i.imgur.com/8Ox4Yxi.gif)
 
 And draggable _grid_ layout. Packery will align 'dropped' item elements into it's proper place in the grid.
 
-![Packery draggable grid](http://i.imgur.com/janRNzJ.gif)
+![Packery draggable grid](https://i.imgur.com/janRNzJ.gif)
 
 With multi-touch support
 
-![Packery draggable multi-touch](http://i.imgur.com/QL6ggTH.gif)
+![Packery draggable multi-touch](https://i.imgur.com/QL6ggTH.gif)
 
 Mic. Dropped.
 

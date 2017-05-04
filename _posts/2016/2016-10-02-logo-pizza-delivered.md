@@ -1,10 +1,10 @@
 ---
 title: Logo Pizza Delivered
 blurb: "I've been able to work on some great logo projects, but I've been itching to do more. Rather than wait for projects to come my way, I gave myself a project of my own: design 50 logos."
-image: http://i.imgur.com/u40AMfs.png
+image: https://i.imgur.com/u40AMfs.png
 ---
 
-[![Logo Pizza](http://i.imgur.com/u40AMfs.png)](http://logo.pizza)
+[![Logo Pizza](https://i.imgur.com/u40AMfs.png)](http://logo.pizza)
 
 After shipping [Flickity v2](/blog/flickity-v2-released) thus wrapping 2016's huge development project, I didn't have it in me to write another line of code. I discussed my state of mind and motivation in this 3 min podcast.
 
@@ -17,7 +17,7 @@ Man, I love logos. A little piece of imagery that represents the ideal you want 
 
 Fifty logos is a lot. At least one or two a day for an entire month. I tried pushing myself: exploring different styles, subjects, and techniques. It was like design boot camp: working all those muscles you never use.
 
-![Logo Pizza logo sketches](http://i.imgur.com/gpJbgKX.jpg)
+![Logo Pizza logo sketches](https://i.imgur.com/gpJbgKX.jpg)
 
 ## Designing
 
@@ -27,7 +27,7 @@ Critics have commented that these logos aren't actually logos because they weren
 
 ## Pricing
 
-[![Logo Pizza header](http://i.imgur.com/uoqPa89.png)](http://logo.pizza)
+[![Logo Pizza header](https://i.imgur.com/uoqPa89.png)](http://logo.pizza)
 
 I took inspiration from the [The Million Dollar Homepage](http://www.milliondollarhomepage.com/) and [I Wear Your Shirt](http://www.iwearyourshirt.com/), both _why didn't I think of that_ ideas. I always wanted to do a _why didn't I think of that_ thing. A gimmick!
 
@@ -43,7 +43,7 @@ As much as I hate to say it, if you work on the web, you work in the Age of Gimm
 
 ## Results
 
-[![Logo Pizza logos sold](http://i.imgur.com/yqXon1Q.png)](http://logo.pizza)
+[![Logo Pizza logos sold](https://i.imgur.com/yqXon1Q.png)](http://logo.pizza)
 
 I launched Logo Pizza on September 13th. It was much more successful than I had expected. Logo Pizza cracked the top 5 of Hacker News, which gave the logos and my work a much broader audience. I underestimated the power of a gimmick and a slow news day.
 

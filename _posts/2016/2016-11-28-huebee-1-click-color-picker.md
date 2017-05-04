@@ -1,10 +1,10 @@
 ---
 title: "Huebee: 1-click color picker"
 blurb: New thing! Huebee displays a limited set of colors so users view all colors at a glance and select a color with a single click.
-image: "http://i.imgur.com/2oW5U49.png"
+image: "https://i.imgur.com/2oW5U49.png"
 ---
 
-[![Huebee color picker](http://i.imgur.com/2oW5U49.png)](http://huebee.buzz)
+[![Huebee color picker](https://i.imgur.com/2oW5U49.png)](http://huebee.buzz)
 
 I've made a new thing! [Huebee is a one-click color picker.](http://huebee.buzz) It displays a limited set of colors so users view all colors at a glance, make clear decisions, and select a color with a single click.
 

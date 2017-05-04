@@ -61,7 +61,7 @@ endVelo = startVelo * ( 1 - friction ) ^ t
 
 Eventually, velocity will reach 0, and the dot stops moving. I can't get its end position from this equation, but I can figure out how many ticks of animation happen. The number in question is `t`. This looks like algebra, which I can handle. It's an exponent, which leads me to remember logarithms. I forget how they work. [Khan Academy refreshes](https://www.khanacademy.org/math/algebra2/logarithms-tutorial/logarithm_basics/v/logarithms) my memory. `eV` is end velocity, `sV` is start velocity.
 
-![Velocity, logarithm equations](http://i.imgur.com/qF6QSER.jpg)
+![Velocity, logarithm equations](https://i.imgur.com/qF6QSER.jpg)
 
 I've got the equation worked out. Now to bring it into JavaScript. [`Math.log` is in base `e`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log), and this equation has a different base `1 - f`. The MDN article even covers using [`Math.log` with different bases](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log#Example.3A_Using_Math.log_with_a_different_base).
 

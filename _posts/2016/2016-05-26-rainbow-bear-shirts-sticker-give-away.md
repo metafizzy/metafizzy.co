@@ -6,7 +6,7 @@ Ho dang. The world needs more rainbow bears out there and we're gonna make it ha
 
 ## Rainbow bear shirts now on sale
 
-[![Metafizzy rainbow bear t-shirt](http://i.imgur.com/jmMTtGD.jpg)](https://cottonbureau.com/products/fizzy-bear)
+[![Metafizzy rainbow bear t-shirt](https://i.imgur.com/jmMTtGD.jpg)](https://cottonbureau.com/products/fizzy-bear)
 
 [Metafizzy rainbow bear shirts are now on sale on Cotton Bureau.](https://cottonbureau.com/products/fizzy-bear) You can now sport that fizzy bear, bouncing up towards design Valhalla, right on your own person. **The sale lasts for the next two weeks, [so order now](https://cottonbureau.com/products/fizzy-bear).** We'll throw in a couple stickers with your shirt to sweeten the deal.
 
@@ -20,7 +20,7 @@ But the swag don't stop there...
 
 ## Free stickers in USA
 
-[![Metafizzy stickers](http://i.imgur.com/5RfF9Qa.jpg)](mailto:yo@metafizzy.co?subject=USA sticker give-away)
+[![Metafizzy stickers](https://i.imgur.com/5RfF9Qa.jpg)](mailto:yo@metafizzy.co?subject=USA sticker give-away)
 
 Dear Americans, you get stickers for free, by virtue of our national freedom and by virtue of thriftiness of USPS stamps. That's right. You get 4 dazzling stickers _fo' free_.
 
@@ -35,7 +35,7 @@ Email [yo@metafizzy.co](mailto:yo@metafizzy.co?subject=USA sticker give-away) wi
 
 If you live outside the US, we got you covered. [You can purchase a set of stickers for the low, low price of $4 USD.](https://gum.co/metafizzy-stickers-intl) That includes international shipping to where ever you are. You can increase multiple quantities for your team buddies.
 
-[![Metafizzy stickers international](http://i.imgur.com/FMCi2Rz.jpg)](https://gum.co/metafizzy-stickers-intl)
+[![Metafizzy stickers international](https://i.imgur.com/FMCi2Rz.jpg)](https://gum.co/metafizzy-stickers-intl)
 
 ---
 

@@ -4,7 +4,7 @@ title: "Isotope v3 released: stagger in, IE8 out"
 
 [Isotope v3 is Metafizzy's flagship product](http://isotope.metafizzy.co) — the best JavaScript library for filtering and sorting dynamic layouts. It just got a whole lot better with new version 3. We dropped support for IE8 & 9, and Android 2.3. In doing so, we were able to shed 800 lines of code to make Isotope's filesize 20% smaller. We added a [new option to stagger item transitions](http://isotope.metafizzy.co/options.html#stagger) ([finally](https://github.com/desandro/masonry/issues/540)).
 
-![Isotope stagger transition](http://i.imgur.com/NK0hbMu.gif)
+![Isotope stagger transition](https://i.imgur.com/NK0hbMu.gif)
 
 Staggered transitions are a small change to animation behavior, but the result is subtly compelling. The reveal and hide animations appear more natural.
 

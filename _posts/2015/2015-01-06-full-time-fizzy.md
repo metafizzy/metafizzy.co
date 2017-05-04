@@ -18,4 +18,4 @@ My heartfelt thanks goes out to you who have purchased a license. Your support i
 
 _— Dave_
 
-<p><img src="http://i.imgur.com/G8iN2Bm.jpg" alt="Metafizzy full-time" style="max-width: 400px"></p>
+<p><img src="https://i.imgur.com/G8iN2Bm.jpg" alt="Metafizzy full-time" style="max-width: 400px"></p>

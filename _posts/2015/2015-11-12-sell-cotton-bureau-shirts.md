@@ -6,7 +6,7 @@ layout: blog
 
 ---
   
-![Refactor shirts](http://i.imgur.com/pPdhMqp.jpg)
+![Refactor shirts](https://i.imgur.com/pPdhMqp.jpg)
 
 I've had some good fortune shilling shirts on Cotton Bureau. [The Refactor shirt](https://cottonbureau.com/products/refactor) recently completed its third offering, selling another 50 units. Not too shabby! Meanwhile, [the Bower shirt](https://cottonbureau.com/products/bower) remains in the [top 10 wall of fame](https://cottonbureau.com/wall-of-fame), with over 500 sold (and it's yellow!). It's not an exact science, but here's what I think works.
 
@@ -34,7 +34,7 @@ More shilling [Tweets in the Shirt promo Twitter collection.](https://twitter.co
 
 I'm not kidding about using any site you can get your hands on. I put up a promo in the footer on all my documentation sites: [Isotope](http://isotope.metafizzy.co), [Flickity](http://flickity.metafizzy.co), [Masonry](http://masonry.desandro.com). People come to these sites to learn some JS, but I was surprised to see how many shirt sales kept trickling in because of them.
 
-![Refactor shirt footer promo](http://i.imgur.com/2t6Y7jF.jpg)
+![Refactor shirt footer promo](https://i.imgur.com/2t6Y7jF.jpg)
 
 ## 3. Be chill about money
 
@@ -56,7 +56,7 @@ Also consider offering a Poly-Cotton or 100% Cotton selection, as they can save 
 
 It's worth looking through the [Wall of Fame](https://cottonbureau.com/wall-of-fame).
 
-![Cotton Bureau Wall of Fame](http://i.imgur.com/pb63427.jpg)
+![Cotton Bureau Wall of Fame](https://i.imgur.com/pb63427.jpg)
 
 Of the top 20 shirts, only four are not part of some larger brand. A lot of shirts are popular, not because the shirt has a great design, but because the shirt is about something else. People may be a huge fan of a show, or power-user of a product, or a supporter of the artist. The shirt is not about the design on the fabric, but about what it represents. It allows people to be a part of this bigger thing.
 

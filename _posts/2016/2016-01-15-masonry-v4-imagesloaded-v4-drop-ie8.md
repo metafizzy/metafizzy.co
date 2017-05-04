@@ -4,9 +4,9 @@ title: Masonry v4 and imagesLoaded v4 drop IE8
 
 [As promised](http://metafizzy.co/blog/dropping-ie8-9-support/), we are dropping support for IE8 & 9. We have released [Masonry v4](http://masonry.desandro.com) and [imagesLoaded v4](http://imagesloaded.desandro.com), ushering in a new glorious era of modern browser support.
 
-[![Masonry](http://i.imgur.com/SRu49e1.jpg)](http://masonry.desandro.com)
+[![Masonry](https://i.imgur.com/SRu49e1.jpg)](http://masonry.desandro.com)
 
-[![imagesLoaded](http://i.imgur.com/KBQszTE.png)](http://imagesloaded.desandro.com)
+[![imagesLoaded](https://i.imgur.com/KBQszTE.png)](http://imagesloaded.desandro.com)
 
 Dropping older browsers meant dropping excess weight. 700 lines of code were removed for Masonry v4, making it 25% lighter. imagesLoaded dropped 450 lines of code, reducing its size by half.
 

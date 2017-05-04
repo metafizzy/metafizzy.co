@@ -12,7 +12,7 @@ I spend a lot of time navigating through the docs, checking features and  findin
 
 The first thing you'll notice is a re-done homepage. While the original version did a good job of exhibiting Isotope's features, I found it tough to  navigate to the next page. This new version has navigation and demo clearly separated.
 
-[![Isotope homepage](http://i.imgur.com/mqlpY.png)](http://isotope.metafizzy.co)
+[![Isotope homepage](https://i.imgur.com/mqlpY.png)](http://isotope.metafizzy.co)
 
 The sidebar navigation is now ever-present around the micro site, so you can easily browse from demo to demo.
 

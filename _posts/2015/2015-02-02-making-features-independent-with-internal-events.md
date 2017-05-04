@@ -38,7 +38,7 @@ Flickity.prototype.pointerDown = function() {
 
 Everything was interconnected. If you wanted to use Flickity, you would need to use all its parts.
 
-![Flickity dependency chart](http://i.imgur.com/o8gyxW4.png)
+![Flickity dependency chart](https://i.imgur.com/o8gyxW4.png)
 
 Ideally, Flickity could be structured in a way that features could be completely optional. If you didn't want to use page dots or `autoPlay`, you wouldn't have to include its `.js` source. While these features are related, they are not dependent on one another. They could be separated and made independent. To maintain functionality between features, Flickity could use its own events.
 
@@ -167,7 +167,7 @@ A feature's code exists only in that feature's `.js` file, and not sprinkled thr
 
 The result is that the dependencies are reversed. Instead of Flickity requiring each feature to be in place, features are dependent on the core of Flickity. Features can be added or removed independently of one another.
 
-![Flickity dependency chart](http://i.imgur.com/zcVp9EO.png)
+![Flickity dependency chart](https://i.imgur.com/zcVp9EO.png)
 
 You could even build a Flickity gallery with no dragging or no UI, with just the core API as its interface.
 

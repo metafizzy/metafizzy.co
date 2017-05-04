@@ -10,7 +10,7 @@ Packery, the bin-packing layout library, is out. Packery is the second product f
 
 [packery.metafizzy.co](http://packery.metafizzy.co)
 
-[![packery site](http://i.imgur.com/LVUd29Y.png)](http://packery.metafizzy.co)
+[![packery site](https://i.imgur.com/LVUd29Y.png)](http://packery.metafizzy.co)
 
 > Packery is a JavaScript layout library that uses a bin-packing algorithm. This is a fancy way of saying "it fills empty gaps." Packery layouts can be intelligently ordered or organically wild. Elements can be [stamped](http://packery.metafizzy.co/options.html#stamped) in place, [fit](http://packery.metafizzy.co/methods.html#fit) in an ideal spot, or [dragged](http://packery.metafizzy.co/draggable.html) around.
 
@@ -22,9 +22,9 @@ Packery resolves some of the more recent issues with Masonry and Isotope and the
 
 The cornerstone of this project is the bin-packing algorithm. That algorithm was taken from a white paper, [A Thousand Ways to Pack the Bin -- A Practical Approach to Two-Dimensional Rectangle Bin Packing](http://clb.demon.fi/files/RectangleBinPack.pdf), by Finish developer [Jukka Jylänki](http://clb.demon.fi/) (shared with me by Wes Dimiceli. Thank you so much Wes). The paper discusses several algorithms for essentially fitting lots of rectangles into a much bigger rectangle. The Packery algorithm is based off of Jylänki's Maximal Rectangles algorithm.
 
-![maximal rectangle algorithm](http://i.imgur.com/kFvd9n5.png)
+![maximal rectangle algorithm](https://i.imgur.com/kFvd9n5.png)
 
-![maximal rectangle algorithm](http://i.imgur.com/zf1Oj0j.png)
+![maximal rectangle algorithm](https://i.imgur.com/zf1Oj0j.png)
 
 How it works is not that fascinating (if you're interested, [read the paper](http://clb.demon.fi/files/RectangleBinPack.pdf)), but what it provides is delicious. This algorithm was the key to unlocking some of Masonry's most fantasized features: dragging, and filling in gaps. It opens up new possibilities, like [fitting in expanded items](http://packery.metafizzy.co/methods.html#fit) and [stamping other elements in place](http://packery.metafizzy.co/options.html#stamped).
 

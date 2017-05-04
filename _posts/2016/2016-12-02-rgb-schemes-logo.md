@@ -1,10 +1,10 @@
 ---
 title: RGB Schemes logo
-image: "http://i.imgur.com/CvCUGay.png"
+image: "https://i.imgur.com/CvCUGay.png"
 blurb: I designed the logo, type treatment, and brand guidelines for RGB Schemes, a VR gaming start-up.
 ---
 
-![RGB Schemes logo](http://i.imgur.com/1tRedUl.png)
+![RGB Schemes logo](https://i.imgur.com/1tRedUl.png)
 
 I designed the logo, type treatment, and brand guidelines for [RGB Schemes](http://www.rgbschemes.com/), a VR gaming start-up. Woo, it's a fun one! The main logo is the RGB birdie, a symbol dense with meaning.
 
@@ -15,9 +15,9 @@ I designed the logo, type treatment, and brand guidelines for [RGB Schemes](http
 
 The kicker: The birdie can be rendered as a 3D object.
 
-![RGB Schemes 3D logo rotation](http://i.imgur.com/5sjqPUj.gif)
+![RGB Schemes 3D logo rotation](https://i.imgur.com/5sjqPUj.gif)
 
-![RGB Schemes 3D logo object](http://i.imgur.com/a25tzCr.jpg)
+![RGB Schemes 3D logo object](https://i.imgur.com/a25tzCr.jpg)
 
 I coded up this demo with 3D CSS transforms so you can [drag around the logo for yourself](http://codepen.io/desandro/pen/LRXkQY/).
 
@@ -28,12 +28,12 @@ It was one of those wonderful cases of design happenstance. I put the letters in
 
 Here's a look at all the explorations designed in the effort.
 
-![RGB Schemes logo design process 1](http://i.imgur.com/VdKWIry.png)
+![RGB Schemes logo design process 1](https://i.imgur.com/VdKWIry.png)
 
-![RGB Schemes logo design process 2](http://i.imgur.com/8KI78Xk.png)
+![RGB Schemes logo design process 2](https://i.imgur.com/8KI78Xk.png)
 
 ---
 
 Interested in a logo for your project? **Let's chat!** Email me [yo@metafizzy.co](mailto:yo@metafizzy.co) to get started.
 
-[![David DeSandro logos](http://i.imgur.com/rj69rp7.png)](http://desandro.com/#logos)
+[![David DeSandro logos](https://i.imgur.com/rj69rp7.png)](http://desandro.com/#logos)

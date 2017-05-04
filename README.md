@@ -1,4 +1,4 @@
-# [metafizzy.co](http://metafizzy.co)
+# [metafizzy.co](https://metafizzy.co)
 
 Metafizzy company site
 

@@ -10,7 +10,7 @@ I just added a new Isotope demo for a highly-requested feature -- [combination f
 
 Check it out in all its Playskool glory!
 
-[![Isotope Combination filters demo screenshot](http://i.imgur.com/nD4KQ.png)](http://isotope.metafizzy.co/demos/combination-filters.html)
+[![Isotope Combination filters demo screenshot](https://i.imgur.com/nD4KQ.png)](http://isotope.metafizzy.co/demos/combination-filters.html)
 
 The JS isn't too heavy. I'm using an object to store the filter for each group.  Then when a new item is clicked, I update the object, compile an array of the filters, and then merge them together as one string. To allow a filter of nothing for each group, I assign an empty string for that group.
 
