@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>Metafizzy</title>
-  <link href="http://metafizzy.co/feed/index.xml" rel="self" />
-  <link href="http://metafizzy.co/blog" />
+  <link href="https://metafizzy.co/feed/index.xml" rel="self" />
+  <link href="https://metafizzy.co/blog" />
   <updated>{{ updated }}</updated>
-  <id>http://metafizzy.co/blog</id>
+  <id>https://metafizzy.co/blog</id>
   <author>
     <name>David DeSandro / Metafizzy</name>
   </author>
@@ -13,13 +13,13 @@
   {{#each posts}}
     <entry>
       <title>{{ title }}</title>
-      <link href="http://metafizzy.co/blog/{{ slug }}" />
+      <link href="https://metafizzy.co/blog/{{ slug }}" />
       <published>{{ xmlTimestamp }}</published>
       <author>
         <name>David DeSandro / Metafizzy</name>
-        <uri>http://metafizzy.co/blog</uri>
+        <uri>https://metafizzy.co/blog</uri>
       </author>
-      <id>http://metafizzy.co/blog/{{ slug }}</id>
+      <id>https://metafizzy.co/blog/{{ slug }}</id>
       <content type="html">{{ contents }}</content>
     </entry>
   {{/each}}
