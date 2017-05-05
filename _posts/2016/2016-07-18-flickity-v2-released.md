@@ -33,6 +33,6 @@ Flick that upgrade up.
 
 ---
 
-This wraps up the 2016 major version upgrade run. Did you catch [Isotope v3](/blog/isotope-v3-released/) and [Packery v2](http://metafizzy.co/blog/packery-v2-released/)? It's been a doozy — banging out major releases for every big library, multitudes of support libraries, and all the documentation sites. Pushing out all that code was a thrill, feeling like a developer super-producer. But I'm relieved now that it's all wrapped up. Time to build something new.
+This wraps up the 2016 major version upgrade run. Did you catch [Isotope v3](/blog/isotope-v3-released/) and [Packery v2](/blog/packery-v2-released/)? It's been a doozy — banging out major releases for every big library, multitudes of support libraries, and all the documentation sites. Pushing out all that code was a thrill, feeling like a developer super-producer. But I'm relieved now that it's all wrapped up. Time to build something new.
 
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>

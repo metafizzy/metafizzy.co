@@ -11,7 +11,7 @@ layout: blog
 + Bower, Component(1), Browserify
 + jsFiddle & CodePen
 
-When [Isotope v1 was released](http://metafizzy.co/blog/isotope-v1dot0-released/) three years ago, these things either weren't on the map or didn't even exist. Front-end development has made incredible leaps since then. Isotope v1 was designed to be at the cutting edge of front-end technology, but it eventually felt like it was being left behind by its own environment. With this big version 2 upgrade, Isotope is back in front.
+When [Isotope v1 was released](/blog/isotope-v1dot0-released/) three years ago, these things either weren't on the map or didn't even exist. Front-end development has made incredible leaps since then. Isotope v1 was designed to be at the cutting edge of front-end technology, but it eventually felt like it was being left behind by its own environment. With this big version 2 upgrade, Isotope is back in front.
 
 Isotope v2 big features include:
 

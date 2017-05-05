@@ -28,7 +28,7 @@ Now that it's been properly launched, it's worth considering what it cost to put
 + [Unit demos](http://codepen.io/desandro/tag/flickity-docs/) for every feature
 + Support, [addressing open source issues](https://github.com/metafizzy/flickity/issues)
 
-Flickity's total development time, from [initial demos](/blog/initial-demos/) to v1.0.0 release, has taken about 3 months. [Creating Isotope](http://metafizzy.co/blog/isotope-v1dot0-released) and [Packery](http://metafizzy.co/blog/packery-released) took about 3 months as well, although I wasn't working on them full-time. Estimating that a front-end developer's yearly salary is $100,000 (which is on the low end for NYC or San Francisco), 3 months would cost $25,000. 
+Flickity's total development time, from [initial demos](/blog/initial-demos/) to v1.0.0 release, has taken about 3 months. [Creating Isotope](/blog/isotope-v1dot0-released) and [Packery](/blog/packery-released) took about 3 months as well, although I wasn't working on them full-time. Estimating that a front-end developer's yearly salary is $100,000 (which is on the low end for NYC or San Francisco), 3 months would cost $25,000. 
 
 A widget costs 25 grand. That's to say, a full-featured widget with all the bells and whistles like Flickity costs 25 grand.
 

@@ -7,7 +7,7 @@ layout: blog
 ---
 
 
-Just yesterday, Mr. Angel Marino pinged me for some help via the [Isotope GitHub issue tracker](https://github.com/desandro/isotope/issues). Most support requests come to me via the email mechanism I put in place with the [support license](http://metafizzy.co/#support).   I recommend that customers looking for support to use email over GitHub issues or Twitter for the sake of confidentiality.
+Just yesterday, Mr. Angel Marino pinged me for some help via the [Isotope GitHub issue tracker](https://github.com/desandro/isotope/issues). Most support requests come to me via the email mechanism I put in place with the [support license](/#support).   I recommend that customers looking for support to use email over GitHub issues or Twitter for the sake of confidentiality.
 
 In this case, I got the impression that [Angel was comfortable with openness](https://github.com/desandro/isotope/issues/46#issuecomment-1065965), so now I have a good example of a typical support request process.
 

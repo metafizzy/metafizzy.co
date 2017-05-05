@@ -48,4 +48,4 @@ You can install Packery with Bower.
 
 ---
 
-I am excited for what's to come. Packery layouts have tremendous potential for innovation for web layouts. But there's a danger that comes with changing the rules so much. What will happen now that developers have their [mythical drag n' drop multi-column grid plugin](http://metafizzy.co/blog/mythical-drag-drop-multi-column-grid-plugin/)? I hope good things. But once these tools are out in wild, who knows how they will be used.
+I am excited for what's to come. Packery layouts have tremendous potential for innovation for web layouts. But there's a danger that comes with changing the rules so much. What will happen now that developers have their [mythical drag n' drop multi-column grid plugin](/blog/mythical-drag-drop-multi-column-grid-plugin/)? I hope good things. But once these tools are out in wild, who knows how they will be used.

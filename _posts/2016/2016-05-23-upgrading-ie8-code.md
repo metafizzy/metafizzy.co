@@ -2,7 +2,7 @@
 title: Upgrading junky IE8 code with current goodies
 ---
 
-Man, it feels good to cut out all the old junky code and live in the modern day. With new versions of [Isotope](/blog/isotope-v3-released/), [Packery](/blog/packery-v2-released/), [Masonry, and imagesLoaded](http://metafizzy.co/blog/masonry-v4-imagesloaded-v4-drop-ie8/), I've been upgrading browser support, dropping IE8 & 9, and Android <4. I've been able to remove hundreds of lines of code.
+Man, it feels good to cut out all the old junky code and live in the modern day. With new versions of [Isotope](/blog/isotope-v3-released/), [Packery](/blog/packery-v2-released/), [Masonry, and imagesLoaded](/blog/masonry-v4-imagesloaded-v4-drop-ie8/), I've been upgrading browser support, dropping IE8 & 9, and Android <4. I've been able to remove hundreds of lines of code.
 
 If you're looking to bump up your browser support, here's a run-down of all the code you can upgrade.
 

@@ -39,6 +39,6 @@ If you live outside the US, we got you covered. [You can purchase a set of stick
 
 ---
 
-Whew, that's a lot of goodies! [We haven't done a sticker give-away for three years](http://metafizzy.co/blog/sticker-give-away/). Been too long! I'm finally in a place where I can spend time mailing stuff out. That's the real constraint. Sitting down, printing envelopes, heading to the post office. It's great to now have an option for all the good people outside of the States. [The response to the new logo was a treat](https://twitter.com/metafizzyco/status/712281507289640961), so I'm jazzed to get these out there.
+Whew, that's a lot of goodies! [We haven't done a sticker give-away for three years](/blog/sticker-give-away/). Been too long! I'm finally in a place where I can spend time mailing stuff out. That's the real constraint. Sitting down, printing envelopes, heading to the post office. It's great to now have an option for all the good people outside of the States. [The response to the new logo was a treat](https://twitter.com/metafizzyco/status/712281507289640961), so I'm jazzed to get these out there.
 
 And when you do get your rainbow bears, why not scratch our back and [show off the goods like these fine folks](https://twitter.com/metafizzyco/timelines/676774542568726528)?

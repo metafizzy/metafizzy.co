@@ -2,7 +2,7 @@
 title: Masonry v4 and imagesLoaded v4 drop IE8
 ---
 
-[As promised](http://metafizzy.co/blog/dropping-ie8-9-support/), we are dropping support for IE8 & 9. We have released [Masonry v4](http://masonry.desandro.com) and [imagesLoaded v4](http://imagesloaded.desandro.com), ushering in a new glorious era of modern browser support.
+[As promised](/blog/dropping-ie8-9-support/), we are dropping support for IE8 & 9. We have released [Masonry v4](http://masonry.desandro.com) and [imagesLoaded v4](http://imagesloaded.desandro.com), ushering in a new glorious era of modern browser support.
 
 [![Masonry](https://i.imgur.com/SRu49e1.jpg)](http://masonry.desandro.com)
 
