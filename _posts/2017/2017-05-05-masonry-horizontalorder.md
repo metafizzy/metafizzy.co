@@ -10,7 +10,7 @@ I've added Masonry's first new layout feature in years. [`horizontalOrder` for M
 
 [Try out the demo on CodePen](https://codepen.io/desandro/pen/dWVqmx).
 
-<p data-height="360" data-theme-id="20058" data-slug-hash="dWVqmx" data-default-tab="result" data-user="desandro" data-embed-version="2" data-pen-title="Masonry & Isotope horizontalOrder" class="codepen">See the Pen <a href="https://codepen.io/desandro/pen/dWVqmx/">Masonry & Isotope horizontalOrder</a> by David DeSandro (<a href="http://codepen.io/desandro">@desandro</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="360" data-theme-id="dark" data-slug-hash="dWVqmx" data-default-tab="result" data-user="desandro" data-embed-version="2" data-pen-title="Masonry & Isotope horizontalOrder" class="codepen">See the Pen <a href="https://codepen.io/desandro/pen/dWVqmx/">Masonry & Isotope horizontalOrder</a> by David DeSandro (<a href="http://codepen.io/desandro">@desandro</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 This feature has been [hotly requested over a long time](https://github.com/desandro/masonry/issues/873). For a while, I felt a horizontalOrder feature went against the purpose of Masonry. Masonry is supposed to mess up the horizontal order — that's what makes it Masonry. But recently, I've started relenting over these philosophical stances. If hundreds of people are asking for the same thing, maybe I shouldn't be so stubborn.
