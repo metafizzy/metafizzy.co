@@ -6,7 +6,7 @@ image: https://i.imgur.com/42X1uJl.png
 
 ![Metafizzy taking over Infinite Scroll](https://i.imgur.com/42X1uJl.png)
 
-Metafizzy is taking over [Infinite Scroll](https://github.com/infinite-scroll/infinite-scroll/). In addition to assuming maintenance of the project, Metafizzy will release a brand new version of Infinite Scroll in the coming weeks.
+Metafizzy is taking over [Infinite Scroll](https://github.com/metafizzy/infinite-scroll/). In addition to assuming maintenance of the project, Metafizzy will release a brand new version of Infinite Scroll in the coming weeks.
 
 Infinite Scroll is the OG of jQuery plugins, first created by Paul Irish in 2007. It works by automatically adding the next page's content to current page, saving the user from a full page load. Infinite Scroll combined several of jQuery's best features: AJAX page requests, dynamic UI, and progressive enhancement. Developers could drop its `.js` file on their page and feel super-powered, watching their sites come alive with its effortless integration.
 

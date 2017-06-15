@@ -73,6 +73,40 @@ module.exports = function( site ) {
 
   site.addWatch( blogArchiveSrc, [ 'content-blog-archive' ] );
 
+  // ----- promo pages ----- //
+
+  var promoSrc = 'pages/promo.mustache';
+
+  gulp.task( 'content-codepenradio-promo', [ 'partials' ], function() {
+    promoTask({
+      slug: 'codepenradio',
+      users: 'CodePen Radio listeners',
+      copy: '<p>Get 15% any Metafizzy Commercial license. Use the links below when you&rsquo;re ready to make a purchase.',
+    });
+  });
+
+  gulp.task( 'content-shoptalkshow-promo', [ 'partials' ], function() {
+    promoTask({
+      slug: 'shoptalkshow',
+      users: 'Shop Talk Show listeners',
+      copy: '<p>Get 15% any Metafizzy Commercial license. Use the links below when you&rsquo;re ready to make a purchase.',
+    });
+  });
+
+  function promoTask( data ) {
+    return gulp.src( promoSrc )
+      .pipe( template( data ) )
+      .pipe( rename('index.html') )
+      .pipe( gulp.dest( 'build/' + data.slug ) );
+  }
+
+  gulp.task( 'content-promo', [
+    'content-codepenradio-promo',
+    'content-shoptalkshow-promo',
+  ]);
+
+  site.addWatch( promoSrc, [ 'content-promo' ] );
+
   // ----- rss ----- //
 
   var rssFeedSrc = 'pages/rss-feed.mustache';
@@ -89,11 +123,11 @@ module.exports = function( site ) {
 
   site.addWatch( rssFeedSrc, [ 'content-rss' ] );
 
-  // ----- rss ----- //
+  // ----- 404 ----- //
 
   var fourOhFourSrc = 'pages/404.mustache';
 
-  gulp.task( 'content-404', [ 'posts' ], function() {
+  gulp.task( 'content-404', [ 'partials' ], function() {
     return gulp.src( fourOhFourSrc )
       .pipe( template() )
       .pipe( rename('404.html') )
@@ -123,6 +157,7 @@ module.exports = function( site ) {
     'content-homepage',
     'content-blog',
     'content-blog-archive',
+    'content-promo',
     'content-rss',
     'content-404',
   ]);
