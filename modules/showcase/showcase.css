@@ -78,28 +78,25 @@
 
 @media screen and (min-width: 768px) {
 
-  .showcase:after {
-    display: block;
-    clear: both;
-    content: '';
+  .showcase__row {
+    display: -webkit-box;
+    display: flex;
+    margin-bottom: 40px;
   }
 
-  .showcase__product {
-    float: left;
-    width: calc((100% - 20px) / 2);
+  .showcase__row .showcase__product {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
     margin-right: 20px;
-    margin-bottom: 20px;
   }
 
-  .showcase__product:nth-child(2n+0) { margin-right: 0; }
+  .showcase__row  .showcase__product:last-child { margin-right: 0; }
 
   .showcase__product__demo {
     min-height: 320px;
   }
 
   .showcase__product--banner {
-    clear: both;
-    width: 100%;
     margin-right: 0;
     margin-top: 20px;
     padding-bottom: 0;

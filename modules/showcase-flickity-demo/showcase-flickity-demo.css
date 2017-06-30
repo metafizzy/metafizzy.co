@@ -10,11 +10,11 @@
   margin-right: 15px;
 }
 
-.showcase-flickity-demo__cell:nth-child(1) { background: #19F; }
+.showcase-flickity-demo__cell:nth-child(1) { background: #6A6; }
+.showcase-flickity-demo__cell:nth-child(5) { background: #19F; }
 .showcase-flickity-demo__cell:nth-child(2) { background: #EA0; }
 .showcase-flickity-demo__cell:nth-child(3) { background: #E62; }
 .showcase-flickity-demo__cell:nth-child(4) { background: #C25; }
-.showcase-flickity-demo__cell:nth-child(5) { background: #6A6; }
 
 .showcase-flickity-demo__cell__number {
   position: absolute;

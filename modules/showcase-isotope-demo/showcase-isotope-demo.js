@@ -1,5 +1,5 @@
 /**
- * homepage isotope demo
+ * showcase isotope demo
  */
 
 /* globals Isotope: false */
