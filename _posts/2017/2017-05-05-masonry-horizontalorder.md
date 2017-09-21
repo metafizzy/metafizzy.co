@@ -1,6 +1,6 @@
 ---
 title: Masonry gets horizontalOrder
-image: https://imgur.com/vjODpqE
+image: https://i.imgur.com/vjODpqE.png
 blurb: Masonry and Isotope
 ---
 

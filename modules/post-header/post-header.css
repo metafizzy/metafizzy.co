@@ -1,8 +1,29 @@
 /* post-header
 ------------------------- */
 
+.post-header {
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.post-header__thumbnail {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.post-header__text {
+  -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+}
+
 .post-header__title {
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   line-height: 1.0;
   font-size: 1.8rem;
   font-weight: normal;
@@ -11,7 +32,7 @@
 
 .post-header__date {
   color: #E62;
-  margin: 0 0 30px;
+  margin: 0;
 }
 
 .post-header:hover .post-header__title,
@@ -20,7 +41,14 @@
 }
 
 @media screen and (min-width: 768px) {
+  .post-header__thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+
   .post-header__title {
+    padding-top: 10px;
     font-size: 2.2rem;
   }
 }
