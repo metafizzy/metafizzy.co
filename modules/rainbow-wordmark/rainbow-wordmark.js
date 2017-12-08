@@ -15,16 +15,17 @@ var wordmarkImg = wordmark.querySelector('.rainbow-wordmark__image');
 var canvas = wordmark.querySelector('.rainbow-wordmark__canvas');
 var ctx = canvas.getContext('2d');
 var trailCount = 100;
-var canvasWidth = canvas.width;
-var canvasHeight = canvas.height;
+var canvasWidth, canvasHeight;
 
 // ----- load image ----- //
 
 var whiteImg = new Image();
 whiteImg.onload = onWhiteImgLoad;
-whiteImg.src = '/img/wordmark-white.png';
+whiteImg.src = '/img/metafizzy-wordmark-fizzy-script.png';
 
 function onWhiteImgLoad() {
+  canvasWidth = canvas.width = whiteImg.width + trailCount;
+  canvasHeight = canvas.height = whiteImg.height + trailCount;
   setColorCanvas( 'blue', '#19F' );
   setColorCanvas( 'gold', '#EA0' );
   setColorCanvas( 'orange', '#E62' );
@@ -84,6 +85,8 @@ function update() {
   rainbow.pop();
   rainbow.pop();
   rainbow.pop();
+  rainbow.pop();
+  rainbow.unshift( nextColor );
   rainbow.unshift( nextColor );
   rainbow.unshift( nextColor );
   rainbow.unshift( nextColor );

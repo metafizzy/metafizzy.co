@@ -10,7 +10,8 @@
   position: relative;
 }
 
-.site-header__logo {
+.site-header .mfzy-logo {
+  width: 60px;
   height: 60px;
   vertical-align: bottom;
   margin-right: 5px;
@@ -32,7 +33,6 @@
   bottom: 0;
   padding-left: 15px;
   font-size: 1.2rem;
-  font-style: italic;
   line-height: 1;
   color: white;
 }
@@ -49,12 +49,14 @@
 
 @media screen and (min-width: 768px) {
 
-  .site-header__logo {
-    height: 100px;
+  .site-header .mfzy-logo {
+    width: 80px;
+    height: 80px;
   }
 
   .site-header .rainbow-wordmark {
     width: 220px;
+    margin-bottom: 5px;
   }
 
   .site-header__title-blog-text {

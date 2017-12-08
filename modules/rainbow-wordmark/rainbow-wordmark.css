@@ -14,7 +14,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 110%; /* canvas is 1100px, img is 1000 */
+  width: 109%; /* canvas is 1220px, img is 1120 */
 }
 
 .rainbow-wordmark__image {
