@@ -1,7 +1,7 @@
 ---
 title: "transfob replaces through2 for Gulp plugins"
 blurb: transfob is a tiny replacement for through2.obj, ideal for Gulp plugins
-image: https://metafizzy.co/img/metafizzy-logo-thumbnail-green.png
+image: /img/metafizzy-logo-thumbnail-green.png
 ---
 
 As Metafizzy uses [Gulp](https://gulpjs.com/) for running tasks, I write a lot of Gulp plugins. For example, here's a simple one to add a file's basename to the [Vinyl](https://github.com/gulpjs/vinyl) `file` object.
