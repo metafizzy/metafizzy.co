@@ -7,6 +7,11 @@
   {{/if}}
   <div class="post-header__text">
     <h1 class="post-header__title">{{{title}}}</h1>
-    <p class="post-header__date">{{timestamp}}</p>
+    <p class="post-header__details">
+      <span class="post-header__date">{{timestamp}}</span>
+      <span class="post-header__author">
+        &middot; by {{#if authorName}}{{authorName}}{{else}}David DeSandro{{/if}}
+      </span>
+    </p>
   </div>
 </a>

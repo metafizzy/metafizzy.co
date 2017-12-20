@@ -30,13 +30,13 @@
   color: #D26;
 }
 
-.post-header__date {
+.post-header__details {
   color: #E62;
   margin: 0;
 }
 
 .post-header:hover .post-header__title,
-.post-header:hover .post-header__date {
+.post-header:hover .post-header__details {
   color: #19F;
 }
 
