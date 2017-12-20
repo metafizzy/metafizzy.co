@@ -1,10 +1,10 @@
 ---
 title: Infinite Scroll v3 released
 blurb: Infinite Scroll v3 is a complete re-write that brings lots of great, new features
-image: http://i.imgur.com/HdGBqXX.png
+image: https://i.imgur.com/HdGBqXX.png
 ---
 
-[![Infinite Scroll v3 homepage](http://i.imgur.com/HdGBqXX.png)](https://infinite-scroll.com)
+[![Infinite Scroll v3 homepage](https://i.imgur.com/HdGBqXX.png)](https://infinite-scroll.com)
 
 Today, Metafizzy is releasing a [brand new version of Infinite Scroll](https://infinite-scroll.com).
 
