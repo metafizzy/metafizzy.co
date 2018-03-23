@@ -85,14 +85,6 @@ module.exports = function( site ) {
     });
   });
 
-  gulp.task( 'content-shoptalkshow-promo', [ 'partials' ], function() {
-    promoTask({
-      slug: 'shoptalkshow',
-      users: 'Shop Talk Show listeners',
-      copy: '<p>Get 15% any Metafizzy Commercial license. Use the links below when you&rsquo;re ready to make a purchase.',
-    });
-  });
-
   function promoTask( data ) {
     return gulp.src( promoSrc )
       .pipe( template( data ) )
@@ -101,8 +93,6 @@ module.exports = function( site ) {
   }
 
   gulp.task( 'content-promo', [
-    'content-codepenradio-promo',
-    'content-shoptalkshow-promo',
   ]);
 
   site.addWatch( promoSrc, [ 'content-promo' ] );
