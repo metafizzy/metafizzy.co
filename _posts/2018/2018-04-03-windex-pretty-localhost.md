@@ -8,7 +8,7 @@ image: /img/2018/windex-thumbnail.png
 
 As 90% of my job is making static websites, I am often looking at directory index pages. You know, those ancient pages with titles like _Index of /projects/_. Long ago, I swore off the ugly unstyled 90's default and chose a higher path.
 
-[Windex is a little library that creates stylized directory index pages with Apache.](https://github.com/desandro/windex) Simply put, it allows you to use CSS on your `localhost`. Features include:
+[Windex is a little library that creates styled directory index pages with Apache.](https://github.com/desandro/windex) Simply put, it allows you to use CSS on your `localhost`. Features include:
 
 + SVG icons, sized pixel-perfect for 24x24 & multiples thereof
 + View HTML files without extensions: `project/page.html` at `project/page`
