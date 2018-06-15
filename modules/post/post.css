@@ -28,6 +28,7 @@
   display: block;
   margin: 1.0rem 0;
   max-width: 100%;
+  border-radius: 5px;
 }
 
 .post__content iframe {
