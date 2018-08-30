@@ -81,10 +81,6 @@ blockquote {
 
 /* ----  ---- */
 
-svg {
-  fill: white;
-}
-
 pre, code {
   font-family: Consolas, Menlo, monospace;
   background: black;
