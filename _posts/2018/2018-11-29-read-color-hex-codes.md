@@ -18,9 +18,6 @@ Full transcript of my talk is below. [Video on YouTube](https://www.youtube.com/
 
 ---
 
-
-<script async class="speakerdeck-embed" data-id="2f5d4ebf304641d5ba8d26560ecc2a67" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-
 A couple years ago, I discovered I had a special ability. I can read color hex codes.
 
 Color hex codes are the six-digit alpha-numerical codes that we developers use every day to set colors.
