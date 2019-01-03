@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var frontMatter = require('gulp-front-matter');
 var moment = require('moment');
-// var marked = require('gulp-marked');
+var markdown = require('gulp-markdown');
 var highlight = require('highlight.js');
 var transfob = require('transfob');
 var rename = require('gulp-rename');
@@ -27,7 +27,14 @@ module.exports = function( site ) {
       }));
   });
 
-  gulp.task( 'posts', gulp.series( 'partials', 'blog-permalink-template' ), function() {
+  gulp.task( 'posts',
+    gulp.series(
+      gulp.parallel( 'partials', 'blog-permalink-template' ),
+      buildPosts
+    )
+  );
+
+  function buildPosts() {
     // reset posts
     site.posts = [];
 
@@ -36,11 +43,11 @@ module.exports = function( site ) {
         property: 'frontMatter',
         remove: true
       }) )
-      // .pipe( marked({
-      //   highlight: function( code, lang ) {
-      //     return lang ? highlight.highlight( lang, code ).value : code;
-      //   }
-      // }) )
+      .pipe( markdown({
+        highlight: function( code, lang ) {
+          return lang ? highlight.highlight( lang, code ).value : code;
+        }
+      }) )
       .pipe( transfob( function( file, encoding, callback ) {
         // get dateCode and slug from basename
         var basename = utils.getBasename( file.path );
@@ -84,10 +91,10 @@ module.exports = function( site ) {
           post: file
         };
         utils.extend( data, site.data );
-        file.contents = new Buffer( blogPermalinkTemplate( data ) );
+        file.contents = Buffer.from( blogPermalinkTemplate( data ) );
         callback( null, file );
       }))
-      create post permalink pages
+      // create post permalink pages
       .pipe( rename( function( postPath ) {
         var matches = postPath.basename.match( rePostPath );
         postPath.dirname = 'blog/' + matches[2];
@@ -95,8 +102,9 @@ module.exports = function( site ) {
         postPath.extname = '.html';
       }))
       .pipe( gulp.dest('build') );
+  }
 
-  });
+  // ----- watch ----- //
 
   site.watches.push({
     src: postsSrc,

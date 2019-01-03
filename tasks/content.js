@@ -10,7 +10,7 @@ module.exports = function( site ) {
 
   var homepageSrc = 'pages/homepage.mustache';
 
-  gulp.task( 'content-homepage', gulp.series( 'posts', 'partials' ), function() {
+  gulp.task( 'content-homepage', gulp.series(  gulp.parallel( 'posts', 'partials' ), function() {
     var homepagePosts = site.posts.slice( 0, 5 );
     return gulp.src( homepageSrc )
       .pipe( template({
@@ -18,7 +18,7 @@ module.exports = function( site ) {
       }) )
       .pipe( rename('index.html') )
       .pipe( gulp.dest('build') );
-  });
+  }));
 
   site.addWatch( homepageSrc, [ 'content-homepage' ] );
 
@@ -26,7 +26,7 @@ module.exports = function( site ) {
 
   var blogSrc = 'pages/blog.mustache';
 
-  gulp.task( 'content-blog', gulp.series( 'posts', 'partials' ), function() {
+  gulp.task( 'content-blog', gulp.series( gulp.parallel( 'posts', 'partials' ), function() {
     var paginatedPosts = site.paginatedPosts;
 
     paginatedPosts.forEach( function( pagePosts, i ) {
@@ -54,7 +54,7 @@ module.exports = function( site ) {
         .pipe( gulp.dest('build') );
     });
 
-  });
+  }));
 
   site.addWatch( blogSrc, [ 'content-blog' ] );
 
@@ -62,46 +62,22 @@ module.exports = function( site ) {
 
   var blogArchiveSrc = 'pages/blog-archive.mustache';
 
-  gulp.task( 'content-blog-archive', gulp.series( 'posts', 'partials' ), function() {
+  gulp.task( 'content-blog-archive', gulp.series( gulp.parallel( 'posts', 'partials' ), function() {
     return gulp.src( blogArchiveSrc )
       .pipe( template({
         posts: site.posts
       }) )
       .pipe( rename('index.html') )
       .pipe( gulp.dest('build/blog/archive') );
-  });
+  }));
 
   site.addWatch( blogArchiveSrc, [ 'content-blog-archive' ] );
-
-  // ----- promo pages ----- //
-
-  var promoSrc = 'pages/promo.mustache';
-
-  gulp.task( 'content-codepenradio-promo', gulp.series( 'partials' ), function() {
-    promoTask({
-      slug: 'codepenradio',
-      users: 'CodePen Radio listeners',
-      copy: '<p>Get 15% any Metafizzy Commercial license. Use the links below when you&rsquo;re ready to make a purchase.',
-    });
-  });
-
-  function promoTask( data ) {
-    return gulp.src( promoSrc )
-      .pipe( template( data ) )
-      .pipe( rename('index.html') )
-      .pipe( gulp.dest( 'build/' + data.slug ) );
-  }
-
-  // gulp.task( 'content-promo', [
-  // ]);
-
-  // site.addWatch( promoSrc, [ 'content-promo' ] );
 
   // ----- rss ----- //
 
   var rssFeedSrc = 'pages/rss-feed.mustache';
 
-  gulp.task( 'content-rss', gulp.series('posts'), function() {
+  gulp.task( 'content-rss', gulp.series( 'posts', function() {
     return gulp.src( rssFeedSrc )
       .pipe( template({
         updated: site.posts[0].xmlTimestamp,
@@ -109,7 +85,7 @@ module.exports = function( site ) {
       }) )
       .pipe( rename('index.xml') )
       .pipe( gulp.dest('build/feed') );
-  });
+  }));
 
   site.addWatch( rssFeedSrc, [ 'content-rss' ] );
 
@@ -117,12 +93,12 @@ module.exports = function( site ) {
 
   var fourOhFourSrc = 'pages/404.mustache';
 
-  gulp.task( 'content-404', gulp.series('partials'), function() {
+  gulp.task( 'content-404', gulp.series( 'partials', function() {
     return gulp.src( fourOhFourSrc )
       .pipe( template() )
       .pipe( rename('404.html') )
       .pipe( gulp.dest('build') );
-  });
+  }));
 
   site.addWatch( fourOhFourSrc, [ 'content-404' ] );
 
@@ -136,16 +112,16 @@ module.exports = function( site ) {
     return transfob( function( file, encoding, callback ) {
       var fileContents = file.contents.toString();
       var tmpl = Handlebars.compile( fileContents );
-      file.contents = new Buffer( tmpl( data ) );
+      file.contents = Buffer.from( tmpl( data ) );
       return callback( null, file );
     });
   }
 
   // ----- content ----- //
 
-  gulp.task( 'content', gulp.series(
+  gulp.task( 'content', gulp.parallel(
     'content-homepage',
-    'content-blog',
+    // 'content-blog',
     'content-blog-archive',
     'content-rss',
     'content-404'
