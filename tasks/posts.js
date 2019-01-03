@@ -7,7 +7,6 @@ var transfob = require('transfob');
 var rename = require('gulp-rename');
 var utils = require('./utils');
 var hb = require('gulp-hb');
-var hbLayouts = require('handlebars-layouts');
 var path = require('path');
 var getHelpers = require('./utils/get-handlebars-helpers');
 
@@ -19,14 +18,21 @@ var postsSrc = '_posts/*/**.md';
 
 module.exports = function( site ) {
 
-  gulp.task( 'posts-metadata', function() {
+  var helpers = getHelpers( site );
+
+  gulp.task( 'get-posts', function() {
     // reset posts
-    site.posts = [];
+    site.data.posts = [];
 
     return gulp.src( postsSrc )
       .pipe( frontMatter({
         property: 'frontMatter',
         remove: true
+      }) )
+      .pipe( markdown({
+        highlight: function( code, lang ) {
+          return lang ? highlight.highlight( lang, code ).value : code;
+        }
       }) )
       .pipe( transfob( function( file, encoding, callback ) {
         // get dateCode and slug from basename
@@ -39,65 +45,30 @@ module.exports = function( site ) {
         file.sortDate = parseInt( file.momentDate.format('YYYYMMDD') );
         file.timestamp = file.momentDate.format('D MMM YYYY');
         file.xmlTimestamp = file.momentDate.format('YYYY-MM-DD') + 'T12:00:00-05:00';
+        // copy front matter to file
         utils.extend( file, file.frontMatter );
+        // convert contents to main field
+        file.main = file.contents;
         // add file to posts collection
-        if ( file.frontMatter.published !== false ) {
-          site.posts.push( file.clone() );
+        if ( file.published !== false ) {
+          site.data.posts.push( file.clone() );
         }
         return callback( null, file );
-      }));
-  });
-
-  gulp.task( 'sort-posts', function( callback ) {
-    // sort by date
-    site.posts.sort( function( a, b ) {
-      return b.sortDate - a.sortDate;
-    });
-    // create paginatedPosts
-    var paginatedPosts = site.paginatedPosts = [];
-    site.posts.forEach( function( postFile, i ) {
-      var pageIndex = Math.floor( i / postsPerPage );
-      // add new array of posts if not there
-      paginatedPosts[ pageIndex ] = paginatedPosts[ pageIndex ] || [];
-      paginatedPosts[ pageIndex ].push( postFile );
-    });
-
-    callback();
-  });
-
-  var helpers = getHelpers( site );
-
-  gulp.task( 'build-posts', function() {
-    // reset posts
-    site.posts = [];
-
-    return gulp.src( postsSrc )
-      .pipe( frontMatter({
-        property: 'data.post',
-        remove: true
-      }) )
-      .pipe( markdown({
-        highlight: function( code, lang ) {
-          return lang ? highlight.highlight( lang, code ).value : code;
-        }
-      }) )
+      }))
       .pipe( transfob( function( file, enc, next ) {
-        var contents = file.contents.toString();
-        contents = '{{#extend "blog-permalink"}}{{#content "main"}}' + contents +
-          '{{/content}}{{/extend}}';
-        file.contents = Buffer.from( contents );
+        // convert file to placeholder for blog-permalink template
+        file.contents = Buffer.from('{{> blog-post-permalink}}');
         next( null, file );
       }))
       // templating
       .pipe( hb()
-        .partials('pages/blog-permalink.hbs')
+        .partials('page-templates/blog-post-permalink.hbs')
         .partials( 'modules/*/*.hbs', {
           parsePartialName: function( options, file ) {
             return path.basename( file.path, '.hbs' );
           }
         })
         .data( site.data )
-        .helpers( hbLayouts )
         .helpers( helpers )
       )
       // create post permalink pages
@@ -110,11 +81,27 @@ module.exports = function( site ) {
       .pipe( gulp.dest('build') );
   });
 
+  gulp.task( 'sort-posts', function( callback ) {
+    // sort by date
+    site.data.posts.sort( function( a, b ) {
+      return b.sortDate - a.sortDate;
+    });
+    // create paginatedPosts
+    var paginatedPosts = site.data.paginatedPosts = [];
+    site.data.posts.forEach( function( postFile, i ) {
+      var pageIndex = Math.floor( i / postsPerPage );
+      // add new array of posts if not there
+      paginatedPosts[ pageIndex ] = paginatedPosts[ pageIndex ] || [];
+      paginatedPosts[ pageIndex ].push( postFile );
+    });
+
+    callback();
+  });
+
   gulp.task( 'posts',
     gulp.series(
-      'posts-metadata',
-      'sort-posts',
-      'build-posts'
+      'get-posts',
+      'sort-posts'
     )
   );
 

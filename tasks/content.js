@@ -1,35 +1,21 @@
 var gulp = require('gulp');
-var transfob = require('transfob');
 var rename = require('gulp-rename');
-var utils = require('./utils');
+var frontMatter = require('gulp-front-matter');
+var hb = require('gulp-hb');
+var path = require('path');
+var merge2 = require('merge2');
+var transfob = require('transfob');
 
 module.exports = function( site ) {
-  var Handlebars = site.Handlebars;
-
-  // ----- homepage ----- //
-
-  var homepageSrc = 'pages/homepage.mustache';
-
-  gulp.task( 'content-homepage', gulp.series(  gulp.parallel( 'posts', 'partials' ), function() {
-    var homepagePosts = site.posts.slice( 0, 5 );
-    return gulp.src( homepageSrc )
-      .pipe( template({
-        homepagePosts: homepagePosts
-      }) )
-      .pipe( rename('index.html') )
-      .pipe( gulp.dest('build') );
-  }));
-
-  site.addWatch( homepageSrc, [ 'content-homepage' ] );
 
   // ----- blog ----- //
 
-  var blogSrc = 'pages/blog.mustache';
+  var blogSrc = 'page-templates/blog-page.hbs';
 
-  gulp.task( 'content-blog', gulp.series( gulp.parallel( 'posts', 'partials' ), function() {
+  gulp.task( 'build-blog-pages', function() {
     var paginatedPosts = site.paginatedPosts;
 
-    paginatedPosts.forEach( function( pagePosts, i ) {
+    var paginatedTasks = paginatedPosts.map( function( pagePosts, i ) {
       var currentPage = i + 1;
       var data = {
         pagePosts: pagePosts,
@@ -46,85 +32,70 @@ module.exports = function( site ) {
       }
 
       var filename = currentPage == 1 ? 'blog/index.html' :
-        'blog/page' + currentPage + '/index.html';
+        `blog/page${currentPage}/index.html`;
 
-      gulp.src( blogSrc )
+      return gulp.src( blogSrc )
         .pipe( template( data ) )
         .pipe( rename( filename ) )
         .pipe( gulp.dest('build') );
     });
+    // create a merged stream for array of streams
+    return merge2( paginatedTasks );
+  });
 
-  }));
+  gulp.task( 'content-blog-pages', gulp.series( 'posts', 'build-blog-pages' ) );
 
   site.addWatch( blogSrc, [ 'content-blog' ] );
 
-  // ----- blog archive ----- //
+  // ----- pages ----- //
 
-  var blogArchiveSrc = 'pages/blog-archive.mustache';
-
-  gulp.task( 'content-blog-archive', gulp.series( gulp.parallel( 'posts', 'partials' ), function() {
-    return gulp.src( blogArchiveSrc )
-      .pipe( template({
-        posts: site.posts
+  gulp.task( 'build-pages', function() {
+    return gulp.src('_pages/**/*.hbs')
+      .pipe( frontMatter({
+        property: 'frontMatter',
+        remove: true,
       }) )
-      .pipe( rename('index.html') )
-      .pipe( gulp.dest('build/blog/archive') );
-  }));
-
-  site.addWatch( blogArchiveSrc, [ 'content-blog-archive' ] );
-
-  // ----- rss ----- //
-
-  var rssFeedSrc = 'pages/rss-feed.mustache';
-
-  gulp.task( 'content-rss', gulp.series( 'posts', function() {
-    return gulp.src( rssFeedSrc )
+      // page-specific data
       .pipe( template({
-        updated: site.posts[0].xmlTimestamp,
-        posts: site.posts
+        homepagePosts: site.data.posts.slice( 0, 5 ),
+        rssUpdated: site.data.posts[0].xmlTimestamp,
       }) )
-      .pipe( rename('index.xml') )
-      .pipe( gulp.dest('build/feed') );
-  }));
-
-  site.addWatch( rssFeedSrc, [ 'content-rss' ] );
-
-  // ----- 404 ----- //
-
-  var fourOhFourSrc = 'pages/404.mustache';
-
-  gulp.task( 'content-404', gulp.series( 'partials', function() {
-    return gulp.src( fourOhFourSrc )
-      .pipe( template() )
-      .pipe( rename('404.html') )
+      // add path from frontMatter.path
+      .pipe( transfob( function( file, encoding, callback ) {
+        if ( file.frontMatter.path ) {
+          file.path = 'build/' + file.frontMatter.path;
+        }
+        callback( null, file );
+      }) )
       .pipe( gulp.dest('build') );
-  }));
+  });
 
-  site.addWatch( fourOhFourSrc, [ 'content-404' ] );
+  gulp.task( 'content-pages', gulp.series( 'posts', 'build-pages' ) );
 
   // ----- template ----- //
 
   // templating plugin, builds content with Handlebars
   function template( data ) {
-    data = data || {};
-    utils.extend( data, site.data );
-
-    return transfob( function( file, encoding, callback ) {
-      var fileContents = file.contents.toString();
-      var tmpl = Handlebars.compile( fileContents );
-      file.contents = Buffer.from( tmpl( data ) );
-      return callback( null, file );
-    });
+    return hb()
+      .partials( 'modules/*/*.hbs', {
+        parsePartialName: function( options, file ) {
+          return path.basename( file.path, '.hbs' );
+        }
+      })
+      .data( site.data )
+      .data( data );
   }
 
   // ----- content ----- //
 
-  gulp.task( 'content', gulp.parallel(
-    'content-homepage',
-    // 'content-blog',
-    'content-blog-archive',
-    'content-rss',
-    'content-404'
-  ));
+  gulp.task( 'content',
+    gulp.series(
+      'posts',
+      gulp.parallel(
+        'build-blog-pages',
+        'build-pages'
+      )
+    )
+  );
 
 };

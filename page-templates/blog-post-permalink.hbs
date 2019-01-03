@@ -1,0 +1,45 @@
+{{> html-head}}
+
+  <title>{{{@file.title}}} &middot; Metafizzy blog</title>
+
+  {{! Twitter card }}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@metafizzyco" />
+  <meta name="twitter:title" content="{{@file.title}}" />
+  {{! Facebook OpenGraph }}
+  <meta property="og:url" content="https://metafizzy.co/blog/{{@file.slug}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{@file.title}}" />
+  <meta property="og:site_name" content="Metafizzy" />
+  {{! blurb }}
+  {{#if @file.blurb}}
+    <meta name="description" content="{{@file.blurb}}" />
+    <meta name="twitter:description" content="{{@file.blurb}}" />
+    <meta property="og:description" content="{{@file.blurb}}" />
+  {{/if}}
+  {{! image }}
+  {{#if @file.image}}
+    <meta name="twitter:image" content="{{domainAbsoluteURL @file.image}}" />
+    <meta property="og:image" content="{{domainAbsoluteURL @file.image}}" />
+  {{else}}
+    <meta name="twitter:image" content="https://metafizzy.co/img/metafizzy-logo-thumbnail-magenta.png" />
+    <meta property="og:image" content="https://metafizzy.co/img/metafizzy-logo-thumbnail-magenta.png" />
+  {{/if}}
+
+</head>
+<body>
+
+{{> blog-header}}
+
+<div class="container">
+{{#with @file}}
+{{> post}}
+{{/with}}
+</div>
+
+{{> blog-footer}}
+
+{{> scripts}}
+
+</body>
+</html>

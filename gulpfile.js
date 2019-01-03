@@ -1,7 +1,6 @@
 /* jshint node: true, strict: false */
 
 var gulp = require('gulp');
-var Handlebars = require('handlebars');
 
 // ----- site ----- //
 
@@ -15,7 +14,6 @@ var site = {
   posts: [],
   // hash of posts per page
   paginatedPosts: [],
-  Handlebars: Handlebars,
   // src to watch, tasks to trigger
   watches: [],
   addWatch: function( src, tasks ) {
@@ -25,17 +23,6 @@ var site = {
     });
   }
 };
-
-//-- Handelbars helpers -- //
-
-Handlebars.registerHelper( 'domainAbsoluteURL', function( url ) {
-  if ( !url.match( /^\/[\w]/ ) ) {
-    return url;
-  }
-  // add absolute URL
-  var domain = site.data.isDev ? 'http://localhost:3000' : 'https://metafizzy.co';
-  return domain + url;
-});
 
 // ----- assets ----- //
 
@@ -52,7 +39,6 @@ site.addWatch( assetsSrc, [ 'assets' ] );
 
 // ----- tasks ----- //
 
-require('./tasks/partials')( site );
 require('./tasks/posts')( site );
 require('./tasks/css')( site );
 require('./tasks/js')( site );
@@ -74,13 +60,8 @@ gulp.task( 'default', gulp.series(
   'content'
 ));
 
-// ----- watch ----- //
+// ----- dev ----- //
 
 gulp.task( 'dev',
-  gulp.series( 'assets', 'copy-css', 'copy-js', 'content', 'serve' ),
-  function() {
-    site.watches.forEach( function( watchable ) {
-    gulp.watch( watchable.src, watchable.tasks );
-    });
-  }
+  gulp.series( 'assets', 'copy-css', 'copy-js', 'content', 'serve' )
 );
