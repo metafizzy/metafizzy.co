@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var through = require('through2');
+var transfob = require('transfob');
 var rename = require('gulp-rename');
 var utils = require('./utils');
 
@@ -10,7 +10,7 @@ module.exports = function( site ) {
 
   var homepageSrc = 'pages/homepage.mustache';
 
-  gulp.task( 'content-homepage', [ 'posts', 'partials' ], function() {
+  gulp.task( 'content-homepage', gulp.series( 'posts', 'partials' ), function() {
     var homepagePosts = site.posts.slice( 0, 5 );
     return gulp.src( homepageSrc )
       .pipe( template({
@@ -26,7 +26,7 @@ module.exports = function( site ) {
 
   var blogSrc = 'pages/blog.mustache';
 
-  gulp.task( 'content-blog', [ 'posts', 'partials' ], function() {
+  gulp.task( 'content-blog', gulp.series( 'posts', 'partials' ), function() {
     var paginatedPosts = site.paginatedPosts;
 
     paginatedPosts.forEach( function( pagePosts, i ) {
@@ -62,7 +62,7 @@ module.exports = function( site ) {
 
   var blogArchiveSrc = 'pages/blog-archive.mustache';
 
-  gulp.task( 'content-blog-archive', [ 'posts', 'partials' ], function() {
+  gulp.task( 'content-blog-archive', gulp.series( 'posts', 'partials' ), function() {
     return gulp.src( blogArchiveSrc )
       .pipe( template({
         posts: site.posts
@@ -77,7 +77,7 @@ module.exports = function( site ) {
 
   var promoSrc = 'pages/promo.mustache';
 
-  gulp.task( 'content-codepenradio-promo', [ 'partials' ], function() {
+  gulp.task( 'content-codepenradio-promo', gulp.series( 'partials' ), function() {
     promoTask({
       slug: 'codepenradio',
       users: 'CodePen Radio listeners',
@@ -92,16 +92,16 @@ module.exports = function( site ) {
       .pipe( gulp.dest( 'build/' + data.slug ) );
   }
 
-  gulp.task( 'content-promo', [
-  ]);
+  // gulp.task( 'content-promo', [
+  // ]);
 
-  site.addWatch( promoSrc, [ 'content-promo' ] );
+  // site.addWatch( promoSrc, [ 'content-promo' ] );
 
   // ----- rss ----- //
 
   var rssFeedSrc = 'pages/rss-feed.mustache';
 
-  gulp.task( 'content-rss', [ 'posts' ], function() {
+  gulp.task( 'content-rss', gulp.series('posts'), function() {
     return gulp.src( rssFeedSrc )
       .pipe( template({
         updated: site.posts[0].xmlTimestamp,
@@ -117,7 +117,7 @@ module.exports = function( site ) {
 
   var fourOhFourSrc = 'pages/404.mustache';
 
-  gulp.task( 'content-404', [ 'partials' ], function() {
+  gulp.task( 'content-404', gulp.series('partials'), function() {
     return gulp.src( fourOhFourSrc )
       .pipe( template() )
       .pipe( rename('404.html') )
@@ -133,7 +133,7 @@ module.exports = function( site ) {
     data = data || {};
     utils.extend( data, site.data );
 
-    return through.obj( function( file, encoding, callback ) {
+    return transfob( function( file, encoding, callback ) {
       var fileContents = file.contents.toString();
       var tmpl = Handlebars.compile( fileContents );
       file.contents = new Buffer( tmpl( data ) );
@@ -143,13 +143,12 @@ module.exports = function( site ) {
 
   // ----- content ----- //
 
-  gulp.task( 'content', [
+  gulp.task( 'content', gulp.series(
     'content-homepage',
     'content-blog',
     'content-blog-archive',
-    'content-promo',
     'content-rss',
-    'content-404',
-  ]);
+    'content-404'
+  ));
 
 };

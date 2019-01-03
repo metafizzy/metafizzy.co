@@ -19,8 +19,8 @@ gulp.task( 'cache-bust-css', function() {
     .pipe( gulp.dest('modules/html-head') );
 });
 
-gulp.task( 'cache-bust', [ 'cache-bust-js', 'cache-bust-css' ] );
+gulp.task( 'cache-bust', gulp.parallel( 'cache-bust-js', 'cache-bust-css' ) );
 // shorthand
-gulp.task( 'cb', [ 'cache-bust' ] );
+gulp.task( 'cb', gulp.parallel('cache-bust') );
 
 module.exports = function() {};

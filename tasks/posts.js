@@ -1,9 +1,9 @@
 var gulp = require('gulp');
 var frontMatter = require('gulp-front-matter');
 var moment = require('moment');
-var marked = require('gulp-marked');
+// var marked = require('gulp-marked');
 var highlight = require('highlight.js');
-var through = require('through2');
+var transfob = require('transfob');
 var rename = require('gulp-rename');
 var utils = require('./utils');
 
@@ -21,13 +21,13 @@ module.exports = function( site ) {
 
   gulp.task( 'blog-permalink-template', function() {
     return gulp.src( blogPermalinkSrc )
-      .pipe( through.obj( function( file, enc, callback ) {
+      .pipe( transfob( function( file, enc, callback ) {
         blogPermalinkTemplate = Handlebars.compile( file.contents.toString() );
         callback( null, file );
       }));
   });
 
-  gulp.task( 'posts', [ 'partials', 'blog-permalink-template' ], function() {
+  gulp.task( 'posts', gulp.series( 'partials', 'blog-permalink-template' ), function() {
     // reset posts
     site.posts = [];
 
@@ -36,12 +36,12 @@ module.exports = function( site ) {
         property: 'frontMatter',
         remove: true
       }) )
-      .pipe( marked({
-        highlight: function( code, lang ) {
-          return lang ? highlight.highlight( lang, code ).value : code;
-        }
-      }) )
-      .pipe( through.obj( function( file, encoding, callback ) {
+      // .pipe( marked({
+      //   highlight: function( code, lang ) {
+      //     return lang ? highlight.highlight( lang, code ).value : code;
+      //   }
+      // }) )
+      .pipe( transfob( function( file, encoding, callback ) {
         // get dateCode and slug from basename
         var basename = utils.getBasename( file.path );
         var matches = basename.match( rePostPath );
@@ -79,7 +79,7 @@ module.exports = function( site ) {
         }
       ))
       // templating
-      .pipe( through.obj( function( file, encoding, callback ) {
+      .pipe( transfob( function( file, encoding, callback ) {
         var data = {
           post: file
         };
@@ -87,7 +87,7 @@ module.exports = function( site ) {
         file.contents = new Buffer( blogPermalinkTemplate( data ) );
         callback( null, file );
       }))
-      // create post permalink pages
+      create post permalink pages
       .pipe( rename( function( postPath ) {
         var matches = postPath.basename.match( rePostPath );
         postPath.dirname = 'blog/' + matches[2];

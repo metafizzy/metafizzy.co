@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var through = require('through2');
+var transfob = require('transfob');
 
 var utils = require('./utils');
 
@@ -13,8 +13,7 @@ module.exports = function( site ) {
   // register all modules/*/*.mustache files as partials
   gulp.task( 'partials', function() {
     return gulp.src( partialsSrc )
-      .pipe(
-        through.obj( function( file, encoding, callback ) {
+      .pipe( transfob( function( file, encoding, callback ) {
         var name = utils.getBasename( file.path );
         var tmpl = file.contents.toString();
         Handlebars.registerPartial( name, tmpl );

@@ -12,14 +12,14 @@ var cssSrcs = [
 
 // build styles.css
 gulp.task( 'css', function() {
-  gulp.src( cssSrcs )
+  return gulp.src( cssSrcs )
     .pipe( concat('styles.css') )
     .pipe( gulp.dest('build') );
 });
 
 // copy css, use for dev
 gulp.task( 'copy-css', function() {
-  gulp.src( cssSrcs )
+  return gulp.src( cssSrcs )
     .pipe( rename({
       dirname: ''
     }))

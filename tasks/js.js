@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var utils = require('./utils');
-var through = require('through2');
+var transfob = require('transfob');
 
 var jsSrcs = [
   'bower_components/get-size/get-size.js',
@@ -49,7 +49,7 @@ var jsSrcs = [
 
 // build scripts.js
 gulp.task( 'js', function() {
-  gulp.src( jsSrcs )
+  return gulp.src( jsSrcs )
     .pipe( uglify() )
     .pipe( concat('scripts.js') )
     .pipe( gulp.dest('build') );
@@ -58,8 +58,8 @@ gulp.task( 'js', function() {
 // copy js into build/, used for dev
 gulp.task( 'copy-js', function() {
   var cwd = process.cwd();
-  gulp.src( jsSrcs )
-    .pipe( through.obj( function( file, encoding, callback ) {
+  return gulp.src( jsSrcs )
+    .pipe( transfob( function( file, encoding, callback ) {
       file.base = cwd;
       return callback( null, file );
     }))

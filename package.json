@@ -1,32 +1,34 @@
 {
   "name": "metafizzy.co",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Metafizzy site",
   "dependencies": {
-    "glob": "^5.0.15",
-    "gulp": "^3.9.0",
+    "glob": "^7.1.3",
+    "gulp": "^4.0.0",
     "gulp-concat": "^2.6.0",
-    "gulp-filter": "^3.0.1",
-    "gulp-front-matter": "^1.2.3",
-    "gulp-jshint": "^1.11.2",
-    "gulp-marked": "^1.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-uglify": "^1.5.1",
-    "handlebars": "^4.0.3",
-    "highlight.js": "^8.9.1",
-    "moment": "^2.10.6",
-    "through2": "^2.0.0"
+    "gulp-filter": "^5.1.0",
+    "gulp-front-matter": "^1.3.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-markdown": "^3.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify": "^3.0.1",
+    "handlebars": "^4.0.12",
+    "highlight.js": "^9.13.1",
+    "jshint": "^2.9.7",
+    "moment": "^2.23.0",
+    "transfob": "^1.0.0"
   },
   "devDependencies": {
-    "gulp-serve": "^1.2.0"
+    "gulp-serve": "^1.4.0"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/metafizzy/metafizzy.co.git"
   },
   "author": "Metafizzy",
-  "license": "CC BY",
+  "private": true,
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/metafizzy/metafizzy.co/issues"
   },

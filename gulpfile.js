@@ -67,17 +67,20 @@ gulp.task( 'serve', serve('build') );
 
 // ----- default ----- //
 
-gulp.task( 'default', [
+gulp.task( 'default', gulp.series(
   'assets',
   'css',
   'js',
   'content'
-]);
+));
 
 // ----- watch ----- //
 
-gulp.task( 'dev', [ 'assets', 'copy-css', 'copy-js', 'content', 'serve' ], function() {
-  site.watches.forEach( function( watchable ) {
+gulp.task( 'dev',
+  gulp.series( 'assets', 'copy-css', 'copy-js', 'content', 'serve' ),
+  function() {
+    site.watches.forEach( function( watchable ) {
     gulp.watch( watchable.src, watchable.tasks );
-  });
-});
+    });
+  }
+);
