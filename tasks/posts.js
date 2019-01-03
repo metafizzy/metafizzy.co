@@ -6,35 +6,20 @@ var highlight = require('highlight.js');
 var transfob = require('transfob');
 var rename = require('gulp-rename');
 var utils = require('./utils');
+var hb = require('gulp-hb');
+var hbLayouts = require('handlebars-layouts');
+var path = require('path');
+var getHelpers = require('./utils/get-handlebars-helpers');
 
 var postsPerPage = 6;
 
 var rePostPath = /(\d\d\d\d\-\d\d\-\d\d)\-([\w\d\-_]+)/;
 
 var postsSrc = '_posts/*/**.md';
-var blogPermalinkSrc = 'pages/blog-permalink.mustache';
 
 module.exports = function( site ) {
-  var Handlebars = site.Handlebars;
 
-  var blogPermalinkTemplate;
-
-  gulp.task( 'blog-permalink-template', function() {
-    return gulp.src( blogPermalinkSrc )
-      .pipe( transfob( function( file, enc, callback ) {
-        blogPermalinkTemplate = Handlebars.compile( file.contents.toString() );
-        callback( null, file );
-      }));
-  });
-
-  gulp.task( 'posts',
-    gulp.series(
-      gulp.parallel( 'partials', 'blog-permalink-template' ),
-      buildPosts
-    )
-  );
-
-  function buildPosts() {
+  gulp.task( 'posts-metadata', function() {
     // reset posts
     site.posts = [];
 
@@ -42,11 +27,6 @@ module.exports = function( site ) {
       .pipe( frontMatter({
         property: 'frontMatter',
         remove: true
-      }) )
-      .pipe( markdown({
-        highlight: function( code, lang ) {
-          return lang ? highlight.highlight( lang, code ).value : code;
-        }
       }) )
       .pipe( transfob( function( file, encoding, callback ) {
         // get dateCode and slug from basename
@@ -65,35 +45,61 @@ module.exports = function( site ) {
           site.posts.push( file.clone() );
         }
         return callback( null, file );
-      },
-        // flush function: sort posts and put into pages
-        function( callback ) {
-          // sort by date
-          site.posts.sort( function( a, b ) {
-            return b.sortDate - a.sortDate;
-          });
-          // arrange in pages
+      }));
+  });
 
-          var paginatedPosts = site.paginatedPosts = [];
-          site.posts.forEach( function( postFile, i ) {
-            var pageIndex = Math.floor( i / postsPerPage );
-            // add new array of posts if not there
-            paginatedPosts[ pageIndex ] = paginatedPosts[ pageIndex ] || [];
-            paginatedPosts[ pageIndex ].push( postFile );
-          });
+  gulp.task( 'sort-posts', function( callback ) {
+    // sort by date
+    site.posts.sort( function( a, b ) {
+      return b.sortDate - a.sortDate;
+    });
+    // create paginatedPosts
+    var paginatedPosts = site.paginatedPosts = [];
+    site.posts.forEach( function( postFile, i ) {
+      var pageIndex = Math.floor( i / postsPerPage );
+      // add new array of posts if not there
+      paginatedPosts[ pageIndex ] = paginatedPosts[ pageIndex ] || [];
+      paginatedPosts[ pageIndex ].push( postFile );
+    });
 
-          callback();
+    callback();
+  });
+
+  var helpers = getHelpers( site );
+
+  gulp.task( 'build-posts', function() {
+    // reset posts
+    site.posts = [];
+
+    return gulp.src( postsSrc )
+      .pipe( frontMatter({
+        property: 'data.post',
+        remove: true
+      }) )
+      .pipe( markdown({
+        highlight: function( code, lang ) {
+          return lang ? highlight.highlight( lang, code ).value : code;
         }
-      ))
-      // templating
-      .pipe( transfob( function( file, encoding, callback ) {
-        var data = {
-          post: file
-        };
-        utils.extend( data, site.data );
-        file.contents = Buffer.from( blogPermalinkTemplate( data ) );
-        callback( null, file );
+      }) )
+      .pipe( transfob( function( file, enc, next ) {
+        var contents = file.contents.toString();
+        contents = '{{#extend "blog-permalink"}}{{#content "main"}}' + contents +
+          '{{/content}}{{/extend}}';
+        file.contents = Buffer.from( contents );
+        next( null, file );
       }))
+      // templating
+      .pipe( hb()
+        .partials('pages/blog-permalink.hbs')
+        .partials( 'modules/*/*.hbs', {
+          parsePartialName: function( options, file ) {
+            return path.basename( file.path, '.hbs' );
+          }
+        })
+        .data( site.data )
+        .helpers( hbLayouts )
+        .helpers( helpers )
+      )
       // create post permalink pages
       .pipe( rename( function( postPath ) {
         var matches = postPath.basename.match( rePostPath );
@@ -102,7 +108,15 @@ module.exports = function( site ) {
         postPath.extname = '.html';
       }))
       .pipe( gulp.dest('build') );
-  }
+  });
+
+  gulp.task( 'posts',
+    gulp.series(
+      'posts-metadata',
+      'sort-posts',
+      'build-posts'
+    )
+  );
 
   // ----- watch ----- //
 
@@ -111,9 +125,9 @@ module.exports = function( site ) {
     tasks: [ 'posts' ]
   });
 
-  site.watches.push({
-    src: blogPermalinkSrc,
-    tasks: [ 'posts' ]
-  });
+  // site.watches.push({
+  //   src: blogPermalinkSrc,
+  //   tasks: [ 'posts' ]
+  // });
 
 };
