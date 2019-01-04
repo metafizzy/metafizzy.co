@@ -5,7 +5,7 @@ module.exports = function( site ) {
         return url;
       }
       // add absolute URL
-      var domain = site.data.isDev ? 'http://localhost:3000' : 'https://metafizzy.co';
+      var domain = site.data.dev ? 'http://localhost:3000' : 'https://metafizzy.co';
       return domain + url;
     },
   };

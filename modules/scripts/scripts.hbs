@@ -1,4 +1,4 @@
-{{#if isDev}}
+{{#if dev}}
   {{#each jsPaths}}
     <script src="/js/{{this}}"></script>
   {{/each}}
@@ -6,7 +6,7 @@
   <script src="/scripts.js?4"></script>
 {{/if}}
 
-{{#unless isDev}}
+{{#unless dev}}
   {{! Google analyltics }}
   <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;

@@ -8,7 +8,7 @@ var gulp = require('gulp');
 var site = {
   // templating data
   data: {
-    isDev: process.argv[2] == 'dev'
+    dev: process.argv[2] == 'dev'
   },
   // array of all posts
   posts: [],

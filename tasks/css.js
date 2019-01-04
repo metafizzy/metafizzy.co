@@ -28,7 +28,7 @@ gulp.task( 'copy-css', function() {
 
 module.exports = function( site ) {
 
-  if ( site.data.isDev ) {
+  if ( site.data.dev ) {
     var cssPaths = utils.getGlobPaths( cssSrcs );
     site.data.cssPaths = cssPaths.map( function( cssPath ) {
       return utils.getBasename( cssPath ) + '.css';
