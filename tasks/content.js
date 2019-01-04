@@ -84,10 +84,12 @@ module.exports = function( site ) {
 
   // ----- template ----- //
 
+  var partialsSrc = 'modules/*/*.hbs';
+
   // templating plugin, builds content with Handlebars
   function template( data ) {
     return hb()
-      .partials( 'modules/*/*.hbs', {
+      .partials( partialsSrc, {
         parsePartialName: function( options, file ) {
           return path.basename( file.path, '.hbs' );
         }
@@ -108,7 +110,7 @@ module.exports = function( site ) {
   gulp.task( 'content', content );
 
   if ( site.data.dev ) {
-    gulp.watch( [ site.postsSrc, site.blogPermalinkSrc ], content );
+    gulp.watch( [ site.postsSrc, site.blogPermalinkSrc, partialsSrc ], content );
   }
 
 };

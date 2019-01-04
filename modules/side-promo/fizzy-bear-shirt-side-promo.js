@@ -1,10 +1,9 @@
 ( function() {
 
-  var elem = document.querySelector('.fizzy-bear-shirt-sidebar');
+  var elem = document.querySelector('.side-promo--fizzy-bear-shirt');
   if ( !elem ) {
     return;
   }
-
 
   var endDate = new Date( 2016, 10, 29 );
   var days = Math.round( ( endDate - new Date() ) / ( 1000 * 60 * 60 * 24 ) );
