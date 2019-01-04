@@ -13,7 +13,7 @@ module.exports = function( site ) {
   var blogSrc = 'page-templates/blog-page.hbs';
 
   gulp.task( 'build-blog-pages', function() {
-    var paginatedPosts = site.paginatedPosts;
+    var paginatedPosts = site.data.paginatedPosts;
 
     var paginatedTasks = paginatedPosts.map( function( pagePosts, i ) {
       var currentPage = i + 1;
@@ -43,14 +43,19 @@ module.exports = function( site ) {
     return merge2( paginatedTasks );
   });
 
-  gulp.task( 'content-blog-pages', gulp.series( 'posts', 'build-blog-pages' ) );
+  var contentBlogPages = gulp.series( 'posts', 'build-blog-pages' );
+  gulp.task( 'content-blog-pages', contentBlogPages );
 
-  site.addWatch( blogSrc, [ 'content-blog' ] );
+  if ( site.data.dev ) {
+    gulp.watch( blogSrc, contentBlogPages );
+  }
 
   // ----- pages ----- //
 
+  var pagesSrc = '_pages/**/*.hbs';
+
   gulp.task( 'build-pages', function() {
-    return gulp.src('_pages/**/*.hbs')
+    return gulp.src( pagesSrc )
       .pipe( frontMatter({
         property: 'frontMatter',
         remove: true,
@@ -70,7 +75,12 @@ module.exports = function( site ) {
       .pipe( gulp.dest('build') );
   });
 
-  gulp.task( 'content-pages', gulp.series( 'posts', 'build-pages' ) );
+  var contentPages = gulp.series( 'posts', 'build-pages' );
+  gulp.task( 'content-pages', contentPages );
+
+  if ( site.data.dev ) {
+    gulp.watch( pagesSrc, contentPages );
+  }
 
   // ----- template ----- //
 
@@ -88,14 +98,17 @@ module.exports = function( site ) {
 
   // ----- content ----- //
 
-  gulp.task( 'content',
-    gulp.series(
-      'posts',
-      gulp.parallel(
-        'build-blog-pages',
-        'build-pages'
-      )
+  var content = gulp.series(
+    'posts',
+    gulp.parallel(
+      'build-blog-pages',
+      'build-pages'
     )
   );
+  gulp.task( 'content', content );
+
+  if ( site.data.dev ) {
+    gulp.watch( [ site.postsSrc, site.blogPermalinkSrc ], content );
+  }
 
 };

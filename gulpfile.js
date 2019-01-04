@@ -8,20 +8,12 @@ var gulp = require('gulp');
 var site = {
   // templating data
   data: {
-    dev: process.argv[2] == 'dev'
+    dev: process.argv[2] == 'dev',
+    // array of all posts
+    posts: [],
+    // hash of posts per page
+    paginatedPosts: [],
   },
-  // array of all posts
-  posts: [],
-  // hash of posts per page
-  paginatedPosts: [],
-  // src to watch, tasks to trigger
-  watches: [],
-  addWatch: function( src, tasks ) {
-    site.watches.push({
-      src: src,
-      tasks: tasks
-    });
-  }
 };
 
 // ----- assets ----- //
@@ -34,16 +26,17 @@ gulp.task( 'assets', function() {
     .pipe( gulp.dest('build') );
 });
 
-
-site.addWatch( assetsSrc, [ 'assets' ] );
+if ( site.data.dev ) {
+  gulp.watch( assetsSrc, gulp.parallel('assets') );
+}
 
 // ----- tasks ----- //
 
-require('./tasks/posts')( site );
 require('./tasks/css')( site );
 require('./tasks/js')( site );
-require('./tasks/content')( site );
 require('./tasks/cache-bust')( site );
+require('./tasks/posts')( site );
+require('./tasks/content')( site );
 
 // ----- serve ----- //
 

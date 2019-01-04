@@ -18,7 +18,7 @@ gulp.task( 'css', function() {
 });
 
 // copy css, use for dev
-gulp.task( 'copy-css', function() {
+var copyCss = gulp.task( 'copy-css', function() {
   return gulp.src( cssSrcs )
     .pipe( rename({
       dirname: ''
@@ -27,14 +27,14 @@ gulp.task( 'copy-css', function() {
 });
 
 module.exports = function( site ) {
-
-  if ( site.data.dev ) {
-    var cssPaths = utils.getGlobPaths( cssSrcs );
-    site.data.cssPaths = cssPaths.map( function( cssPath ) {
-      return utils.getBasename( cssPath ) + '.css';
-    });
+  if ( !site.data.dev ) {
+    return;
   }
 
-  site.addWatch( cssSrcs, [ 'copy-css' ] );
+  var cssPaths = utils.getGlobPaths( cssSrcs );
+  site.data.cssPaths = cssPaths.map( function( cssPath ) {
+    return utils.getBasename( cssPath ) + '.css';
+  });
 
+  gulp.watch( cssSrcs, copyCss );
 };

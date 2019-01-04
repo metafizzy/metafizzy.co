@@ -15,8 +15,12 @@ var postsPerPage = 6;
 var rePostPath = /(\d\d\d\d\-\d\d\-\d\d)\-([\w\d\-_]+)/;
 
 var postsSrc = '_posts/*/**.md';
+var blogPermalinkSrc = 'page-templates/blog-post-permalink.hbs';
 
 module.exports = function( site ) {
+
+  site.postsSrc = postsSrc;
+  site.blogPermalinkSrc = blogPermalinkSrc;
 
   var helpers = getHelpers( site );
 
@@ -62,7 +66,7 @@ module.exports = function( site ) {
       }))
       // templating
       .pipe( hb()
-        .partials('page-templates/blog-post-permalink.hbs')
+        .partials( blogPermalinkSrc )
         .partials( 'modules/*/*.hbs', {
           parsePartialName: function( options, file ) {
             return path.basename( file.path, '.hbs' );
@@ -105,16 +109,5 @@ module.exports = function( site ) {
     )
   );
 
-  // ----- watch ----- //
-
-  site.watches.push({
-    src: postsSrc,
-    tasks: [ 'posts' ]
-  });
-
-  // site.watches.push({
-  //   src: blogPermalinkSrc,
-  //   tasks: [ 'posts' ]
-  // });
-
+  // watched in content.js
 };

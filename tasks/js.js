@@ -56,7 +56,7 @@ gulp.task( 'js', function() {
 });
 
 // copy js into build/, used for dev
-gulp.task( 'copy-js', function() {
+var copyJs = gulp.task( 'copy-js', function() {
   var cwd = process.cwd();
   return gulp.src( jsSrcs )
     .pipe( transfob( function( file, encoding, callback ) {
@@ -67,10 +67,11 @@ gulp.task( 'copy-js', function() {
 });
 
 module.exports = function( site ) {
-
-  if ( site.data.dev ) {
-    site.data.jsPaths = utils.getGlobPaths( jsSrcs );
+  if ( !site.data.dev ) {
+    return;
   }
 
-  site.addWatch( 'modules/*/*.js', [ 'copy-js' ] );
+  site.data.jsPaths = utils.getGlobPaths( jsSrcs );
+
+  gulp.watch( 'modules/*/*.js', copyJs );
 };
