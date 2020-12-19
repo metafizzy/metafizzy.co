@@ -5,44 +5,42 @@ var utils = require('./utils');
 var transfob = require('transfob');
 
 var jsSrcs = [
-  'bower_components/get-size/get-size.js',
-  'bower_components/desandro-matches-selector/matches-selector.js',
-  'bower_components/ev-emitter/ev-emitter.js',
-  'bower_components/fizzy-ui-utils/utils.js',
+  'node_modules/get-size/get-size.js',
+  'node_modules/desandro-matches-selector/matches-selector.js',
+  'node_modules/ev-emitter/ev-emitter.js',
+  'node_modules/fizzy-ui-utils/utils.js',
   // draggabilly
-  'bower_components/unipointer/unipointer.js',
-  'bower_components/unidragger/unidragger.js',
-  'bower_components/draggabilly/draggabilly.js',
+  'node_modules/unipointer/unipointer.js',
+  'node_modules/unidragger/unidragger.js',
+  'node_modules/draggabilly/draggabilly.js',
   // outlayer
-  'bower_components/outlayer/item.js',
-  'bower_components/outlayer/outlayer.js',
+  'node_modules/outlayer/item.js',
+  'node_modules/outlayer/outlayer.js',
   // masonry
-  'bower_components/masonry/masonry.js',
+  'node_modules/masonry-layout/masonry.js',
   // packery
-  'bower_components/packery/js/rect.js',
-  'bower_components/packery/js/packer.js',
-  'bower_components/packery/js/item.js',
-  'bower_components/packery/js/packery.js',
+  'node_modules/packery/js/rect.js',
+  'node_modules/packery/js/packer.js',
+  'node_modules/packery/js/item.js',
+  'node_modules/packery/js/packery.js',
   // isotope
-  'bower_components/isotope/js/layout-mode.js',
-  'bower_components/isotope/js/item.js',
-  'bower_components/isotope/js/isotope.js',
-  'bower_components/isotope/js/layout-modes/fit-rows.js',
-  // flickity deps
-  'bower_components/tap-listener/tap-listener.js',
+  'node_modules/isotope-layout/js/layout-mode.js',
+  'node_modules/isotope-layout/js/item.js',
+  'node_modules/isotope-layout/js/isotope.js',
+  'node_modules/isotope-layout/js/layout-modes/fit-rows.js',
   // flickity
-  'bower_components/flickity/js/cell.js',
-  'bower_components/flickity/js/slide.js',
-  'bower_components/flickity/js/animate.js',
-  'bower_components/flickity/js/flickity.js',
-  'bower_components/flickity/js/prev-next-button.js',
-  'bower_components/flickity/js/page-dots.js',
-  'bower_components/flickity/js/drag.js',
+  'node_modules/flickity/js/cell.js',
+  'node_modules/flickity/js/slide.js',
+  'node_modules/flickity/js/animate.js',
+  'node_modules/flickity/js/flickity.js',
+  'node_modules/flickity/js/prev-next-button.js',
+  'node_modules/flickity/js/page-dots.js',
+  'node_modules/flickity/js/drag.js',
   // infinite-scroll
-  'bower_components/infinite-scroll/js/core.js',
-  'bower_components/infinite-scroll/js/scroll-watch.js',
+  'node_modules/infinite-scroll/js/core.js',
+  'node_modules/infinite-scroll/js/scroll-watch.js',
   // huebee
-  'bower_components/huebee/huebee.js',
+  'node_modules/huebee/huebee.js',
   // modules
   'modules/*/*.js'
 ];

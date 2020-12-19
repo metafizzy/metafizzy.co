@@ -8,7 +8,6 @@ Built with Gulp and Handlebars.
 
 ``` bash
 npm install
-bower install
 ```
 
 ## Tasks

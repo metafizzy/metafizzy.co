@@ -4,9 +4,9 @@ var concat = require('gulp-concat');
 var utils = require('./utils');
 
 var cssSrcs = [
-  'bower_components/normalize-css/normalize.css',
-  'bower_components/flickity/css/flickity.css',
-  'bower_components/huebee/huebee.css',
+  'node_modules/normalize.css/normalize.css',
+  'node_modules/flickity/css/flickity.css',
+  'node_modules/huebee/huebee.css',
   'modules/*/*.css'
 ];
 
