@@ -15,7 +15,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.1",
     "handlebars": "^4.5.3",
-    "highlight.js": "^9.13.1",
+    "highlight.js": "^10.4.1",
     "jshint": "^2.9.7",
     "merge2": "^1.2.3",
     "moment": "^2.23.0",
