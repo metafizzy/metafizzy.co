@@ -2,6 +2,7 @@ _site/
 bower_components/
 node_modules/
 build/
+assets/fonts/
 assets/img/20*/*
 build2/
 .netlify
