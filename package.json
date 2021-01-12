@@ -2,6 +2,7 @@
   "name": "metafizzy.co",
   "version": "2.2.0",
   "description": "Metafizzy site",
+  "main": "gulpfile.js",
   "dependencies": {
     "draggabilly": "^2.1.0",
     "flickity": "^2.0.0",
@@ -31,6 +32,12 @@
   "devDependencies": {
     "gulp-serve": "^1.4.0"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx gulp dev",
+    "build": "npx gulp",
+    "deploy": "netlify deploy --dir=build"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/metafizzy/metafizzy.co.git"
@@ -41,9 +48,5 @@
   "bugs": {
     "url": "https://github.com/metafizzy/metafizzy.co/issues"
   },
-  "homepage": "https://metafizzy.co",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "homepage": "https://metafizzy.co"
 }
