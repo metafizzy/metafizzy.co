@@ -16,6 +16,6 @@ The first step is to disable Isotope resizing the container. Set the [`resizesCo
 
 To produce the intended result, I used sorting with [`fitColumns` layout mode](http://isotope.metafizzy.co/docs/layout-modes.html#fitcolumns) and [updated the sort data](http://isotope.metafizzy.co/docs/methods.html#updatesortdata) whenever a new item was clicked.
 
-<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/desandro/S5vAG/2/embedded/result,js,html,css"> </iframe>
+<iframe style="width: 100%; height: 300px" src="https://jsfiddle.net/desandro/S5vAG/2/embedded/result,js,html,css"> </iframe>
 
 View [Isotope - fitColumns in fit container on jsFiddle](http://jsfiddle.net/desandro/S5vAG/2/).

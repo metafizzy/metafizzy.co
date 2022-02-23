@@ -10,11 +10,11 @@ After seeing a whole animated layout with Isotope or Masonry, you might get the 
 
 It's a problem I've faced before, so I put together this screencast to go over the most elegant way to resolve it.
 
-<iframe src="http://player.vimeo.com/video/20267709?byline=0&amp;portrait=0&amp;color=ffffff" width="581" height="363" frameborder="0"> </iframe>
+<iframe src="https://player.vimeo.com/video/20267709?byline=0&amp;portrait=0&amp;color=ffffff" width="581" height="363" frameborder="0"> </iframe>
 
 View on Vimeo: [Isotope: animating item sizes](http://vimeo.com/20267709)
 
 Try out the results [for yourself on jsFiddle](http://jsfiddle.net/desandro/DJVX2/2/)
 
-<iframe style="width: 100%; height: 460px" src="http://jsfiddle.net/desandro/DJVX2/2/embedded/result,js,html,css"> </iframe>
+<iframe style="width: 100%; height: 460px" src="https://jsfiddle.net/desandro/DJVX2/2/embedded/result,js,html,css"> </iframe>
 

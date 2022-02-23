@@ -16,9 +16,9 @@ I've subsequently forked the [imagesLoaded plugin for use with Masonry and Isoto
 
 Now Masonry users no longer have to rely on `$(window).load()` to load every image on the page before the plugin is triggered.
 
-<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/desandro/RXDL4/embedded/js,result,html,css"> </iframe>
+<iframe style="width: 100%; height: 300px" src="https://jsfiddle.net/desandro/RXDL4/embedded/js,result,html,css"> </iframe>
 
-[imagesLoaded and Masonry fiddle](http://jsfiddle.net/desandro/RXDL4/)
+[imagesLoaded and Masonry fiddle](https://jsfiddle.net/desandro/RXDL4/)
 
 Additionally, you can use `imagesLoaded` inside the Infinite Scroll callback.
 

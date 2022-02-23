@@ -18,7 +18,7 @@ I'm a big fan of [Divya](http://nimbupani.com/)'s because she draws a clear line
 
 ## [HTML5, CSS3, and DOM Performance](http://www.youtube.com/watch?v=q_O9_C2ZjoA#t=9m53s) by Paul Irish
 
-<iframe width="480" height="390" src="http://www.youtube.com/embed/q_O9_C2ZjoA?rel=0" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+<iframe width="480" height="390" src="https://www.youtube.com/embed/q_O9_C2ZjoA?rel=0" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 Isotope portion starts at 9:53
 

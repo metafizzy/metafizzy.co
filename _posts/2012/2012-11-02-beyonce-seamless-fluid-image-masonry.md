@@ -27,4 +27,4 @@ designedmemory came up with a much better solution. Instead of trying to get exa
 [Crack open this example on CodePen!](http://codepen.io/desandro/pen/myBxD)
 
 <pre class="codepen" data-height="300" data-type="result" data-href="myBxD" data-user="desandro"><code> </code></pre>
-<script async="async" src="http://codepen.io:/assets/embed/ei.js"> </script>
+<script async="async" src="https://codepen.io/assets/embed/ei.js"> </script>

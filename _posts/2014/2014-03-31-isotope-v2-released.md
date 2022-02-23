@@ -25,7 +25,7 @@ Read over the [changes from Isotope v1](http://isotope.metafizzy.co/appendix.htm
 [Isotope documentation](http://isotope.metafizzy.co) has been upgraded as well. All demos are displayed along side their explanations. [Each demo can be edited on CodePen](http://codepen.io/desandro/tag/isotope-docs/) (that's 44 demos!), providing clear visibility to how Isotope works. Here's the [filtering](http://isotope.metafizzy.co/filtering.html) demo:
 
 <p data-height="500" data-theme-id="0" data-slug-hash="Ehgij" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/desandro/pen/Ehgij/'>Isotope - filtering</a> by David DeSandro (<a href='http://codepen.io/desandro'>@desandro</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async="true" src="http://codepen.io/assets/embed/ei.js"> </script>
+<script async="true" src="https://codepen.io/assets/embed/ei.js"> </script>
 
 Commercial licenses purchased for v1 can be used for v2. No need to purchase a new one.
 

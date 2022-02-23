@@ -14,7 +14,7 @@ You can see what Chris is talking about in the [Infinite Scroll demo](http://iso
 
 It's a issue I had written down for a rainy day, so my thanks go out to Chris to motivate me to find a solution. Here it is...
 
-<iframe style="width: 100%; height: 450px" src="http://jsfiddle.net/desandro/MAjzR/5/embedded/result,js,css,html"> </iframe>
+<iframe style="width: 100%; height: 450px" src="https://jsfiddle.net/desandro/MAjzR/5/embedded/result,js,css,html"> </iframe>
 
 View on jsFiddle: [Isotope - fading in newly appended elements](http://jsfiddle.net/desandro/MAjzR/5/)
 

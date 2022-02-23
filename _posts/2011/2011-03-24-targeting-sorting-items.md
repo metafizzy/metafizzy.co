@@ -18,6 +18,6 @@ var $sortedItems = $container.data('isotope').$filteredAtoms;
 
 Once you have that jQuery object, you can use it just like any other.  For this example, I am highlighting the appropriate first and last item after a sort.
 
-<iframe style="width: 100%; height: 400px" src="http://jsfiddle.net/desandro/JcHcc/embedded/result,js,html,css"> </iframe>
+<iframe style="width: 100%; height: 400px" src="https://jsfiddle.net/desandro/JcHcc/embedded/result,js,html,css"> </iframe>
 
 View [Isotope - target first / last item sorting on jsFiddle](http://jsfiddle.net/desandro/JcHcc/)

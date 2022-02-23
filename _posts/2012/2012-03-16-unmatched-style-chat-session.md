@@ -10,9 +10,6 @@ layout: blog
 
 [Unmatched Style Chat Session - David DeSandro](http://www.unmatchedstyle.com/news/chat-session-david-desandro.php)
 
- <iframe src="http://blip.tv/play/hc0zgu7RKwI.html?p=1" width="480" height="346" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
- <embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#hc0zgu7RKwI" style="display:none"> </embed>
-
 My thanks to Gene for putting this all together.
 
 Also, sorry [Jonah](http://www.jonahgoldstein.com/site/) for totally blanking on your name.
