@@ -24,7 +24,7 @@
     "isotope-layout": "^3.0.1",
     "jshint": "^2.9.7",
     "merge2": "^1.2.3",
-    "moment": "^2.23.0",
+    "moment": "^2.29.2",
     "normalize.css": "^4.2.0",
     "packery": "^2.1.1",
     "transfob": "^1.0.0"
